@@ -1,0 +1,2215 @@
+/**
+ * Category navigation menu
+ *
+ * .navi.nav-regular            - regular horizontal menu
+ * .navi.nav-regular.nav-vert   - regular vertical menu
+ * .navi.nav-mobile             - mobile menu accordion
+ */
+
+
+@font-face {
+    font-family: 'ThemeIcons';
+    src:url('../../../fonts/ThemeIcons.eot?387osh');
+    src:url('../../../fonts/ThemeIcons.eot?#iefix387osh') format('embedded-opentype'),
+    url('../../../fonts/ThemeIcons.woff?387osh') format('woff'),
+    url('../../../fonts/ThemeIcons.ttf?387osh') format('truetype'),
+    url('../../../fonts/ThemeIcons.svg?387osh#ThemeIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Common elements %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Category blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-block { margin-top: 1%; margin-bottom: 1%; }
+.nav-block--center { margin-top: 1%; margin-bottom: 1%; }
+
+/* Section line (separator) is lighter than other lines
+-------------------------------------------------------------- */
+.nav-block .section-line { border-color: #eee; }
+
+/* Deprecated: custom static block block_header_nav_dropdown displayed as a dropdown
+-------------------------------------------------------------- */
+.navi .nav-custom-link .header-nav-dropdown-wrapper .heading { margin: 10px 0; }
+
+
+/* Menu triggers.
+   Styles shared by vertical menu trigger and mobile menu trigger.
+   Styles similar to 1st-level links from the standard menu.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.menu-trigger {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Mobile menu icon */
+.menu-trigger .trigger-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    margin: 0 4px 0 0;
+}
+.menu-trigger .trigger-icon .line {
+    display: block;
+    background-color: #595959;
+    height: 3px;
+    margin-bottom: 2px;
+}
+.menu-trigger .label {
+    margin-right: 10px;
+}
+
+
+/* Caret
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Only items with dropdown display the caret */
+.nav-regular .caret {
+    display: none;
+}
+.nav-regular .nav-item--parent > a .caret {
+    display: inline-block;
+}
+
+/* Caret inside dropdowns - right side caret */
+.nav-regular .nav-panel a .caret {
+    margin-left: 5px;
+    opacity: 0.2;
+}
+.nav-regular .nav-panel a:hover .caret {
+    opacity: 1;
+}
+
+
+/* Sticky logo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-item--stickylogo {
+    display: none;
+}
+.nav-item--stickylogo img {
+    padding-right: 10px;
+}
+
+/* Show only when sticky header active */
+.sticky-header .nav-item--stickylogo {
+    display: inline;
+}
+.header-container:not(.sticky-header) .nav-item--stickylogo {
+    display: none !important;
+}
+
+
+/* Home link
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Home link with icon inside a menu item
+-------------------------------------------------------------- */
+/* Class "feature" inside an item */
+.nav-regular .nav-item--home .ic {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    float: none;
+    background-color: transparent !important; /* Remove default colors */
+}
+
+/* Single icon as a home link
+-------------------------------------------------------------- */
+.navi .nav-item--homeicon a {
+    padding-left: 17px; /* The same as side padding of top-level items +5px */
+    padding-right: 5px;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1;
+    transition:         opacity 450ms ease-in-out;
+    -moz-transition:    opacity 450ms ease-in-out;
+    -webkit-transition: opacity 450ms ease-in-out;
+    -o-transition:      opacity 450ms ease-in-out;
+}
+.navi .nav-item--homeicon a:hover {
+    opacity: 0.6;
+    transition-duration:            100ms;
+    -moz-transition-duration:       100ms;
+    -webkit-transition-duration:    100ms;
+    -o-transition-duration:         100ms;
+}
+
+
+/* Category labels
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.cat-label {
+    padding:2px 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    font-weight:normal;
+    line-height:18px;
+    text-transform:none;
+    text-shadow:none;
+    
+    transition:         color 450ms ease-in-out, background-color 450ms ease-in-out;
+    -moz-transition:    color 450ms ease-in-out, background-color 450ms ease-in-out;
+    -webkit-transition: color 450ms ease-in-out, background-color 450ms ease-in-out;
+    -o-transition:      color 450ms ease-in-out, background-color 450ms ease-in-out;
+}
+li > a:hover > span > .cat-label {
+    transition-duration:            100ms;
+    -moz-transition-duration:       100ms;
+    -webkit-transition-duration:    100ms;
+    -o-transition-duration:         100ms;
+}
+
+/* labels: 1st level
+-------------------------------------------------------------- */
+li.level0 > a > span { position:relative; }
+li.level0 > a > span > .cat-label {
+    position:absolute;
+    top:-10px; /*-14px*/
+    right:0;
+    padding:0 6px;
+    
+    font-size:14px;
+    line-height:22px;
+}
+
+/* Add pin (1st level only) */
+li.level0 > a > span > .pin-bottom:before {
+    position:absolute;
+    right:6px;
+    top:22px;
+    width:0;
+    height:0;
+    content:"";
+    border-style:solid;
+    border-width:4px;
+    border-color:transparent;
+
+    transition:         border-color 450ms ease-in-out;
+    -moz-transition:    border-color 450ms ease-in-out;
+    -webkit-transition: border-color 450ms ease-in-out;
+    -o-transition:      border-color 450ms ease-in-out;
+}
+li.level0 > a:hover > span > .pin-bottom:before {
+    transition-duration:            100ms;
+    -moz-transition-duration:       100ms;
+    -webkit-transition-duration:    100ms;
+    -o-transition-duration:         100ms;
+}
+
+/* labels: 2nd level
+-------------------------------------------------------------- */
+li.level1 > a > span > .cat-label {
+    display:inline-block !important;
+    padding:0 4px;
+    margin-left:5px;
+    vertical-align:middle;
+}
+
+/* labels: 3rd level
+-------------------------------------------------------------- */
+li.level2 > a > span > .cat-label {
+    display:inline-block !important;
+    padding:0 4px;
+    margin-left:2px;
+}
+
+/* Category labels inside mobile menu / vertical menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-mobile li > a > span > .cat-label,
+.nav-vert li > a > span > .cat-label {
+    position:static;
+    display:inline-block !important;
+    padding:0 4px;
+    margin-left:5px;
+
+    /* Label size: all levels */
+    font-size:14px;
+    line-height:18px;
+}
+
+/* Hide pin */
+.nav-mobile li > a > span > .pin-bottom:before,
+.nav-vert li > a > span > .pin-bottom:before {
+    display:none;
+}
+
+
+/* Non-clickable links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.navi a.no-click { cursor: default; }
+
+
+/* Remove highlight color on tap
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.navi,
+.menu-trigger,
+.nav-regular .nav-item.level0 > a { -webkit-tap-highlight-color: transparent; }
+
+
+
+/* Base styles of the menu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/*
+.navi-wrapper {
+    position: relative;
+}
+*/
+
+.navi {
+    position: relative; /* Dropdown box position is relative to this container */
+    -webkit-transform: translateZ(0); /* Fix possible glitches during animation */
+}
+
+/* Clearfix for menu items list */
+.navi > ul:before,
+.navi > ul:after {
+    display: table;
+    content: " ";
+}
+.navi > ul:after {
+    clear: both;
+}
+
+/* Show/hide mobile menu */
+.navi.nav-mobile-triggerable { 
+    display: none;
+
+    /* Important: menu needs to be cleared to avoid overlapping other elements inside nav bar, such as triggers and holders */
+    clear: both;
+}
+.navi.nav-mobile-triggerable.show { 
+    display: block;
+}
+
+/* Show/hide vertical menu */
+.navi.nav-vert-triggerable {
+    display: none;
+}
+.navi.nav-vert-triggerable.show {
+    display: block;
+}
+
+/* Pull up dropdowns above other elements
+-------------------------------------------------------------- */
+/* Top menu in the header */
+.header-container .navi {
+    z-index: 200;
+}
+/* Sidebar menu */
+.navi.nav-regular.navi-sidebarmenu {
+    z-index: 199; /* One level below the menu */
+}
+
+
+/* Bottom border
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-border-bottom {
+    clear: both;
+}
+
+
+
+/* Standard menu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Height of the menu bar (and other elements inisde menu bar)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Top-level items and menu triggers */
+.menu-trigger,
+.nav-regular .nav-item.level0 > a {
+    line-height: 50px;
+    text-decoration: none;
+}
+
+/* Other elements inisde menu bar need to have the same height as height of the menu bar.
+   Set max height to avoid issues with excessive height of the elements. */
+.nav-holder > *,
+.nav-holder .dropdown .dropdown-heading {
+    line-height: 50px; 
+    max-height: 50px;
+}
+
+
+/* Additional classes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Menu items centered within the menu bar
+-------------------------------------------------------------- */
+.nav-regular.centered {
+    text-align: center;
+}
+.nav-regular.centered li.level0
+{
+    float: none;
+    display: inline-block;
+}
+.nav-regular.centered li.level0.right,
+.nav-regular.centered li.level0.left
+{
+    float: none !important;
+}
+
+/* Sticky logo has to float left */
+.nav-regular.centered li.nav-item--stickylogo {
+    float: left;
+}
+
+
+/* Other elements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Openers */
+.nav-regular .opener { display: none; }
+
+/* Hide elements */
+.nav-regular .hide-in-desktop-menu { display: none !important; }
+
+
+
+/* Holders %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Holder for additional elements inside the menu bar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-holders-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 201; /* One level above the menu */
+    position: relative;
+    /* Important: do not add floating to this element. Otherwise menu items may leave a gap (in the place where holders wrapper is displayed)
+       after sticky menu suspends sticky mode. */
+}
+.nav-holders-wrapper .nav-holder {
+    margin: 0;
+    float: right; /* Required default floating */
+}
+
+
+/* Elements inside holder
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-holder > * {
+    display: block;
+}
+
+
+/* Specific elements inside holder
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Dropdowns
+-------------------------------------------------------------- */
+.nav-holder .dropdown .dropdown-heading .label {
+    vertical-align: baseline;
+}
+
+/* Search box
+-------------------------------------------------------------- */
+/* Common styles for search box in holder, when it's displayed inisde menu bar */
+.nav-regular .nav-holder .search-wrapper, /* <-- Deprecated */
+.nav-holders-wrapper .nav-holder .search-wrapper
+{
+    width: inherit; /* Important: to avoid stretching the box to 100% */
+    float: none !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 7px;
+
+    /* To center the search box vertically */
+    margin-bottom: 1px;
+
+    /* Override styles of search box when its inside element with class ".hp-blocks-holder--stacked" */
+    max-width: none;
+    margin: 0;
+}
+.nav-regular .nav-holder .search-wrapper .input-text, /* <-- Deprecated */
+.nav-holders-wrapper .nav-holder .search-wrapper .input-text
+{
+    /* To center the search box vertically */
+    margin-bottom: 1px;
+}
+
+/* Dropdowns
+-------------------------------------------------------------- */
+.nav-holder .dropdown .dropdown-heading.cover > span,
+.nav-holder .dropdown .dropdown-heading.cover > div {
+    padding: 0 15px;
+}
+
+/* Common styles with mobile menu trigger
+-------------------------------------------------------------- */
+.menu-trigger,
+.nav-holder .dropdown .dropdown-heading {
+    font-size: 17px;
+    text-align:left;
+}
+
+
+
+/* Vertical menu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.navi.nav-vert-triggerable {
+    position: absolute;
+    left: 0;
+}
+
+/* The width of the trigger is the same as the width of the sidebar.
+   FEATURE: it should depend on the width of the sidebar.
+*/
+.navi.nav-vert-triggerable,
+.vertnav-trigger {
+    width: 231px;
+}
+
+/* Hide selected elements
+-------------------------------------------------------------- */
+/* Important: added ".nav-item" class to make the rule more specific */
+.nav-vert .nav-item.nav-item--home {
+    display: none !important;
+}
+.nav-vert .nav-item--stickylogo {
+    display: none !important;
+}
+
+
+/* Vertical menu trigger
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.vertnav-trigger {
+    float: left;
+}
+
+
+/* Additional custom links inside menu bar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-inline-links {
+    float: left;
+    margin: 0;
+}
+
+
+
+/* Mobile menu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Mobile menu trigger
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.mobnav-trigger {
+    display: none;
+}
+
+/* If trigger is next to the holders wrapper, make it float left
+   so that it doesn't span entire container and overlap holders. */
+.nav-holders-wrapper + .mobnav-trigger {
+    float: left;    
+}
+/* In left column, make it float right */
+.left-column .nav-holders-wrapper + .mobnav-trigger {
+    float: right;
+}
+/* In right column, make it float left */
+.right-column .nav-holders-wrapper + .mobnav-trigger {
+    float: left;
+
+}
+
+
+/* Dropdowns
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Dropdowns inside mobile menu */
+.nav-mobile .nav-panel--dropdown {
+    /* Override width which can be added to dropdowns of the regular menu */
+    width: 100% !important;
+
+    /* Reset of dropdown's inline positioning */
+    left: 0 !important;
+    top: 0 !important;
+}
+
+
+/* Dropdowns - categories without category blocks but with subcategories
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Simplify dropdown */
+/* Remove dropdown shadow and background color  */
+.nav-mobile .nav-item--only-subcategories > .nav-panel--dropdown {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #ffffff !important;
+}
+/* Remove padding of inner panel */
+.nav-mobile .nav-item--only-subcategories > .nav-panel--dropdown > .nav-panel-inner {
+    padding: 0 !important;
+}
+/* Stretch the central column */
+.nav-mobile .nav-item--only-subcategories > .nav-panel--dropdown > .nav-panel-inner > .nav-block--center {
+    margin: 0;
+    width: 100%;
+}
+/* Hide category blocks (in case there are any non-standard added by user's modifications) */
+.nav-mobile .nav-item--only-subcategories > .nav-panel--dropdown > .nav-panel-inner > .nav-block {
+    display: none;
+}
+
+
+/* Dropdowns - categories which have only category blocks 
+   but have no subcategories
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Special class "opt-sob" displays these items */
+
+/* On 1st level, by default hide these items */
+.nav-mobile .level0.nav-item.nav-item--only-blocks { display: none; }
+
+/* With special class "opt-sob", show these items */
+.nav-mobile.opt-sob .level0.nav-item.nav-item--only-blocks { display: block; }
+
+
+/* Dropdowns - show category blocks on selected topmost levels
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Structure of the selectors used below:
+   mobileMenu.modifier [level] categoryBlock 
+   mobileMenu.modifier [level] item > panel > innerPanel > categoryBlock 
+
+   Classes such as opt-sb0, opt-sb1 etc. are modifiers of the mobile menu.
+
+   To show category blocks on only the first level, we hide 
+   category blocks on all lower levels and simplify dropdowns.
+*/
+
+/* Default class "opt-sb0"
+   - hide category blocks on all level and simplify dropdowns.
+-------------------------------------------------------------- */
+.nav-mobile.opt-sb0 .nav-block { display: none; }
+.nav-mobile.opt-sb0 .nav-item > div { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; background-color: #ffffff !important; } /* Remove dropdown shadow and background color */
+.nav-mobile.opt-sb0 .nav-item > div > div { padding: 0 !important; } /* Remove padding of inner panel */
+.nav-mobile.opt-sb0 .nav-item > div > div > .nav-block--center { margin: 0; width: 100%; } /* Stretch the central column */
+.nav-mobile.opt-sb0 .nav-item.nav-item--only-blocks { display: none; } /* Hide items containing only category blocks */
+
+/* Override styles which simplify dropdowns when default class "opt-sb0" is present.
+   When the default class is not present, we don't need to do this. */
+.nav-mobile.opt-sb0.opt-sob .nav-item.nav-item--only-blocks .nav-block { display: block; }
+/* .nav-mobile.opt-sb0.opt-sob .nav-item.nav-item--only-blocks > div { background-color: transparent !important; } */
+.nav-mobile.opt-sb0.opt-sob .nav-item.nav-item--only-blocks > div > div { padding: 0px !important; }
+.nav-mobile.opt-sb0.opt-sob .nav-item.nav-item--only-blocks > div > div > .nav-block--center { margin-top: 1%; margin-bottom: 1%; }
+
+/* Show on 1 topmost level
+-------------------------------------------------------------- */
+.nav-mobile.opt-sb1 ul.level0 .nav-block { display: none; }
+.nav-mobile.opt-sb1 ul.level0 .nav-item > div { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; background-color: transparent !important; }
+.nav-mobile.opt-sb1 ul.level0 .nav-item > div > div { padding: 0 !important; }
+.nav-mobile.opt-sb1 ul.level0 .nav-item > div > div > .nav-block--center { margin: 0; width: 100%; }
+.nav-mobile.opt-sb1 ul.level0 .nav-item.nav-item--only-blocks { display: none; }
+
+/* Show on 2 topmost levels
+-------------------------------------------------------------- */
+.nav-mobile.opt-sb2 ul.level1 .nav-block { display: none; }
+.nav-mobile.opt-sb2 ul.level1 .nav-item > div { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; background-color: transparent !important; }
+.nav-mobile.opt-sb2 ul.level1 .nav-item > div > div { padding: 0 !important; }
+.nav-mobile.opt-sb2 ul.level1 .nav-item > div > div > .nav-block--center { margin: 0; width: 100%; }
+.nav-mobile.opt-sb2 ul.level1 .nav-item.nav-item--only-blocks { display: none; }
+
+/* Show on 3 topmost levels
+-------------------------------------------------------------- */
+.nav-mobile.opt-sb3 ul.level2 .nav-block { display: none; }
+.nav-mobile.opt-sb3 ul.level2 .nav-item > div { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; background-color: transparent !important; }
+.nav-mobile.opt-sb3 ul.level2 .nav-item > div > div { padding: 0 !important; }
+.nav-mobile.opt-sb3 ul.level2 .nav-item > div > div > .nav-block--center { margin: 0; width: 100%; }
+.nav-mobile.opt-sb3 ul.level2 .nav-item.nav-item--only-blocks { display: none; }
+
+/* Show on 4 topmost levels
+-------------------------------------------------------------- */
+.nav-mobile.opt-sb4 ul.level3 .nav-block { display: none; }
+.nav-mobile.opt-sb4 ul.level3 .nav-item > div { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; background-color: transparent !important; }
+.nav-mobile.opt-sb4 ul.level3 .nav-item > div > div { padding: 0 !important; }
+.nav-mobile.opt-sb4 ul.level3 .nav-item > div > div > .nav-block--center { margin: 0; width: 100%; }
+.nav-mobile.opt-sb4 ul.level3 .nav-item.nav-item--only-blocks { display: none; }
+
+/* Show on 5 topmost levels
+-------------------------------------------------------------- */
+.nav-mobile.opt-sb5 ul.level4 .nav-block { display: none; }
+.nav-mobile.opt-sb5 ul.level4 .nav-item > div { -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; background-color: transparent !important; }
+.nav-mobile.opt-sb5 ul.level4 .nav-item > div > div { padding: 0 !important; }
+.nav-mobile.opt-sb5 ul.level4 .nav-item > div > div > .nav-block--center { margin: 0; width: 100%; }
+.nav-mobile.opt-sb5 ul.level4 .nav-item.nav-item--only-blocks { display: none; }
+
+/* Hide blocks on all levels below this breakpoint
+-------------------------------------------------------------- */
+/* Added more classes and selectors to these rules 
+   to increase specificity */
+@media only screen and (max-width: 479px) {
+    .navi.nav-mobile.opt-hide480 .nav-block { display: none !important; }
+    .navi.nav-mobile.opt-hide480 li.nav-item > div.nav-panel--dropdown { -moz-box-shadow:none !important; -webkit-box-shadow:none !important; box-shadow:none !important; background-color: transparent !important; }
+    .navi.nav-mobile.opt-hide480 li.nav-item > div.nav-panel--dropdown > div { padding: 0 !important; }
+    .navi.nav-mobile.opt-hide480 li.nav-item > div > div > .nav-block--center { margin: 0 !important; width: 100% !important; }
+    .navi.nav-mobile.opt-hide480 li.nav-item.nav-item--only-blocks { display: none !important; }
+}
+
+
+/* Other elements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Carets
+-------------------------------------------------------------- */
+.nav-mobile .caret { display: none !important; }
+
+/* Sticky logo
+-------------------------------------------------------------- */
+.nav-mobile .nav-item--stickylogo { display: none !important; }
+
+/* Home link
+-------------------------------------------------------------- */
+.nav-mobile .nav-item--home { display: none !important; }
+
+/* Hide elements
+-------------------------------------------------------------- */
+.nav-mobile .hide-in-mobile-menu { display: none !important; }
+
+/* Hide containers for additional elements
+-------------------------------------------------------------- */
+.nav-mobile .nav-holder { display: none !important; }
+
+
+
+/* Miscellaneous %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Other modules/components
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Item sliders
+-------------------------------------------------------------- */
+.navi .itemslider { margin-top:0; margin-bottom:0; }
+.navi .itemslider .item { padding-top:5px; padding-bottom:0; }
+.navi .itemslider .product-name a { display: inline-block; }
+.navi .itemslider .product-name { margin-top: 8px; }
+
+
+
+
+
+/* *************************************************************************************************************
+****************************************************************************************************************
+ DROPDOWN BOXES ************************************************************************************************
+****************************************************************************************************************
+************************************************************************************************************* */
+
+
+
+
+
+/* Common %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* All levels
+-------------------------------------------------------------- */
+.nav-regular .nav-item {
+    text-align: left;
+}
+.nav-regular .nav-item > a {
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Level 1 only
+-------------------------------------------------------------- */
+.nav-regular li.level0 { float: left; }
+.nav-regular li.level0 > a { padding: 0 6px; }
+.nav-regular li.level0 > a > span { display: inline-block; white-space: nowrap; }
+
+/* Top-level item on hover */
+.nav-regular li.level0:hover > a {
+    /* Pull up the link above the dropdown */
+    z-index: 2;
+    position: relative;
+}
+
+/* Caret */
+.nav-regular li.level0 > a .caret {
+    opacity: 0.8;
+    border-top-color:#666666;
+
+    /* Fix: IE11
+        Set small line height to avoid issues:
+        - menu doesn't get additional border below the menu when menu items have dropdowns 
+        - menu doesn't get additional padding below the menu when menu items have dropdowns
+        */
+    line-height: 1;
+}
+
+.nav-regular li.catid92.level0 > a .caret {
+    border-top-color:#ffffff;
+}
+
+.nav-regular li.level0.active > a .caret {
+    opacity: 1;
+}
+.nav-regular li.level0:hover > a .caret {
+    opacity: 1;
+}
+
+.nav-regular li.level0 > a:hover .caret, .nav-regular li.level0 > a.active .caret  {
+    border-top-color:#000000 !important;
+}
+
+.nav-item.level0.level-top.nav-item--parent a:hover{
+    color:#ffffff;
+}
+
+/* Dropdowns
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* All levels
+-------------------------------------------------------------- */
+.nav-regular .nav-panel--dropdown {
+    display:none;
+    position:absolute;
+    top:0;
+    background-color:#fff; /* To avoid transparent menu */
+    z-index: 1; /* To avoid links overlaping a dropdown */
+
+    /* Uncomment below line to fix possible glitches during animation in webkit browsers */
+    /*-webkit-transform: translateZ(0);*/
+}
+
+/* Inner wrapper of the dropdown (for additional padding etc.)
+-------------------------------------------------------------- */
+.navi .nav-panel-inner { padding: 20px; } /* Required value in pixels to keep padding consistent in different dropdowns */
+.navi .nav-panel-inner:before,
+.navi .nav-panel-inner:after { display: table; line-height: 0; content: ""; }
+.navi .nav-panel-inner:after { clear: both; }
+
+
+/* Full width dropdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-regular .nav-panel.full-width { width:100%; }
+.nav-regular .nav-panel.tmp-full-width { width:100% !important; } /* Temporary class required by js */
+
+
+/* Effects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Fade
+-------------------------------------------------------------- */
+.nav-regular.opt-fx-fade-inout .nav-panel .nav-item--parent > .nav-panel--dropdown {
+    display: block; /* Important: has to be visible before hover */
+    left: -10000px;
+    opacity: 0;
+    -moz-transition:    opacity 50ms ease-in-out 50ms, left 0s ease-in-out 100ms, top 0s ease-in-out 100ms;
+    -webkit-transition: opacity 50ms ease-in-out 50ms, left 0s ease-in-out 100ms, top 0s ease-in-out 100ms;
+    -o-transition:      opacity 50ms ease-in-out 50ms, left 0s ease-in-out 100ms, top 0s ease-in-out 100ms;
+    transition:         opacity 50ms ease-in-out 50ms, left 0s ease-in-out 100ms, top 0s ease-in-out 100ms;
+}
+.nav-regular.opt-fx-fade-inout .nav-panel .nav-item--parent:hover > .nav-panel--dropdown {
+    opacity: 1;
+    transition-delay:           50ms;
+    -moz-transition-delay:      50ms;
+    -webkit-transition-delay:   50ms;
+    -o-transition-delay:        50ms;
+}
+
+
+
+/* Mega dropdown %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Dropdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* All levels
+-------------------------------------------------------------- */
+.nav-regular .mega > .nav-panel--dropdown {
+    margin:0;
+}
+
+/* Level 2+
+-------------------------------------------------------------- */
+.nav-regular .nav-panel li.mega { 
+    position: relative; /* Container of the dropdown has to be relative (only on levels 2+) */
+}
+.nav-regular .nav-panel li.mega:hover > .nav-panel--dropdown {
+    display: block;
+    left: 60px;
+    top: 0;
+}
+
+
+/* Inside mega dropdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Align submenu's content (grid) with the submenu */
+.nav-regular .nav-submenu--mega {
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+/* Items */
+.nav-regular .nav-submenu--mega .nav-item > a {
+    padding: 0px 4px 0px 7px; /* Less right padding to avoid word wrapping */
+}
+
+/* Inside mega dropdown, level 1: item
+-------------------------------------------------------------- */
+.nav-regular .nav-submenu--mega > .nav-item {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+.nav-regular .nav-submenu--mega > .nav-item > a {
+    line-height: 34px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* If item is a parent of subcategories, add bottom margin, but romove it if item is a parent of a dropdown */
+.nav-regular .nav-submenu--mega > .nav-item.parent > a {
+    margin-bottom: 5px;
+}
+.nav-regular .nav-submenu--mega > .nav-item.nav-item--parent > a {
+    margin-bottom: 0;
+}
+
+/* Inside mega dropdown, level 1: submenu
+-------------------------------------------------------------- */
+/* Each submenu has to be static unless it's a dropdown itself (e.g. if type "classic" was applied to the item).
+   Also, add bottom margin to panel, but romove it if it's a dropdown. */
+.nav-regular .nav-submenu--mega > li > .nav-panel {
+    position: static;
+    margin-bottom: 10px;
+}
+.nav-regular .nav-submenu--mega > li > .nav-panel--dropdown {
+    position: absolute;
+    margin-bottom: 0;
+}
+
+/* Inside mega dropdown, level 1: category blocks
+-------------------------------------------------------------- */
+.nav-regular .nav-submenu--mega > li > .nav-block--top {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.nav-regular .nav-submenu--mega > li > .nav-block--bottom {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Inside mega dropdown, level 2: item
+-------------------------------------------------------------- */
+.nav-regular .nav-submenu--mega > li > ul > li > a {
+    line-height: 24px;
+}
+
+/* Inside mega dropdown, level 2: item with bullet.
+   If mega dropdown has additional bullets 
+   (displayed for 2nd and 3rd level items).
+-------------------------------------------------------------- */
+
+/* Added ":not(.nav-item--parent)" to not display bullet if the item is inside a dropdown
+   (e.g. if type "classic" was applied to 2nd-level cat, 3rd level cats will be inside a dropdown so remove bullets from 3rd level cats) */
+.nav-regular.with-bullets .nav-submenu--mega > li:not(.nav-item--parent) > ul > li > a {
+    padding-left: 28px;
+    position: relative;
+}
+.nav-regular.with-bullets .nav-submenu--mega > li:not(.nav-item--parent) > ul > li > a:before {
+    font-family: ThemeIcons;
+    content: "\e263";
+    line-height: 24px; /* The same as actual height of the item */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 24px; /* Not larger than the left padding of the item */
+    transition:         left 150ms ease-out;
+    -moz-transition:    left 150ms ease-out;
+    -webkit-transition: left 150ms ease-out;
+    -o-transition:      left 150ms ease-out;
+}
+.nav-regular.with-bullets .nav-submenu--mega > li:not(.nav-item--parent) > ul > li > a:hover:before {
+    left: 4px;
+}
+
+/* If there's an icon inside mega dropdown, it needs to have the same line height as the item  */
+.nav-regular.with-bullets .nav-submenu--mega > li:not(.nav-item--parent) > ul > li > a .ic {
+    line-height: 24px;
+}
+
+/* Remove bullet if item has an icon */
+.nav-regular.with-bullets .nav-submenu--mega > li > ul > li.iconic > a:before {
+    display: none;
+}
+
+/* Inside mega dropdown, level 2: submenu dropdown
+-------------------------------------------------------------- */
+.nav-regular .nav-submenu--mega > li > ul > .nav-item--parent > .nav-panel--dropdown {
+}
+.nav-regular .nav-submenu--mega > li > ul > .nav-item--parent:hover > .nav-panel--dropdown {
+    left: 60%;
+    /* TODO - add z-index if dropdown should be displayed over the containing item (which in "classic" dropdown has a background and covers the child dropdown) */
+    /* z-index: 3; */
+}
+
+
+
+/* Classic dropdown %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Level 2+
+-------------------------------------------------------------- */
+.nav-regular .classic > .nav-panel--dropdown > li > a {
+    line-height: 32px;
+    padding-left: 10px;
+}
+.nav-regular .classic > .nav-panel--dropdown > li > a .caret {
+    float: right;
+    margin-right: 10px;
+
+    /* Important: 
+       when floating, caret needs to have the same height as item.
+       Caret may exceed height of the item so we apply small negative margin.
+       */
+    line-height: inherit; 
+    margin-bottom: -2px;
+}
+
+
+/* Dropdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* All levels
+-------------------------------------------------------------- */
+.nav-regular .classic > .nav-panel--dropdown {
+    margin:0;
+    padding:10px;
+    width:16em;
+    min-width:12em;
+}
+
+/* Level 2+
+-------------------------------------------------------------- */
+/* Container of the dropdown has to be relative */
+.nav-regular .nav-panel li.classic {
+    position: relative;
+}
+.nav-regular .nav-panel li.classic:hover > .nav-panel--dropdown {
+    display:block;
+    left:100%;
+    top:0;
+}
+
+/* If classic dropdown is on the 1 level of mega dropdown, change positioning */
+.nav-regular .nav-submenu--mega > li.classic:hover > .nav-panel--dropdown {
+    left:60px;
+    top:20px;
+}
+
+
+/* Inside dropdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.nav-regular .nav-panel li.classic:hover > a {
+    /* TODO - add z-index (must be greater than dropdown's) if the link should be displayed over the child dropdown 
+       (link in "classic" dropdown has a background so it would cover the child dropdown and dropdown's shadow) */
+    /* z-index: 2; */
+    position: relative;
+}
+
+
+
+/* Simple submenu - no dropdown %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* When submenu has to be displayed not as a dropdown, but as a simple nested list (with slight left indent) */
+
+.nav-regular .nav-item.simple > ul {
+    padding-left: 10px;
+}
+
+/* If mega dropdown has additional bullets (displayed for 2nd and 3rd level items in mega dropdown) */
+.nav-regular.with-bullets .nav-item.simple > ul {
+    padding-left: 28px; /* The same space as for standard item */
+}
+
+/* Bullets */
+.nav-regular .nav-item.simple > ul > li > a {
+    line-height: 24px;
+    padding-left: 15px !important; /* Override item standard padding */
+    position: relative;
+    opacity: 0.6;
+}
+.nav-regular .nav-item.simple:hover > ul > li > a {
+    opacity: 1;
+}
+.nav-regular .nav-item.simple > ul > li > a:before {
+    content: "\e263";
+    font-size: 10px;
+    line-height: 24px; /* The same as actual height of the item */
+    left: -2px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 10px; /* Not larger than the left padding of the item */
+    transition:         left 150ms ease-out;
+    -moz-transition:    left 150ms ease-out;
+    -webkit-transition: left 150ms ease-out;
+    -o-transition:      left 150ms ease-out;
+}
+.nav-regular .nav-item.simple > ul > li > a:hover:before {
+    left: 3px;
+}
+
+
+
+/* Vertical menu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* All levels
+-------------------------------------------------------------- */
+.nav-vert li.level0 {
+    float: none !important; /* Add "!important" to override floating of right-aligned items */
+}
+.nav-vert li.level0 > a {
+    padding-left: 10px;
+    padding-right: 7px;
+}
+.nav-vert li.level0 > a .caret {
+    float: right;
+
+    /* Important: 
+       when floating, caret needs to have the same height as item.
+       Caret may exceed height of the item so we apply small negative margin.
+       */
+    line-height: inherit; 
+    margin-bottom: -2px;
+}
+
+
+/* Dropdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Level 1
+-------------------------------------------------------------- */
+.nav-vert li.level0 > .nav-panel--dropdown {
+    /* We may need to set static left positionning to prevent styling issues (inaccurate positionning via JS: non pixel-perfect) */
+    left: 100% !important;
+}
+
+
+
+/* Item with icon %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Important: it has to be defined after item with bullet */
+.navi .nav-item.iconic > a {
+    position: relative;
+    padding-left: 28px !important;
+}
+.navi .nav-item.iconic > a .ic {
+    content: "\e226";
+    font-size: 14px;
+    line-height: 36px; /* The same as actual height of the item */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 28px; /* Not larger than the left padding of the item */
+}
+
+
+/* Itemgrid for menu dropdown %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.dd-itemgrid > .nav-item {
+    float:left;
+    padding-left:1%;
+    padding-right:1%;
+}
+
+/* Itemgrid: different numbers of columns
+-------------------------------------------------------------- */
+/* Clear first item in each row (row: group of n items) */
+
+/* Item grid: 1 column */
+.dd-itemgrid-1col > .nav-item { width:98%; }
+
+/* Item grid: 2 columns */
+.dd-itemgrid-2col > .nav-item { width:48%; }
+.dd-itemgrid-2col > .nav-item:nth-child(2n+1) { clear:left; }
+
+/* Item grid: 3 columns */
+.dd-itemgrid-3col > .nav-item { width:31.3333%; }
+.dd-itemgrid-3col > .nav-item:nth-child(3n+1) { clear:left; }
+
+/* Item grid: 4 columns */
+.dd-itemgrid-4col > .nav-item { width:23%; }
+.dd-itemgrid-4col > .nav-item:nth-child(4n+1) { clear:left; }
+
+/* Item grid: 5 columns */
+.dd-itemgrid-5col > .nav-item { width:18%; }
+.dd-itemgrid-5col > .nav-item:nth-child(5n+1) { clear:left; }
+
+/* Item grid: 6 columns */
+.dd-itemgrid-6col > .nav-item { width:14.6666%; }
+.dd-itemgrid-6col > .nav-item:nth-child(6n+1) { clear:left; }
+
+/* Item grid: 7 columns */
+.dd-itemgrid-7col > .nav-item { width:12.2857%; }
+.dd-itemgrid-7col > .nav-item:nth-child(7n+1) { clear:left; }
+
+/* Item grid: 8 columns */
+.dd-itemgrid-8col > .nav-item { width:10.5%; }
+.dd-itemgrid-8col > .nav-item:nth-child(8n+1) { clear:left; }
+
+
+
+
+
+/* *************************************************************************************************************
+****************************************************************************************************************
+ MOBILE MENU ACCORDION *****************************************************************************************
+****************************************************************************************************************
+************************************************************************************************************* */
+
+
+
+
+
+/* Accordion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+.nav-mobile .nav-panel-inner{
+    background-color: #ffffff;
+}
+
+.nav-mobile .nav-panel-inner .opener{
+    color: #000000;
+}
+
+.nav-mobile .nav-panel-inner .level1.nav-submenu{
+    background-color: #cccccc;
+}
+
+.acco {
+    list-style-type: none;
+}
+.acco li.nav-item {
+    list-style-type:none;
+    display:block;
+    float:left;
+    width:100% !important; /* Use "!important" to override grid units styling */
+    padding:0 !important;
+    margin:0 !important;
+    position:relative; /* For opener positioning */
+}
+.acco ul.nav-panel {
+    display:block;
+    float:left;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+
+/* Items
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Space for openner if item has children. Space has to be a few pixels wider than openner */
+.acco li.parent > a {
+    padding-right: 54px;
+}
+
+.nav-mobile.acco hr{
+    border-width: 1px;
+    margin-left: -30px;
+}
+
+.nav-mobile.acco li.level0{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-mobile.acco li.nav-1.level0{
+    border-top: 1px solid #e5e5e5;
+}
+
+/* All levels
+-------------------------------------------------------------- */
+.acco .nav-item > a {
+    line-height: 50px;
+    display: block;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.nav-mobile.acco .catid92 .nav-item > a,
+.nav-mobile.acco .level1.nav-submenu .nav-item > a,
+.nav-mobile.acco .catid94 .nav-item > a,
+.nav-mobile.acco .nav-custom-link  .nav-item > a
+{
+    line-height: 45px;
+    display: block;
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+.nav-mobile.acco h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:17px;
+    color: #666666;
+    margin-left:-8px;
+    margin-bottom:18px;
+    padding-top:1rem;
+}
+.nav-mobile.acco .catid87 .nav-item > a{
+    margin-left:-16px;
+}
+
+.nav-mobile.acco a.nav-item.level2{
+    color: #353535 !important;
+}
+
+.nav-mobile.acco .nav-custom-link  .nav-item > a{
+    margin-left:40px;
+}
+
+.nav-mobile.acco .nav-custom-link  .nav-item a div{
+    margin-left:0;
+}
+
+.nav-mobile.acco .some-menu .nav-item > a{
+    line-height: 42px !important;
+}
+
+.nav-mobile.acco .some-menu{
+    margin-left:8px;
+    margin-top:20px;
+}
+
+.nav-mobile.acco .level1.nav-submenu .nav-item > a {
+      line-height: 45px;
+      display: block;
+      padding-left: 120px;
+      font-size: 17px;
+  }
+
+.nav-mobile.acco .level1.nav-submenu{
+    margin-bottom:10px;
+    margin-top:-5px;
+}
+
+.nav-mobile.acco .catid87 .nav-block{
+    margin-left:26px;
+}
+
+/* Level 1
+-------------------------------------------------------------- */
+.acco li.level0 > a {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.nav-mobile.acco li.level0 > a {
+    font-size: 17px;
+    text-transform: none;
+    font-weight:normal;
+    color:#808080 !important;
+    text-decoration:none;
+}
+
+/* Level 2
+-------------------------------------------------------------- */
+.acco li.level1 > a {
+    padding-left: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav-mobile.acco li.level1 > a {
+    padding-left: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left:15px;
+    margin-bottom:5px;
+}
+
+.nav-mobile.acco ul.level0{
+    margin-top:10px !important;
+}
+
+.nav-mobile.acco li.level1 > a {
+    padding-left: 10px;
+    font-size: 17px;
+    text-transform: none;
+    margin-left:35px;
+    margin-bottom:5px;
+    color:#666666;
+}
+
+.nav-mobile.acco li.level1 .opener {
+    background-color: transparent;
+}
+
+    /* Level 3
+    -------------------------------------------------------------- */
+.acco li.level2 > a {
+    padding-left: 50px;
+    font-size: 16px;
+    text-transform: none;
+}
+
+/* Level 4
+-------------------------------------------------------------- */
+.acco li.level3 > a
+{
+    padding-left: 70px;
+    font-size: 14px;
+    text-transform: none;
+}
+
+/* Level 5+
+-------------------------------------------------------------- */
+.acco li.level3 .nav-item > a
+{
+    padding-left: 90px;
+    font-size: 12px;
+    text-transform: none;
+}
+
+
+
+/* Opener
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.acco .opener {
+    font-size:2.4em;
+    position:absolute;
+    right:0;
+    top:0;
+    display:block;
+    cursor:pointer;
+    text-align:right;
+    font-family: ThemeIcons;
+    color:#cccccc;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    padding-right:20px;
+    -webkit-transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+}
+
+.nav-mobile.acco{
+    text-align:left;
+}
+
+.nav-mobile.acco li.level1 .opener{
+    right:-7px;
+    height:10px;
+    line-height:10px;
+    color:#999999;
+    width: 50%;
+}
+
+.nav-mobile.acco .catid3 li.level1 .opener,
+.nav-mobile.acco .catid94 li.level1 .opener{
+    right:0;
+    height:50px;
+    line-height:50px;
+    color:#999999;
+}
+
+/*
+.acco .opener:hover {
+    background-color:rgba(0,0,0, 0.05);
+}
+*/
+
+
+.accordion .opener::before, .acco .opener::before {
+    content: "\e261";
+}
+
+.accordion li.item-active > .opener::before, .acco li.item-active > .opener::before {
+    content: "\e262";
+}
+
+
+
+/* *************************************************************************************************************
+****************************************************************************************************************
+ SIDEBAR MENU **************************************************************************************************
+****************************************************************************************************************
+************************************************************************************************************* */
+
+
+
+
+
+/* Simple vertical accordion in sidebar menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.sideacco {
+    float: left;
+    width: 100%;
+}
+
+/* Number of products in category */
+.sideacco .number {
+    color: #aaa;
+    margin-left: 3px;
+}
+
+
+/* Category labels inside vertical menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* All levels */
+.sideacco li > a > span > .cat-label {
+    position: static;
+    display: inline-block !important;
+    padding: 0 4px;
+    margin-left: 3px;
+}
+
+/* Hide pin */
+.sideacco li > a > span > .pin-bottom:before {
+    display: none;
+}
+
+/* Miomente MegaMenu-Styles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+.nav-regular li.level0 > a > span {
+    margin-right:5px;
+}
+
+.navi-wrapper {
+    background-color: #ffffff !important;
+    z-index:1000;
+}
+
+.inner-container{
+    border-bottom:1px solid #eeeeee;
+}
+
+.nav-panel-inner{
+    border-top:1px solid #eeeeee;
+}
+
+.nav-item.level-top.nav-item--parent a{
+    color:#000000;
+}
+
+.nav-item.level0.level-top.nav-item--parent a:hover, .nav-item.level0.level-top.nav-item--parent a.active{
+    background-color:transparent;
+    color:#000000;
+}
+
+.nav-mobile .nav-item.level-top.nav-item--parent a:hover, .nav-mobile .nav-item.level-top.nav-item--parent a.active{
+    background-color:#a62778;
+    color:#a62778 !important;
+    text-decoration:none;
+}
+
+/*
+.nav-mobile .nav-item.level-top.nav-item--parent a{
+    color:#666666 !important;
+    text-decoration:none;
+}
+*/
+
+.nav-item.level-top.nav-item--parent a.level-top{
+    color:#666666;
+    cursor:pointer !important;
+}
+
+
+/*
+.nav-item .level-top a:hover{
+    background-color:#9ea2a4;
+    color:#ffffff;
+}
+*/
+
+
+/* Link Entdeckermagazin */
+/*
+.nav-item.catid94.level0 a{
+    color:#ffffff;
+}
+
+.nav-item.catid94.level0 a:hover{
+    background-color:#9ea2a4;
+}
+*/
+
+
+.navhover{
+    background-color:#9ea2a4;
+    color:#ffffff;
+}
+
+.nav-regular .nav-panel--dropdown{
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.15);
+}
+
+#dim {
+    display: none;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index:100;
+}
+
+li.nav-item.level1 a{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 42px 42px;
+}
+
+li.nav-item.level1 a div{
+    margin-left: 45px;
+}
+
+
+li.nav-item.level2 a div{
+    margin-left:0px;
+}
+
+/* Stadtauswahl */
+.catid93{
+    display:none !important;
+}
+
+#mainmenu .nav-item.catid92{
+    margin-right:60px;
+}
+
+    .nav-regular .nav-item.nav-1.level0.level-top {
+        background-color: transparent;
+        color: #666666;
+    }
+
+.nav-item.nav-1.level-top.nav-item--parent a {
+    color: #666666;
+    text-decoration:none;
+}
+
+.megacitylist .item-inline{
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+.megacitylist a.item-inline{
+    color:#444 !important;
+}
+
+.megacitylist .item-inline:hover{
+    background-color: transparent !important;
+}
+
+.megacitylist .item-inline .citylistwrapper{
+    box-sizing: content-box;
+    width:108px;
+    height:85px;
+    background-color:#9cb9bd;
+    margin-right:14px;
+    margin-bottom:14px;
+}
+
+.megacitylist .item-inline .cityliststorename{
+    line-height:12px !important;
+    font-size:11px;
+    text-transform:uppercase;
+    margin-top:3px;
+    margin-left:8px;
+    padding-top: 0 !important;
+}
+
+.megacitylist .item-inline .citylistwrapper figure {
+    box-sizing: content-box;
+    width: 108px;
+    height: 67px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.megacitylist .item-inline .citylistwrapper figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    width: 108px;
+    height: 67px;
+}
+
+.megacitylist .item-inline .citylistwrapper figure img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.nav-item.level-top.nav-item--parent .megacitylist a:hover{
+    color:#93216a;
+}
+
+.nav-panel .wrapper-column3{
+    margin-top:-60px;
+}
+
+
+
+
+/* UltraMegaMenublocks begin */
+
+.menublocks{
+    margin-bottom:18px;
+}
+
+.menublocks.geschenkboxen{
+    margin-bottom:0;
+}
+
+.menublocks .item-inline{
+    display: inline-block;
+    height:100px;
+}
+
+.menublocks h5{
+    margin-bottom: 5px;
+}
+
+.menublocks .item-inline:hover{
+    background-color: transparent !important;
+}
+
+.menublocks .item-inline .productlistwrapper{
+    width:96px;
+    height:66px;
+    margin-right:8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menublocks .item-inline .productlistwrapper figure {
+    width: 96px;
+    height: 66px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.menublocks.topseller.boxen{
+    margin-left: -8px;
+    margin-top: 8px;
+}
+
+.nav-item .geschenkboxen_mobile h5{
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.menublocks.topseller.boxen .item-inline{
+    height:180px;
+}
+
+.menublocks.all_boxen .item-inline .productlistwrapper{
+    width:305px;
+    height:146px;
+}
+
+.menublocks.all_boxen .item-inline .productlistwrapper figure{
+    width: 250px;
+    height:160px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menublocks.geschenkboxen .item-inline{
+    width:305px;
+    height:136px;
+}
+
+.menublocks.geschenkboxen .item-inline .productlistwrapper{
+    width:305px;
+    height:136px;
+}
+
+.menublocks.geschenkboxen .item-inline .productlistwrapper figure{
+    width:305px;
+    height:254px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.menublocks.all_boxen .item-inline{
+    width:250px;
+    height:160px;
+    margin-bottom:12px;
+}
+
+
+.menublocks.topseller.boxen .item-inline .productlistwrapper{
+    width:240px;
+    height:180px;
+    margin-right:28px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menublocks.topseller.boxen .item-inline .productlistwrapper figure {
+    width: 240px;
+    height: 180px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+.menublocks .item-inline .productliststorename{
+    font-size:11px;
+    text-transform:uppercase;
+    margin-top:3px;
+    margin-left:8px;
+}
+
+.menublocks .item-inline .productlistwrapper figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.menublocks .item-inline .productlistwrapper figure img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.menublocks .item-inline .productlistname{
+    font-size:10px;
+    line-height:12px;
+    height:20px;
+
+}
+
+.menublocks a:hover{
+    color:#93216a !important;
+}
+
+.catid87 .menublocks,
+.catid87 .nav-regular{
+    margin-left:-10px;
+}
+
+.stadtauswahllink a:hover, .stadtauswahllink a{
+    color:#93216a !important;
+    background-color:transparent !important;
+}
+
+@media only screen and (min-width: 1367px) {
+
+    /* Desktop Menuitems with Linebreak */
+    li.nav-item.level1 a div.cat71,
+    li.nav-item.level1 a div.cat82,
+    li.nav-item.level1 a div.cat60,
+    li.nav-item.level1 a div.cat63,
+    li.nav-item.entdeckermagazin a div.catwp-17280{
+        line-height: 20px;
+        margin-bottom:-6px;
+    }
+
+    li.nav-item.level1 a div.cat60{
+        width:105px;
+        overflow-wrap: break-word;
+    }
+
+    li.nav-item.level1 a div.cat63{
+        width:105px;
+        overflow-wrap: break-word;
+    }
+
+
+
+    /* Genuss-Events */
+    .catid3 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 473px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 812px top repeat-y;
+    }
+
+    .header-entdeckermagazin
+
+    /* Geschenkboxen */
+    .catid87 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 301px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 560px top repeat-y;
+    }
+
+    /* Geschenkideen*/
+    .catid6 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 280px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 558px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 870px top repeat-y;
+    }
+
+    .header-entdeckermagazin .catid6 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 275px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 558px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 895px top repeat-y;
+    }
+
+    /* Firmen-Events */
+    .catid21 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 266px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 587px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 875px top repeat-y;
+    }
+
+    .header-entdeckermagazin .catid21 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 266px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 602px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 898px top repeat-y;
+    }
+
+    /* Entdeckermagazin */
+    .catid94 .nav-panel-inner {
+        background: url('../../../images/ultramegamenu/bg-nav-border-top.png') left top repeat-x,
+        url('../../../images/ultramegamenu/bg-nav-border-bottom.png') left bottom repeat-x,
+        url('../../../images/ultramegamenu/bg-nav.png') 297px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 579px top repeat-y,
+        url('../../../images/ultramegamenu/bg-nav.png') 861px top repeat-y;
+    }
+}
+.navi h3{
+    font-size: 1.3333em;
+}
+
+.navi .nav-block--top .first{
+    margin-left:0;
+}
+
+/* Firmen-Events Content 1 */
+
+.menublocks.firmenevents.content1 .imagewrapper figure {
+    width: 260px;
+    height: 195px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menublocks.firmenevents.content1 figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.menublocks.firmenevents.content1 figure img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.menublocks.firmenevents.content2 .imagewrapper figure {
+    width: 260px;
+    height: 195px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menublocks.firmenevents.content2 figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.menublocks.firmenevents.content2 figure img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#mainmenu .std{
+    padding-left:0 !important;
+    padding-top:0 !important;
+}
+
+#mainmenu .std ul li {
+    margin: 0;
+}
+
+#mainmenu ul, #mainmenu li {
+    margin: 0;
+}
+
+
+#mainmenu .aboutpagemenu .nav-regular{
+    width:200px;
+    margin-left:-10px;
+}
+
+#mainmenu .aboutpagemenu .nav-regular li.nav-item.level1 a div{
+    margin-left:0;
+}
+
+#mainmenu .aboutpagemenu .nav-regular .nav-submenu--mega  > .nav-item > a{
+    line-height:22px;
+}
+
+.menublocks.aboutpage.content2 .imagewrapper figure {
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menublocks.aboutpage.content2 figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.menublocks.aboutpage.content2 figure img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.nav-panel-inner .nav-item.level1 a.hvr-grow,
+.nav-panel-inner .nav-item.level1 a.hvr-grow:hover,
+.nav-panel-inner .nav-item.level1 a.hvr-pop,
+.nav-panel-inner .nav-item.level1 a.hvr-pop:hover{
+    background-color: transparent;
+    color:#000000;
+    text-decoration: none;
+}
+
+.nav-mobile.acco .nav-panel-inner .nav-item.level1 a.hvr-grow,
+.nav-mobile.acco .nav-panel-inner .nav-item.level1 a.hvr-grow:hover,
+.nav-mobile.acco .nav-panel-inner .nav-item.level1 a.hvr-pop,
+.nav-mobile.acco .nav-panel-inner .nav-item.level1 a.hvr-pop:hover{
+    background-color: transparent;
+    color:#000000;
+}
+
+.nav-mobile.acco .nav-panel-inner .nav-item.level2 a.hvr-grow,
+.nav-mobile.acco .nav-panel-inner .nav-item.level2 a.hvr-grow:hover,
+.nav-mobile.acco .nav-panel-inner .nav-item.level2 a.hvr-pop,
+.nav-mobile.acco .nav-panel-inner .nav-item.level2 a.hvr-pop:hover{
+    background-color: transparent;
+    color:#353535;
+}
+
+li.nav-item.noicon a div {
+    margin-left: 0px;
+}
+
+.nav-regular .nav-submenu--mega > .nav-item.noicon > a{
+    line-height: 18px;
+    padding-left:0px;
+}
+
+
+/*
+.nav-item--only-blocks .nav-panel--dropdown{
+    display:block !important;
+}
+*/
+
+.catid21 .nav-panel--dropdown h3,
+.catid3 .nav-panel--dropdown h3
+{
+    margin-bottom: -8px;
+}
+
+.catid6 .nav-panel--dropdown .nav-block--center{
+    margin-top: -8px;
+}
+
+.nav-item.entdeckermagazin a{
+    background-size:22px 22px;
+}
+
+li.nav-item{
+    list-style-type: none;
+}
+
+.nav-panel--dropdown .nav-block--top h3 a:hover,
+.nav-item.level-top.nav-item--parent h5 a:hover{
+    background-color:transparent !important;
+    color:#93216a !important;
+}
+
+.catid3 li.classic:hover > .nav-panel--dropdown {
+    left: 100px !important;
+    top: 32px !important;
+}
+
+.wpmenu.mobile a.icon{
+    background-position: 65px top !important;
+}
+
+input[type="search"].suche {
+    line-height: 2.8rem;
+    height: 35px;
+    padding: 0 0.8rem;
+    width: 100%;
+    transition: all 0.3s;
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+    outline: none !important;
+    vertical-align: top;
+    text-transform: none;
+    color: inherit;
+    font: inherit;
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.suche::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: 0.6 !important;
+    font-style: normal !important;
+}
+.suche::-moz-placeholder { /* Firefox 19+ */
+    opacity: 0.6 !important;
+    font-style: normal !important;
+}
+.suche:-ms-input-placeholder { /* IE 10+ */
+    opacity: 0.6 !important;
+    font-style: normal !important;
+}
+.suche:-moz-placeholder { /* Firefox 18- */
+    opacity: 0.6 !important;
+    font-style: normal !important;
+}
+
+/*
+.catid3{
+    display:block !important;
+}
+*/
+
+
+@media only screen and (max-width: 1024px) {
+    .hide-below1024{
+        display:none !important;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .hide-above1024{
+        display:none !important;
+    }
+}
+
+.nav-panel-inner{
+    z-index:1100;
+}
+
+#mainmenu .submenu_headline{
+    font-size: 1.333em;
+    color:#000000;
+}
+
+
+#mainmenu .submenu_headline a,
+#mainmenu .submenu_headline a:hover,
+#mainmenu .submenu_headline a:active{
+    /*background-color:transparent;*/
+    color:#000000;
+    text-decoration:none
+}
+
+#mainmenu .submenu_headlineh5{
+    font-size: 1.3333em;
+    line-height: 1.1428em;
+    margin-bottom: 10px;
+    color:#000000;
+}
+
+#mainmenu .submenu_headlineh5 a,
+#mainmenu .submenu_headlineh5 a:hover,
+#mainmenu .submenu_headlineh5 a:active{
+    font-size: 16px;
+    line-height: 1.1428em;
+    margin-bottom: 5px;
+    color:#000000 !important;
+    background-color:transparent;
+    text-decoration:none;
+}
+
+#mainmenu,
+.navi-wrapper,
+.nav-holders-wrapper,
+.nav
+{
+    background-color:#ffffff !important;
+}
+
+
+    .nav-mobile #nav-item-stadtauswahl {
+        display: none;
+    }
+

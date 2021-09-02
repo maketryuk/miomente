@@ -1,0 +1,149 @@
+/* Talos - Animated Horizontal Submenu (Theme 1) */
+	
+/* ========== THE MAIN FONT ========== */
+      
+/* ========== MAIN DIV THAT HOLDS THE ENTIRE MENU ========== */
+.menu_container{
+        
+	min-width:1170px !important;
+	height:100px;
+	
+	background:#e7e7e4;
+	
+	overflow:hidden;
+	
+	}
+.menu{
+	height:36px;
+	background:#511743;
+        border-bottom:2px solid #ffffff;
+	}
+        
+        
+        .menu li.level{
+            border-right:1px solid #ffffff;    
+        }
+        
+        .menu li.level > a{
+            text-transform: uppercase;
+            color:#ffffff;
+        }
+        
+/* ========== DIV THAT HOLDS MAIN LINKS ========== */
+.menu ul{
+	margin:0;
+	padding:0;
+	position:relative;
+	float:left;
+	list-style:none;
+	}
+/* ========== MAIN LINKS ========== */
+.menu ul li{
+	float:left;
+	}
+.menu ul li a{
+        display:block;
+	height:36px;
+	padding:0 13px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        
+        line-height:35px;
+	color:#FFF;
+	text-decoration:none;
+	/*border-right:solid 1px #1E1E1E;*/
+	/*
+        -webkit-transition:color 170ms linear 20ms, background 170ms linear 20ms;
+	-moz-transition:color 170ms linear 20ms, background 170ms linear 20ms;
+	-ms-transition:color 170ms linear 20ms, background 170ms linear 20ms;
+	-o-transition:color 170ms linear 20ms, background 170ms linear 20ms;
+	transition:color 170ms linear 20ms, background 170ms linear 20ms;
+        */
+	}
+/* ========== Safari Fix ========== */
+.menu ul li:first-child a{
+	border-top-left-radius:3px;
+	}
+/* ========== MAIN LINKS ON MOUSEOVER ========== */
+.menu > ul > li.current > a, .menu > ul > li.current:hover > a, .menu > ul > li:hover > a{
+	color:#ffffff;
+	background:#93216a;
+	}
+/* ========== MAIN LINKS ON MOUSE CLICK ========== */	
+.menu > ul > li > a:active, .menu ul > li.current > a:active{
+	background:#ad3689;
+	}
+/* ========== SUBMENU ========== */	
+.menu ul ul{
+	width:1200px;
+	height:60px;
+	position:absolute;
+	left:0;
+	visibility:hidden;
+	opacity:0;
+	}
+.animation-1 ul ul, .no-js ul ul{
+	-webkit-transition:all 170ms linear 10ms;
+	-moz-transition:all 170ms linear 10ms;
+	-ms-transition:all 170ms linear 10ms;
+	-o-transition:all 170ms linear 10ms;
+	transition:all 170ms linear 10ms;
+	}
+.animation-2 ul ul, .animation-3 ul ul, .animation-4 ul ul{
+	-webkit-transition:all 250ms ease-out 10ms;
+	-moz-transition:all 250ms ease-out 10ms;
+	-ms-transition:all 250ms ease-out 10ms;
+	-o-transition:all 250ms ease-out 10ms;
+	transition:all 250ms ease-out 10ms;
+	}
+.animation-2 ul ul{
+	margin-top:31px;
+	}	
+.animation-3 ul ul{
+	margin-left:38px;
+	}
+.animation-4 ul ul{
+	margin-left:-42px;
+	}	
+.menu ul li.current ul{
+	visibility:visible;
+	opacity:1;
+	margin:0;
+	}
+/* ===== JavaScript Is Disabled ===== */	
+.no-js ul:hover li.current ul{
+	visibility:hidden;
+	opacity:0;
+	}
+.no-js ul li.current ul, .no-js ul li.current:hover ul, .no-js ul li:hover ul{
+	display:block;
+	visibility:visible;
+	opacity:1;
+	}
+/* ========== LINKS IN SUBMENU ========== */
+/*
+.menu ul ul li.current{
+	background:#9e9e9e;
+	}
+*/
+.menu ul ul li a{
+	text-align:left;
+        display:block;
+        margin:10px 10px;
+	padding:0px;
+	font-size:14px;
+	color:#6c6f73;
+	line-height:20px;
+	border-right:none;
+	-webkit-transition-duration:140ms;
+	-moz-transition-duration:140ms;
+	-ms-transition-duration:140ms;
+	-o-transition-duration:140ms;
+	transition-duration:140ms;
+	}
+.menu ul ul li:first-child a{
+	margin-left:13px;
+	}
+/* ========== LINKS ON MOUSEOVER IN SUBMENU ========== */
+.menu ul ul li.current a, .menu ul ul li a:hover{
+	color:#93216a;
+	}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ac541aa2-ba3a-4094-a41c-82b8dd08b37e" name="develop1.miomente.de" url="http://develop1.miomente.de">
+        <fileTransfer host="develop1.miomente.de" port="21" password="dfc7dff9dfc9dfe2df9fdf9edf9e" username="deploy@develop1.miomente.de">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

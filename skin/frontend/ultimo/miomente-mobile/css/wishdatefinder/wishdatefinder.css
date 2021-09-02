@@ -1,0 +1,150 @@
+.boxsizing {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.wishdatefinderSearchForm .icon_calendar {
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    cursor: pointer;
+}
+
+.wishdatefinderSearchForm .datefieldwrapper {
+    position: relative;
+    width: 112px
+}
+
+.wishdatefinderSearchForm #order {
+    width: 120px;
+}
+
+.wishdatefinderSearchForm .wrapper {
+
+    display: block;
+    padding-bottom: 11px;
+    color: #333;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+
+}
+
+.wishdatefinderSearchForm .bootstrap {
+    background-color: transparent !important;
+}
+
+.wishdatefinderSearchForm .bootstrap label {
+    font-weight: normal;
+}
+
+.wishdatefinderSearchForm .bootstrap a{
+    text-decoration:none;
+}
+
+.wishdatefinderSearchForm button.button span {
+    background-color: #93216a !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    color: #fff;
+}
+
+.wishdatefinderSearchForm button.button:hover span {
+    background-color: #a52777 !important;
+}
+
+.wishdatefinderSearchForm h5 {
+    font-weight: bold;
+}
+
+.wishdatefinderSearchForm label.we {
+    display: block;
+    float: left;
+    margin-top: 3px;
+    display: block;
+    float: left;
+    margin-right: 7px;
+}
+
+.wishdatefinderSearchForm .buttonwrapper {
+    padding-top: 33px;
+}
+
+.wishdatefinderResult .date {
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.wishdatefinderResult .statusmessage {
+    height: 37px;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.wishdatefinderResult .statusmessage .inner{
+    margin-top:4px;
+    margin-left:10px;
+}
+
+.statusmessage a.backlink {
+    font-weight: normal;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.statusmessage p {
+    margin-left: 6px;
+}
+
+.statusmessage #backlink {
+    float: right;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.wishdatefinderSearchForm .grid12-3 {
+    padding-left: 12px;
+}
+
+.wishdatefinderSearchForm .buttonwrapper .inner {
+    margin-left: 0px;
+}
+
+.wishdatefinderSearchForm .multiselectwrapper .inner {
+    margin-left: 0px;
+}
+
+.wishdatefinderSearchForm .headlinewrapper {
+    padding-left: 11px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    height: 30px;
+}
+
+.wishdatefinderSearchForm .headlinewrapper h4 {
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+.wishdatefinderSearchForm .grid12-3 .item{
+    text-align: center;
+}
+
+.wishdatefinderResult .category-products{
+    margin-top:20px;
+}
+
+.wishdatefinderResult .statusspace{
+    height:30px;
+}
+
+
+.wishdatefinderSearchForm .bootstrap input[type="checkbox"]{
+    pointer-events:auto;
+    height:14px;
+}
+
+.catalogsearch-result-index .wishdatefinderSearchForm .headlinewrapper{
+    margin:0;
+}

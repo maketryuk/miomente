@@ -1,0 +1,223 @@
+
+#amgiftwrap-loading {
+    visibility:hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -22px;
+    background-position: 0 -108px;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 8060;
+}
+
+#amgiftwrap-loading div{
+    width: 68px;
+    height: 68px;
+    background: url('../../../images/amgiftwrap/amgiftwrap_loader.gif') center center no-repeat;
+}
+
+div.cart-shipping-chooser{
+    background-color:#e7e7e4;
+    margin-bottom:16px;
+    padding-top:8px;
+    padding-bottom:8px;
+}
+
+div.cart-shipping-chooser .giftbox-headline{
+    line-height: 30px;
+    text-align:center;
+}
+
+div.cart-shipping-chooser h2{
+    font-size:17px;
+
+}
+
+div.cart-shipping-chooser label{
+    cursor:pointer;
+}
+
+/* Form Styling
+
+
+
+/* remove standard-styles */
+.cart-shipping-chooser input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:none;
+    border-radius: 0;
+    font-size: 1em;
+    width: 100%
+}
+
+/* graceful degradation for ie8 */
+.cart-shipping-chooser input[type='checkbox'],
+.cart-shipping-chooser input[type='radio'] {
+    width:auto;
+    float:left;
+    margin-right: .75em;
+    background:transparent;
+    border:none;
+}
+
+.cart-shipping-chooser input[type='checkbox']:checked,
+.cart-shipping-chooser input[type='checkbox']:not(:checked),
+.cart-shipping-chooser input[type='radio']:checked,
+.cart-shipping-chooser input[type='radio']:not(:checked) {
+    background: transparent;
+    position: relative;
+    visibility: hidden;
+    margin:0;
+    padding:0;
+}
+
+.cart-shipping-chooser input[type='checkbox'] + label,
+.cart-shipping-chooser input[type='radio'] + label {
+    cursor: pointer;
+}
+
+
+.cart-shipping-chooser input[type='checkbox']:checked + label::before,
+.cart-shipping-chooser input[type='checkbox']:not(:checked) + label::before,
+.cart-shipping-chooser input[type='radio']:checked + label::before,
+.cart-shipping-chooser input[type='radio']:not(:checked) + label::before {
+    content:' ';
+    display:inline-block;
+    width: 17px;
+    height:17px;
+    position: relative;
+    top:4px;
+    border: 1px solid #bbb;
+    background: white;
+    margin-right: 0.2em;
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+.cart-shipping-chooser input[type=radio]:checked + label::before,
+.cart-shipping-chooser input[type=radio]:not(:checked) + label::before {
+    border-radius: 30px;
+}
+
+.cart-shipping-chooser input[type='checkbox']:hover  + label::before,
+.cart-shipping-chooser input[type='radio']:hover  + label::before {
+    background:#ddd;
+    box-shadow: inset 0 0 0 2px white;
+}
+
+.cart-shipping-chooser input[type='checkbox']:checked  + label::before,
+.cart-shipping-chooser input[type='radio']:checked  + label::before {
+    background:#93216a;
+    box-shadow: inset 0 0 0 2px white;
+}
+
+.cart-shipping-chooser .radiobox{
+    width: 167px;
+    text-align: center;
+    padding-top:16px;
+    padding-bottom:16px;
+}
+
+img.giftwrapthumbnail{
+    width:167px;
+}
+
+.giftbox_thumbnail{
+    margin-right:10px;
+    margin-top:12px;
+}
+
+.separatewrap_wrapper{
+    padding-top:10px;
+}
+
+#geschenkbrief .separatewrap_wrapper,
+#pdf .separatewrap_wrapper{
+    padding-top:10px;
+}
+
+#geschenkbrief .description{
+    padding-top:4px;
+}
+
+.separatewrap{
+    padding-top:4px;
+    padding-bottom: 4px;"
+}
+
+
+#pdf .description{
+    padding-top:0px;
+}
+
+#giftwrap .separatewrap_wrapper{
+    padding-top:0px;
+}
+
+#giftwrap .amgiftwrap-cart-button-text{
+    margin-top:10px;
+}
+
+.amgiftwrap-cart-button-text {
+    margin-top: 4px;
+}
+
+#geschenkbrief .amgiftwrap-cart-button-text {
+    margin-top: 10px;
+}
+
+.cart-shipping-chooser .shippingnote2{
+    margin-left:12px;
+}
+
+.cart-shipping-chooser .shippingnote{
+    margin-bottom:10px;
+}
+
+.cart-shipping-chooser .shippingnote1{
+    margin-right:8px;
+}
+
+.cart-shipping-chooser .headline_pdf, .mobile .cart-shipping-chooser .headline_geschenkbrief{
+    margin-left:2px;
+    margin-bottom:2px;
+}
+
+#giftwrap h2{
+    line-height:1.2em;
+}
+
+.cart-shipping-chooser .fancybox.fancyboxtextlink{
+    margin-left:0px !important;
+}
+
+
+@media only screen and (max-width: 460px) {
+
+    img.giftwrapthumbnail{
+        width:100%;
+    }
+
+    .cart-shipping-chooser .radiobox{
+        text-align: center;
+        width:100%;
+        padding-top:16px;
+        padding-bottom:16px;
+    }
+
+    div.cart-shipping-chooser .giftbox-headline{
+        margin-top:20px;
+    }
+}
+
+/* width < 768px */
+/*
+@media only screen and (max-width: 767px) {
+    .mobile img.giftwrapthumbnail{
+        width:100%;
+    }
+}
+*/

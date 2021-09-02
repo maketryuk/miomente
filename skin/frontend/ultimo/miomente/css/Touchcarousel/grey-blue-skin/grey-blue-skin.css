@@ -1,0 +1,200 @@
+/******************************************************\
+*
+*  Grey-Blue skin
+*
+*    1. Arrows(direction) navigation
+*    2. Paging navigation
+*
+\******************************************************/
+
+
+
+/******************************************************\
+*
+*  1. Arrows (direction) navigation
+*
+\******************************************************/
+.touchcarousel.grey-blue .arrow-icon {	
+	background-image: url('sprite.png');
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 19px;	
+	margin-top: -9px;
+}
+.touchcarousel.grey-blue .arrow-holder {
+	width: 19px;
+	height: 100%;
+	-moz-opacity: 1;	
+	-webkit-opacity: 1;	
+	opacity: 1;	
+}
+.touchcarousel.grey-blue .arrow-holder.left {
+	left: -20px;
+}
+.touchcarousel.grey-blue .arrow-holder.right {	
+	right: -20px;
+}
+
+.touchcarousel.grey-blue .arrow-icon.left {
+	left: 0;
+	background-position: -6px -15px;
+}
+.touchcarousel.grey-blue .arrow-icon.right {
+	right: 0;
+	background-position: -186px -15px;
+}
+.touchcarousel.grey-blue .arrow-holder:hover .arrow-icon.left {
+	background-position: -36px -15px;
+}
+.touchcarousel.grey-blue .arrow-holder:hover .arrow-icon.right {
+	background-position: -156px -15px;
+}
+.touchcarousel.grey-blue .arrow-holder.disabled .arrow-icon.left {
+	background-position: -66px -15px;
+}
+.touchcarousel.grey-blue .arrow-holder.disabled .arrow-icon.right {
+	background-position: -126px -15px;
+}
+.touchcarousel.grey-blue .arrow-holder:hover {
+	-moz-opacity: 1;	
+	-webkit-opacity: 1;	
+	opacity: 1;	
+}
+.touchcarousel.grey-blue .arrow-holder:active .arrow-icon {
+	margin-top: -8px;
+}
+.touchcarousel.grey-blue .arrow-holder.disabled {
+	-moz-opacity: 1;	
+	-webkit-opacity: 1;	
+	opacity: 1;	
+}
+
+/******************************************************\
+*
+*  2. Paging navigation
+*
+\******************************************************/
+
+.touchcarousel.grey-blue .tc-paging-item {
+	background: url('sprite.png') no-repeat -95px -4px;
+	
+	width: 16px;
+	height: 16px;	
+	
+	-moz-opacity: 0.8;	
+	-webkit-opacity: 0.8;	
+	opacity: 0.8;	
+}
+.touchcarousel.grey-blue .tc-paging-item.current {	
+	background: url('sprite.png') no-repeat -95px -22px;
+}
+.touchcarousel.grey-blue .tc-paging-item:hover {		
+	-moz-opacity: 1;	
+	-webkit-opacity: 1;	
+	opacity: 1;		
+}
+
+
+
+/**
+* Carousel with image and text, custom skinned scrollbar for miomente
+**/
+#carousel-image-and-text {
+	width: 1176px;
+	height: 84px;
+	margin: 0 auto;
+	margin-left:12px;
+}
+#carousel-image-and-text .arrow-holder {
+	height: 68px;
+}
+#carousel-image-and-text .touchcarousel-item {
+	margin-right: 11px;
+	width: 108px;
+	height: 68px;
+}
+#carousel-image-and-text .item-block {
+	width: 108px;
+	height: 68px;
+	display: block;
+	text-align: center;
+}
+#carousel-image-and-text .item-block img,
+#carousel-image-and-text .item-block p {
+	float: left;
+	position: relative;
+	display: block;
+	margin: 0;
+}
+
+#carousel-image-and-text .item-block h4{
+	float: left;
+	position: relative;
+	display: block;
+	margin: 0;
+	width:100%;
+	text-align: center;
+}
+
+#carousel-image-and-text .item-block img {
+	width: 108px;
+	height: 68px;
+	border: 0;
+	padding: 0;
+}
+
+#carousel-image-and-text .item-block {
+	text-decoration: none;
+	color: inherit;
+
+}
+#carousel-image-and-text .item-block h4, h4.storename {
+	text-transform: uppercase;
+	margin-top: -40px;
+	font: normal 12px Helvetica, Arial, sans-serif;
+	color: #434446;
+	-webkit-transition: color 0.2s ease-out;
+	-moz-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
+}
+#carousel-image-and-text .item-block:hover h4 {
+	color: #93216a;
+}
+#carousel-image-and-text .item-block p {
+	font: normal 13px/20px Helvetica, Arial, sans-serif;
+	color: #434446;
+	width: 158px;
+	padding: 0 0 0 6px;
+}
+#carousel-image-and-text .scrollbar-holder {
+	background: #CED7DB;
+	bottom: 0;
+	height: 1px;
+	left: 0;
+	right: 0;
+}
+#carousel-image-and-text .scrollbar {
+	background-color: #93216a !important;
+	bottom: 0;
+}
+
+div.touchcarousel_textlinks{
+	margin-top:16px;
+	margin-bottom:6px;
+	border-bottom:1px solid #d9d9d9;
+}
+
+div.touchcarousel_textlinks a{
+	text-decoration:none;
+}
+
+div.touchcarousel_textlinks a:hover{
+	color:#93216a;
+	text-decoration:underline;
+}
+
+
+
+
+
+
