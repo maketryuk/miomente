@@ -84,11 +84,11 @@ jQuery(document).ready(function() {
 		}
 	});
 
-	jQuery('a[href^="#"]:not([data-toggle])').click(function() {
-		if (jQuery(jQuery(this).attr('href') + '.tab-pane').length) {
-			jQuery('a[href="' + jQuery(this).attr('href') + '"][data-toggle]').trigger('click');
-		}
-	});
+	// jQuery('a[href^="#"]:not([data-toggle])').click(function() {
+	// 	if (jQuery(jQuery(this).attr('href') + '.tab-pane').length) {
+	// 		jQuery('a[href="' + jQuery(this).attr('href') + '"][data-toggle]').trigger('click');
+	// 	}
+	// });
 
 	jQuery('[data-toggle="modal"]').click(function() {
 		var currModal = jQuery(jQuery(this).attr('data-target'));

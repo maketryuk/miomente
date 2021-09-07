@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraph.org/schema/" xml:lang="de" lang="de">
 <head>
-<!-- 
-    <link rel="preload" href="skin/frontend/ultimo/default/fonts/ThemeIcons.woff?387osh" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="skin/frontend/ultimo/default/fonts/FilsonProMedium.woff" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="skin/frontend/ultimo/default/fonts/FilsonProBook.woff" as="font" type="font/woff2" crossorigin> -->
+
+    <link rel="preload" href="../../skin/frontend/ultimo/default/fonts/ThemeIcons.woff?387osh" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="../../skin/frontend/ultimo/default/fonts/FilsonProMedium.woff" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../skin/frontend/ultimo/default/fonts/FilsonProBook.woff" as="font" type="font/woff2" crossorigin>
 
     <link rel="preload" href="fonts/FilsonPro-Regular.woff" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/FilsonPro-Book.woff" as="font" type="font/woff2" crossorigin>
@@ -149,6 +149,9 @@
             href="../../skin/frontend/ultimo/default/css/goldenwebage/slick-carousel@1.8.1/slick.css" media="all"/>
     <link
             rel="stylesheet" type="text/css" href="../../skin/frontend/base/default/css/amscroll.css" media="all"/>
+
+    <link 
+            rel="stylesheet" type="text/css" href="css/simplebar.css" media="all"/>
     <link
             rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
 
@@ -194,6 +197,9 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
     <script type="text/javascript" src="../../skin/frontend/ultimo/default/js/goldenwebage/custom.js"></script>
     <script type="text/javascript" src="../../skin/frontend/ultimo/default/js/gmaps/gmaps.js"></script>
     <script type="text/javascript" src="../../js/ebizmarts/mailchimp/campaignCatcher.js" async></script>
+
+
+    <script type="text/javascript" src="js/simplebar.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 
@@ -593,7 +599,7 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                 <div class="hero">
                   <div class="container">
                     <div class="dropdown-wrapper">
-                      <div class="dropdown__trigger">
+                      <div class="hero__trigger">
                         Genuss Events <span class="ellipse">online</span> oder in <span>deiner Stadt</span>
                         <img src="images/icons/arrow-dropdown.svg" alt="Arrow Dropdown Icon">
                       </div>
@@ -619,6 +625,9 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     <a href="#" class="scroll-down">
                       <img src="images/icons/arrow-scroll.svg" alt="Arrow Scroll Icon">
                     </a>
+                    <div class="show-more">
+                      <button>Mehr anzeigen</button>
+                    </div>
                   </div>
                 </div>
                 <div class="seller">
@@ -774,22 +783,19 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                         <div class="safe-item__icon">
                           <img src="images/icons/discount.svg" alt="Card With GiftBox Icon">
                         </div>
-                        <span>Immer einlösbar,</span>
-                        <span>ohne fixen Termin</span>
+                        <span>Immer einlösbar, ohne fixen Termin</span>
                       </div>
-                      <div class="safe-item calendar">
+                      <div class="safe-item">
                         <div class="safe-item__icon">
                           <img src="images/icons/safe-calendar.svg" alt="Calendar Icon">
                         </div>
-                        <span>3 Jahre</span>
-                        <span>gültig</span>
+                        <span>3 Jahre gültig</span>
                       </div>
                       <div class="safe-item">
                         <div class="safe-item__icon">
                           <img src="images/icons/trade.svg" alt="Trade Icon">
                         </div>
-                        <span>Kostenlos</span>
-                        <span>umtauschen</span>
+                        <span>Kostenlos umtauschen</span>
                       </div>
                     </div>
                   </div>
@@ -816,8 +822,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Kochkurse</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -828,8 +837,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Grillkurse</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -840,8 +852,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Weinseminare</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -852,8 +867,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Backkurse</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -864,8 +882,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Gin-Tasting</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -876,8 +897,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Cocktailkurse</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -888,8 +912,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Kochkurse</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -900,8 +927,11 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Grillkurse</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -912,11 +942,17 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                           <div class="categories-card-main">
                             <h3>Weinseminare</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                            <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="show-more">
+                      <button class="btn-primary">Mehr anzeigen</button>
                     </div>
                   </div>
                 </div>

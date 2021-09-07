@@ -24,7 +24,6 @@ jQuery(function () {
     });
 
     jQuery('.reviews-table').slick({
-      dots: true,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 3,
@@ -49,7 +48,12 @@ jQuery(function () {
       ]
     });
 
+    jQuery('.slick-dots li button').text('');
+    
   if (window.matchMedia('(max-width: 991px)').matches) {
+    // Add data-simplebar for Seller Table //
+    jQuery('.seller-table').data('data-simplebar', '').attr('data-simplebar', '');
+
     // Change Text //
     jQuery('.giftbox span').text('Geschenkbox');
     jQuery('.printer span').text('Gleich ausdrucken');
@@ -63,8 +67,7 @@ jQuery(function () {
     // Dropdown Mobile //
     jQuery('.dropdown__trigger').click(function () {
       jQuery(this).toggleClass('active');
-      jQuery(this).next('.dropdown-list').slideToggle(300).css('display', 'flex');
-      console.log('123')
+      jQuery(this).next('.dropdown-list').slideToggle(300);
     });
     
     // Nav Mobile //
@@ -78,12 +81,13 @@ jQuery(function () {
     });
 
     // Hero Mobile //
-    jQuery('.dropdown__trigger').click(function () {
+    jQuery('.hero__trigger').click(function () {
       jQuery(this).toggleClass('active');
       jQuery(this).next('.hero-dropdown').toggleClass('active');
     });
 
   } else {
+
     // Dropdown Desktop //
     jQuery('.dropdown__trigger').mouseover(function () {
       jQuery(this).addClass('active');
@@ -95,13 +99,13 @@ jQuery(function () {
     });
 
     // Hero Desktop //
-    jQuery('.dropdown__trigger').mouseover(function () {
+    jQuery('.hero__trigger').mouseover(function () {
       jQuery(this).addClass('active');
       jQuery(this).next('.hero-dropdown').addClass('active');
     });
     jQuery('.hero-dropdown').mouseleave(function () {
       jQuery(this).removeClass('active');
-      jQuery(this).prev('.dropdown__trigger').removeClass('active');
+      jQuery(this).prev('.hero__trigger').removeClass('active');
     });
 
     // Nav Desktop //
