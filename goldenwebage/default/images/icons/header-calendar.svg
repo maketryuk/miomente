@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.366" height="22.463" viewBox="0 0 20.366 22.463">
+  <g id="Сгруппировать_360" data-name="Сгруппировать 360" transform="translate(0.75 0.75)">
+    <g id="Icon_feather-calendar" data-name="Icon feather-calendar" transform="translate(0)">
+      <path id="Контур_234" data-name="Контур 234" d="M6.6,6H21.27a2.1,2.1,0,0,1,2.1,2.1V22.77a2.1,2.1,0,0,1-2.1,2.1H6.6a2.1,2.1,0,0,1-2.1-2.1V8.1A2.1,2.1,0,0,1,6.6,6Z" transform="translate(-4.5 -3.904)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Контур_235" data-name="Контур 235" d="M24,3V7.193" transform="translate(-10.374 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Контур_236" data-name="Контур 236" d="M12,3V7.193" transform="translate(-6.759 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Контур_237" data-name="Контур 237" d="M4.5,15H23.366" transform="translate(-4.5 -7.314)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <path id="Контур_241" data-name="Контур 241" d="M3.463-4.725a3.515,3.515,0,0,1-2.186-.653l-.784.95a4.307,4.307,0,0,0,2.958.974c2.162,0,3.433-1.319,3.433-2.9A2.624,2.624,0,0,0,4.235-8.907l2.388-2.1V-11.9H.909v1.224H4.5L1.942-8.348l.63.808a2.345,2.345,0,0,1,1.152-.309A1.568,1.568,0,0,1,5.4-6.341,1.779,1.779,0,0,1,3.463-4.725Z" transform="translate(5.651 22.102)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+  </g>
+</svg>
