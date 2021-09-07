@@ -219,6 +219,7 @@ p {
 }
 
 .protection {
+  z-index: 50;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -232,7 +233,6 @@ p {
   -webkit-transition: all 0s ease-in-out;
   transition: all 0s ease-in-out;
   background: #fff;
-  display: none;
 }
 
 .protection:hover {
@@ -2191,6 +2191,9 @@ p {
 }
 
 @media screen and (max-width: 991px) {
+  .protection {
+    display: none;
+  }
   .euro {
     display: none;
   }

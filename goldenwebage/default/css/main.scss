@@ -218,6 +218,7 @@ p {
 
 // Protection =====>
 .protection {
+  z-index: 50;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -229,7 +230,6 @@ p {
   border: 1px solid $color-white;
   transition: all 0s ease-in-out;
   background: $color-white;
-  display: none;
   &:hover {
     border-color: rgb(255, 220, 15);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 9px 2px;
@@ -1751,6 +1751,9 @@ p {
 
 // Media 991px //
 @media screen and (max-width: 991px) {
+  .protection {
+    display: none;
+  }
   .euro {
     display: none;
   }
