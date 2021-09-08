@@ -3231,6 +3231,11 @@ p {
   .categories-card h3 {
     font-size: 16px;
   }
+  .search__apply {
+    max-width: 120px;
+    min-width: 120px;
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 380px) {
