@@ -123,8 +123,7 @@ p {
 .scroll-down {
   min-width: 50px;
   max-width: 50px;
-  min-height: 50px;
-  max-height: 50px;
+  height: 50px;
   background: #F5F5F5;
   border-radius: 100px;
   display: -webkit-box;
@@ -148,8 +147,7 @@ p {
 .scroll-up {
   min-width: 50px;
   max-width: 50px;
-  min-height: 50px;
-  max-height: 50px;
+  height: 50px;
   background: #A4006A;
   border-radius: 5px;
   display: -webkit-box;
@@ -505,8 +503,7 @@ p {
 
 .phone-contact__icon {
   min-width: 50px;
-  min-height: 50px;
-  max-width: 50px;
+  height: 50px;
   max-width: 50px;
   background: #F5F5F5;
   border-radius: 100px;
@@ -532,8 +529,7 @@ p {
 .cart__trigger {
   margin-left: 95px;
   min-width: 50px;
-  min-height: 50px;
-  max-width: 50px;
+  height: 50px;
   max-width: 50px;
   background: #F5F5F5;
   border-radius: 100px;
@@ -1107,6 +1103,7 @@ p {
 
 .seller h2 {
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .seller-table {
@@ -1128,6 +1125,7 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.3333%;
           flex: 0 0 33.3333%;
+  max-width: 33.3333%;
   padding: 10px;
 }
 
@@ -1262,10 +1260,11 @@ p {
 }
 
 .safe h2 {
-  max-width: 490px;
+  max-width: 500px;
   margin: 0 auto;
   line-height: 1.05;
   margin-bottom: 65px;
+  text-transform: none;
 }
 
 .safe h2 span {
@@ -1288,19 +1287,6 @@ p {
 }
 
 .safe-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   max-width: 160px;
 }
 
@@ -1318,7 +1304,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 35px;
+  margin: 0 auto 35px;
 }
 
 .safe-item span {
@@ -1345,10 +1331,12 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 1440px;
 }
 
 .categories h2 {
   margin-bottom: 30px;
+  padding-left: 10px;
 }
 
 .categories-filter-list {
@@ -1358,6 +1346,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 10px;
 }
 
 .categories-filter__item {
@@ -1403,13 +1392,15 @@ p {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 50px -10px;
+  margin: 50px 0;
+  width: 100%;
 }
 
 .categories-wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.3333%;
           flex: 0 0 33.3333%;
+  max-width: 33.3333%;
   padding: 10px;
 }
 
@@ -1557,12 +1548,16 @@ p {
 }
 
 .reviews__link {
-  margin: 75px auto 0;
+  margin: 75px 0 0;
+  display: block;
   color: #A4006A;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: underline;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .reviews__link:hover {
@@ -1603,20 +1598,11 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.3333%;
           flex: 0 0 33.3333%;
+  max-width: 33.3333%;
   padding: 40px;
 }
 
 .reviews-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -1636,6 +1622,7 @@ p {
   min-height: 120px;
   border-radius: 100px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .reviews-card__image img {
@@ -1644,13 +1631,16 @@ p {
 }
 
 .reviews-card-stars {
-  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
 }
 
 .reviews-card-stars img {
@@ -1667,6 +1657,7 @@ p {
 }
 
 .reviews-card span {
+  display: block;
   margin-top: 30px;
   color: #595959;
   font-size: 16px;
@@ -1922,6 +1913,7 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-right: 80px;
 }
 
 .payment-list h5 {
@@ -1931,10 +1923,9 @@ p {
 }
 
 .payment__item {
-  min-height: 43px;
   min-width: 74px;
   max-width: 74px;
-  min-height: 43px;
+  height: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1961,6 +1952,7 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-right: 20px;
 }
 
 .safety-list h5 {
@@ -1970,8 +1962,7 @@ p {
 }
 
 .safety__item {
-  max-width: 117px;
-  max-height: 50px;
+  height: 50px;
 }
 
 .safety__item:not(:last-child) {
@@ -1998,9 +1989,8 @@ p {
 
 .social__item {
   min-width: 40px;
-  min-height: 40px;
+  height: 40px;
   max-width: 40px;
-  max-height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2728,6 +2718,7 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: 0;
   }
   .safety__item {
     max-width: 95px;
@@ -2740,12 +2731,12 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-right: 0;
   }
   .payment__item {
     min-width: 60px;
-    min-height: 35px;
     max-width: 60px;
-    max-height: 35px;
+    height: 35px;
     padding: 5px;
   }
   .payment__item img {
@@ -3014,9 +3005,12 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .safe-item {
-    width: 100%;
+    position: relative;
     max-width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3025,18 +3019,20 @@ p {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-left: 24px;
   }
   .safe-item span {
     margin: 0 3px;
   }
   .safe-item::before {
     content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
     min-width: 13px;
     min-height: 13px;
     max-width: 13px;
     max-height: 13px;
-    margin-right: 14px;
-    margin-top: 3px;
     background-image: url(../images/icons/safe-mobile.svg);
     background-repeat: no-repeat;
     background-size: auto;

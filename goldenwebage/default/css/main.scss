@@ -137,8 +137,7 @@ p {
 .scroll-down {
   min-width: 50px;
   max-width: 50px;
-  min-height: 50px;
-  max-height: 50px;
+  height: 50px;
   background: $color-grey-1;
   border-radius: 100px;
   display: flex;
@@ -155,8 +154,7 @@ p {
 .scroll-up {
   min-width: 50px;
   max-width: 50px;
-  min-height: 50px;
-  max-height: 50px;
+  height: 50px;
   background: $color-purple;
   border-radius: 5px;
   display: flex;
@@ -433,8 +431,7 @@ p {
   }
   &__icon {
     min-width: 50px;
-    min-height: 50px;
-    max-width: 50px;
+    height: 50px;
     max-width: 50px;
     background: $color-grey-1;
     border-radius: 100px;
@@ -455,8 +452,7 @@ p {
   &__trigger {
     margin-left: 95px;
     min-width: 50px;
-    min-height: 50px;
-    max-width: 50px;
+    height: 50px;
     max-width: 50px;
     background: $color-grey-1;
     border-radius: 100px;
@@ -900,6 +896,7 @@ p {
   padding-bottom: 140px; 
   h2 {
     margin-bottom: 50px;
+    text-align: left;
   }
   &-table {
     display: flex;
@@ -910,6 +907,7 @@ p {
   }
   &-wrapper {
     flex: 0 0 33.3333%;
+    max-width: 33.3333%;
     padding: 10px;
   }
   &-card {
@@ -1008,10 +1006,11 @@ p {
   padding-bottom: 167px;
   background: #F9F9F9;
   h2 {
-    max-width: 490px;
+    max-width: 500px;
     margin: 0 auto;
     line-height: 1.05;
     margin-bottom: 65px;
+    text-transform: none;
     span {
       font-size: 45px;
       white-space: nowrap;
@@ -1025,10 +1024,6 @@ p {
     margin: 0 auto;
   }
   &-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     max-width: 160px;
     &__icon {
       max-width: 70px;
@@ -1038,7 +1033,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 35px;
+      margin: 0 auto 35px;
     }
     span {
       display: block;
@@ -1058,14 +1053,17 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 1440px;
   }
   h2 {
     margin-bottom: 30px;
+    padding-left: 10px;
   }
   &-filter {
     &-list {
       display: flex;
       align-items: center;
+      padding-left: 10px;
     }
     &__item {
       color: $color-border;
@@ -1100,10 +1098,12 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin: 50px -10px;
+    margin: 50px 0;
+    width: 100%;
   }
   &-wrapper {
     flex: 0 0 33.3333%;
+    max-width: 33.3333%;
     padding: 10px;
   }
   &-card {
@@ -1214,12 +1214,14 @@ p {
     flex-direction: column;
   }
   &__link {
-    margin: 75px auto 0;
+    margin: 75px 0 0;
+    display: block;
     color: $color-purple;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.2;
     text-decoration: underline;
+    align-self: center;
     &:hover {
       color: $color-purple;
       text-decoration: underline;
@@ -1245,12 +1247,10 @@ p {
   }
   &-wrapper {
     flex: 0 0 33.3333%;
+    max-width: 33.3333%;
     padding: 40px;
   }
   &-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     &__image {
       display: flex;
@@ -1262,15 +1262,17 @@ p {
       min-height: 120px;
       border-radius: 100px;
       overflow: hidden;
+      margin: 0 auto;
       img {
         width: 100%;
         height: 100%;
       }
     }
     &-stars {
-      margin-top: 30px;
       display: flex;
       align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
       img {
         max-width: 21px;
         min-width: 21px;
@@ -1283,6 +1285,7 @@ p {
       margin: 28px 0 21px;
     }
     span {
+      display: block;
       margin-top: 30px;
       color: $color-text;
       font-size: 16px;
@@ -1482,15 +1485,15 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-right: 80px;
     h5 {
       flex: 0 0 100%;
     }
   }
   &__item {
-    min-height: 43px;
     min-width: 74px;
     max-width: 74px;
-    min-height: 43px;
+    height: 43px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1507,13 +1510,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-right: 20px;
     h5 {
       flex: 0 0 100%;
     }
   }
   &__item {
-    max-width: 117px;
-    max-height: 50px;
+    height: 50px;
     &:not(:last-child) {
       margin-right: 32px;
     }
@@ -1532,9 +1535,8 @@ p {
   }
   &__item {
     min-width: 40px;
-    min-height: 40px;
+    height: 40px;
     max-width: 40px;
-    max-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2202,6 +2204,7 @@ p {
   .safety-list {
     order: 3;
     align-items: center;
+    margin-right: 0;
   }
   .safety__item {
     max-width: 95px;
@@ -2211,12 +2214,12 @@ p {
       order: 2;
       margin-bottom: 40px;
       justify-content: space-between;
+      margin-right: 0;
     }
     &__item {
       min-width: 60px;
-      min-height: 35px;
       max-width: 60px;
-      max-height: 35px;
+      height: 35px;
       padding: 5px;
       img {
         max-width: 100%;
@@ -2479,23 +2482,26 @@ p {
     &-list {
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
     &-item {
-      width: 100%;
+      position: relative;
       max-width: 100%;
       flex-direction: row;
       align-items: flex-start;
+      padding-left: 24px;
       span {
         margin: 0 3px;
       }
       &::before {
         content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
         min-width: 13px;
         min-height: 13px;
         max-width: 13px;
         max-height: 13px;
-        margin-right: 14px;
-        margin-top: 3px;
         background-image: url(../images/icons/safe-mobile.svg);
         background-repeat: no-repeat;
         background-size: auto;
