@@ -26,6 +26,13 @@ jQuery(function () {
       jQuery('body').toggleClass('lock');
     });
 
+    jQuery('.nav-header .burger-wrapper').click(function () {
+      jQuery('.nav__trigger').removeClass('active');
+      jQuery('.nav-sub__trigger').removeClass('active');
+      jQuery('.nav-dropdown-list').slideUp(300);
+      jQuery('.nav-dropdown').slideUp(300);
+    })
+
     // Overlay //
     jQuery('.overlay').click(function () {
       jQuery(this).removeClass('active');
