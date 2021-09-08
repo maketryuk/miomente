@@ -3255,4 +3255,10 @@ p {
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 360px) {
+  .seller-wrapper {
+    max-width: 280px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

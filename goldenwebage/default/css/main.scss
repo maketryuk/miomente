@@ -2764,3 +2764,12 @@ p {
     }
   }
 }
+
+// Media 360px //
+@media screen and (max-width: 360px) {
+  .seller {
+    &-wrapper {
+      max-width: 280px;
+    }
+  }
+}
