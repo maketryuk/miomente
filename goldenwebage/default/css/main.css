@@ -3017,15 +3017,21 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .safe-item span {
     margin: 0 3px;
   }
   .safe-item::before {
     content: '';
-    width: 13px;
-    height: 13px;
+    min-width: 13px;
+    min-height: 13px;
+    max-width: 13px;
+    max-height: 13px;
     margin-right: 14px;
+    margin-top: 3px;
     background-image: url(../images/icons/safe-mobile.svg);
     background-repeat: no-repeat;
     background-size: auto;
@@ -3259,6 +3265,9 @@ p {
 @media screen and (max-width: 360px) {
   .seller-wrapper {
     max-width: 280px;
+  }
+  .seller-card .price span {
+    margin-right: 5px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -2477,14 +2477,18 @@ p {
       width: 100%;
       max-width: 100%;
       flex-direction: row;
+      align-items: flex-start;
       span {
         margin: 0 3px;
       }
       &::before {
         content: '';
-        width: 13px;
-        height: 13px;
+        min-width: 13px;
+        min-height: 13px;
+        max-width: 13px;
+        max-height: 13px;
         margin-right: 14px;
+        margin-top: 3px;
         background-image: url(../images/icons/safe-mobile.svg);
         background-repeat: no-repeat;
         background-size: auto;
@@ -2770,6 +2774,13 @@ p {
   .seller {
     &-wrapper {
       max-width: 280px;
+    }
+    &-card {
+      .price {
+        span {
+          margin-right: 5px;
+        }
+      }
     }
   }
 }
