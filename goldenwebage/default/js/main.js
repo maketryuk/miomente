@@ -120,11 +120,9 @@ jQuery(function () {
     // Nav Desktop //
     jQuery('.nav__trigger').mouseover(function () {
       jQuery(this).addClass('active');
-      jQuery(this).next('.nav-dropdown').addClass('active');
     });
-    jQuery('.nav-dropdown').mouseleave(function () {
-      jQuery(this).removeClass('active');
-      jQuery(this).prev('.nav__trigger').removeClass('active');
+    jQuery('.nav-item').mouseleave(function () {
+      jQuery(this).children('.nav__trigger').removeClass('active');
     });
 
     // Change Text //
