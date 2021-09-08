@@ -1941,9 +1941,14 @@ p {
       margin-top: 20px;
       padding-left: 40px;
     }
+    &__item {
+      img {
+        display: none;
+      }
+    }
     h6 {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       color: $color-text;
       font-size: 22px;
@@ -1951,7 +1956,9 @@ p {
       margin: 0;
       img {
         display: inline-block;
+        margin-top: 8px;
         margin-right: 24px;
+        margin-left: 5px;
         transition: all 0.3s ease-in-out;
       }
       &.active {
@@ -2596,12 +2603,11 @@ p {
   .header {
     &-top {
       &__item {
-        padding: 0 5px;
-        span {
-          font-size: 13px;
-        }
         img {
-          max-width: 20px;
+          max-width: 14px;
+        }
+        span {
+          font-size: 10px;
         }
       }
     }
@@ -2655,13 +2661,22 @@ p {
   }
   .header {
     &-top {
+      .container {
+        padding: 11.5px 20px;
+      }
       &__item {
         img {
           max-width: 14px;
+          margin-right: 4px;
         }
         span {
-          font-size: 10px;
+          font-size: 8px;
         }
+      }
+    }
+    &-main {
+      .container {
+        padding: 15px 15px 16px;
       }
     }
   }
@@ -2699,27 +2714,6 @@ p {
 
 // Media 380px //
 @media screen and (max-width: 380px) {
-  .header {
-    &-top {
-      .container {
-        padding: 11.5px 20px;
-      }
-      &__item {
-        img {
-          max-width: 14px;
-          margin-right: 4px;
-        }
-        span {
-          font-size: 8px;
-        }
-      }
-    }
-    &-main {
-      .container {
-        padding: 15px 15px 16px;
-      }
-    }
-  }
   .nav {
     &__link {
       font-size: 18px;
@@ -2780,6 +2774,13 @@ p {
         span {
           margin-right: 5px;
         }
+      }
+    }
+  }
+  .header {
+    &-top {
+      &__item {
+        padding: 0 5px;
       }
     }
   }
