@@ -1058,6 +1058,7 @@ p {
   h2 {
     margin-bottom: 30px;
     padding-left: 10px;
+    text-align: left;
   }
   &-filter {
     &-list {
@@ -1142,6 +1143,11 @@ p {
     }
     p {
       font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
     &__btn {
       margin-top: 25px;
@@ -2573,6 +2579,14 @@ p {
     &-wrapper {
       flex: 0 0 100%;
       max-width: 100%;
+      padding: 10px 0;
+    }
+    h2 {
+      padding-left: 0;
+    }
+    &-filter-list {
+      padding-left: 0;
+      flex-wrap: wrap;
     }
     &-card {
       &-main {
@@ -2764,6 +2778,11 @@ p {
     &-card {
       h3 {
         font-size: 14px;
+      }
+    }
+    &-filter {
+      &__item {
+        padding: 6px 18px;
       }
     }
   }

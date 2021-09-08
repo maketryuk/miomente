@@ -1337,6 +1337,7 @@ p {
 .categories h2 {
   margin-bottom: 30px;
   padding-left: 10px;
+  text-align: left;
 }
 
 .categories-filter-list {
@@ -1453,6 +1454,11 @@ p {
 
 .categories-card p {
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .categories-card__btn {
@@ -3106,6 +3112,15 @@ p {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+    padding: 10px 0;
+  }
+  .categories h2 {
+    padding-left: 0;
+  }
+  .categories-filter-list {
+    padding-left: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .categories-card-main {
     padding-bottom: 12px;
@@ -3251,6 +3266,9 @@ p {
   }
   .categories-card h3 {
     font-size: 14px;
+  }
+  .categories-filter__item {
+    padding: 6px 18px;
   }
 }
 
