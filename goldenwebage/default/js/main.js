@@ -1,5 +1,14 @@
 jQuery(function () {
 
+    // Scroll let's
+    let scrollUpBtn = document.querySelector('.scroll-up')
+    let scrollDownBtn = document.querySelector('.scroll-down')
+    let categories = document.querySelector('.categories')
+
+    // Scroll
+    scrollUpBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth'});
+    scrollDownBtn.onclick = () => categories.scrollIntoView({behavior: 'smooth'});
+
     // Search //
     jQuery('.search__trigger').click(function () {
       jQuery('.header-main .search-wrapper').addClass('active');
@@ -57,8 +66,8 @@ jQuery(function () {
     // Change Text //
     jQuery('.giftbox span').text('Geschenkbox');
     jQuery('.printer span').text('Gleich ausdrucken');
-    jQuery('.calendar span').text('Jahre gültig');
     jQuery('.contact h5').text('Kontakt zu Miomente');
+    jQuery('.safe-item .calendar span').text('Gutschein 3 Jahre gültig');
     jQuery('.cities .dropdown__trigger').text('Die Miomente Städte');
 
     // Remove class //
@@ -69,7 +78,7 @@ jQuery(function () {
       jQuery(this).toggleClass('active');
       jQuery(this).next('.dropdown-list').slideToggle(300);
     });
-    
+
     // Nav Mobile //
     jQuery('.nav__trigger').click(function () {
       jQuery(this).toggleClass('active');
@@ -121,7 +130,7 @@ jQuery(function () {
     // Change Text //
     jQuery('.giftbox span').text('Wunderschöne Geschenkbox');
     jQuery('.printer span').text('Sofort selbst ausdrucken');
-    jQuery('.calendar span').text('Gutschein 3 Jahre gültig');
+    jQuery('.safe-item .calendar span').text('3 Jahre gültig');
     jQuery('.contact h5').text('Kundenservice');
     jQuery('.cities .dropdown__trigger').text('Die Moment Städte');
   };

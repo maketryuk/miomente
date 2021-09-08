@@ -2056,6 +2056,7 @@ p {
         width: 13px;
         height: 8px;
         margin-right: 13px;
+        margin-left: 20px;
         margin-bottom: 3px;
         transition: all 0.3s ease-in-out;
       }
@@ -2102,7 +2103,7 @@ p {
       flex-direction: column;
       align-items: flex-start;
       padding: 0;
-      margin-top: 30px;
+      margin-top: 20px;
       &-list {
         width: 100%;
         order: 2;
@@ -2136,7 +2137,7 @@ p {
       }
       .language-list {
         order: 1;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
       .language__item {
         &.active {
@@ -2510,6 +2511,7 @@ p {
     display: none;
   }
   .hero {
+    background-image: url(../images/hero-mobile.png);
     position: relative;
     padding: 380px 0 100px;
     &__trigger {
@@ -2522,6 +2524,16 @@ p {
     }
     &-table {
       margin-top: 43px;
+    }
+  }
+  .footer {
+    .language-list {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .language__item {
+      margin: 10px 0;
     }
   }
 }
@@ -2657,6 +2669,16 @@ p {
       min-height: 30px;
     }
   }
+  .categories {
+    &-card {
+      &-main {
+        align-items: center;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // Media 380px //
@@ -2713,6 +2735,18 @@ p {
         font-size: 16px;
       }
       p {
+        font-size: 14px;
+      }
+    }
+  }
+  .footer {
+    &__link {
+      font-size: 12px;
+    }
+  }
+  .categories {
+    &-card {
+      h3 {
         font-size: 14px;
       }
     }
