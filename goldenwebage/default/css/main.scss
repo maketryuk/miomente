@@ -2793,6 +2793,11 @@ p {
       }
     }
   }
+  .search {
+    &__icon {
+      display: none;
+    }
+  }
 }
 
 // Media 360px //
