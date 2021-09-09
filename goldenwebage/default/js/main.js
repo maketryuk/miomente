@@ -93,6 +93,7 @@ jQuery(function () {
     jQuery('.header-top .giftbox span').text('Geschenkbox');
     jQuery('.header-top .printer span').text('Gleich ausdrucken');
     jQuery('.header-top .contact h5').text('Kontakt zu Miomente');
+    jQuery('.header-top .calendar span').text('Jahre gültig');
     jQuery('.safe-item .calendar span').text('Gutschein 3 Jahre gültig');
     jQuery('.cities .dropdown__trigger').text('Die Miomente Städte');
 
@@ -154,7 +155,7 @@ jQuery(function () {
     // Change Text //
     jQuery('.header-top .giftbox span').text('Wunderschöne Geschenkbox');
     jQuery('.header-top .printer span').text('Sofort selbst ausdrucken');
-    jQuery('.header-top .contact-us span').text('Gutschein 3 Jahre gültig');
+    jQuery('.header-top .calendar span').text('Gutschein 3 Jahre gültig');
     jQuery('.safe-item .calendar span').text('3 Jahre gültig');
     jQuery('.contact h5').text('Kundenservice');
     jQuery('.cities .dropdown__trigger').text('Die Moment Städte');

@@ -840,6 +840,7 @@ p {
     text-align: center;
     cursor: pointer;
     a {
+      display: inline-block;
       position: relative;
       color: $color-white;
       font-size: 60px;
@@ -1568,6 +1569,7 @@ p {
     justify-content: center;
     background: $color-white;
     border-radius: 5px;
+    padding: 10px;
     &:not(:last-child) {
       margin-right: 15px;
     }
@@ -1925,6 +1927,17 @@ p {
         background: $color-white;
         margin-left: 22px;
         height: 38px;
+        border-radius: 19px;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__apply {
+          border-radius: 0 19px 19px 0;
+          max-width: 112px;
+          min-width: 112px;
+          font-size: 14px;
+          margin-left: 10px;
+        }
         &-close {
           display: flex;
           cursor: pointer;
@@ -2677,8 +2690,11 @@ p {
     background-image: url(../images/hero-mobile.png);
     position: relative;
     padding: 380px 0 100px;
-    &__trigger {
+    &__text {
       font-size: 40px;
+      a {
+        font-size: 40px;
+      }
     }
   }
   .categories {
@@ -2761,9 +2777,13 @@ p {
     }
   }
   .hero {
-    &__trigger {
+    &__text {
+      padding-top: 34px;
       font-size: 33px;
       max-width: 250px;
+      a {
+        font-size: 33px;
+      }
       img {
         margin-top: 15px;
       }
@@ -2858,13 +2878,6 @@ p {
       }
     }
   }
-  .search {
-    &__apply {
-      max-width: 120px;
-      min-width: 120px;
-      margin-left: 10px;
-    }
-  }
 }
 
 // Media 380px //
@@ -2921,9 +2934,23 @@ p {
       }
     }
   }
-  .search {
-    &__icon {
-      display: none;
+  .header {
+    &-main {
+      .search {
+        &__apply {
+          max-width: 86px;
+          min-width: 86px;
+        }
+        &__icon {
+          display: none;
+        }
+        .i-search {
+          font-size: 13px;
+          &::placeholder {
+            font-size: 13px;
+          }
+        }
+      }
     }
   }
 }

@@ -1033,6 +1033,7 @@ p {
 }
 
 .hero__text a {
+  display: inline-block;
   position: relative;
   color: #fff;
   font-size: 60px;
@@ -2020,6 +2021,7 @@ p {
           justify-content: center;
   background: #fff;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .payment__item:not(:last-child) {
@@ -2402,6 +2404,17 @@ p {
     background: #fff;
     margin-left: 22px;
     height: 38px;
+    border-radius: 19px;
+  }
+  .header-main .search__icon {
+    margin-right: 10px;
+  }
+  .header-main .search__apply {
+    border-radius: 0 19px 19px 0;
+    max-width: 112px;
+    min-width: 112px;
+    font-size: 14px;
+    margin-left: 10px;
   }
   .header-main .search-close {
     display: -webkit-box;
@@ -3245,7 +3258,10 @@ p {
     position: relative;
     padding: 380px 0 100px;
   }
-  .hero__trigger {
+  .hero__text {
+    font-size: 40px;
+  }
+  .hero__text a {
     font-size: 40px;
   }
   .categories h2 {
@@ -3317,11 +3333,15 @@ p {
   .header-top__item span {
     font-size: 10px;
   }
-  .hero__trigger {
+  .hero__text {
+    padding-top: 34px;
     font-size: 33px;
     max-width: 250px;
   }
-  .hero__trigger img {
+  .hero__text a {
+    font-size: 33px;
+  }
+  .hero__text img {
     margin-top: 15px;
   }
   .info h2 {
@@ -3392,11 +3412,6 @@ p {
   .categories-card h3 {
     font-size: 16px;
   }
-  .search__apply {
-    max-width: 120px;
-    min-width: 120px;
-    margin-left: 10px;
-  }
 }
 
 @media screen and (max-width: 380px) {
@@ -3436,8 +3451,27 @@ p {
   .categories-filter__item {
     padding: 6px 18px;
   }
-  .search__icon {
+  .header-main .search__apply {
+    max-width: 86px;
+    min-width: 86px;
+  }
+  .header-main .search__icon {
     display: none;
+  }
+  .header-main .search .i-search {
+    font-size: 13px;
+  }
+  .header-main .search .i-search::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  .header-main .search .i-search:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .header-main .search .i-search::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .header-main .search .i-search::placeholder {
+    font-size: 13px;
   }
 }
 
