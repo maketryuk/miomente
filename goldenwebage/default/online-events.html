@@ -279,7 +279,7 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
 <body>
 <div id="root-wrapper">
     <div class="wrapper">
-        <div class="page">
+        <div class="page online-event">
             <a href="#" class="protection">
               <img src="images/protection.png" alt="Protection Image">
             </a>
@@ -608,101 +608,31 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
               </nav>
             </div>
             <div class="main-container col1-layout">
-                <div class="hero">
+                <div class="breadcrumbs">
                   <div class="container">
-                    <div class="dropdown-wrapper">
-                      <div class="hero__text">
-                        Genuss Events <a href="#" class="ellipse">online</a> oder in <span class="hero__trigger">deiner Stadt <img src="images/icons/arrow-dropdown.svg" alt="Arrow Dropdown Icon"></span>
-                      </div>
-                      <div class="hero-dropdown">
-                        <div class="search-wrapper">
-                          <input type="text" class="i-search">
+                    <ul>
+                      <li>
+                        <a href="#">Ganz Deutschland</a>
+                        <div class="breadcrumbs-arrow">
+                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Icon">
                         </div>
-                        <p class="result__error" hidden>Nicht gefunden</p>
-                        <ul class="result-list" id="cities">
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/augsburg/" class="result__link">Augsburg</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/berlin/" class="result__link">Berlin</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/bielefeld/" class="result__link">Bielefeld</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/bonn/" class="result__link">Bonn</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/bremen/" class="result__link">Bremen</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/darmstadt/" class="result__link">Darmstadt</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/dortmund/" class="result__link">Dortmund</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/dresden/" class="result__link">Dresden</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/duesseldorf/" class="result__link">Düsseldorf</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/essen/" class="result__link">Essen</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/frankfurt/" class="result__link">Frankfurt am Main</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/freiburg/" class="result__link">Freiburg</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/hamburg/" class="result__link">Hamburg</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/hannover/" class="result__link">Hannover</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/heidelberg/" class="result__link">Heidelberg</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/karlsruhe/" class="result__link">Karlsruhe</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/koeln/" class="result__link">Köln</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/leipzig/" class="result__link">Leipzig</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/mainz/" class="result__link">Mainz</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/mannheim/" class="result__link">Mannheim</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/muenchen/" class="result__link">München</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/muenster/" class="result__link">Münster</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/nuernberg/" class="result__link">Nürnberg</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/regensburg/" class="result__link">Regensburg</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/stuttgart/" class="result__link">Stuttgart</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/wiesbaden/" class="result__link">Wiesbaden</a>
-                          </li>
-                          <li class="result__item">
-                            <a href="https://www.miomente.de/wuppertal/" class="result__link">Wuppertal</a>
-                          </li>
-                        </ul>
-                      </div>
+                      </li>
+                      <li>
+                        <a href="#">Genuss-Events</a>
+                        <div class="breadcrumbs-arrow">
+                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Icon">
+                        </div>
+                      </li>
+                      <li class="active">
+                        <a href="#">Online-Tastings & Events</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="events-preview">
+                  <div class="container">
+                    <div class="events-preview__image">
+                      <img src="images/online-events.png" alt="Decor Image">
                     </div>
                   </div>
                 </div>
@@ -711,8 +641,8 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     <div class="info__image">
                       <img src="images/mobile-logo.png" alt="Logo Of Miomente">
                     </div>
-                    <h2>Kulinarische Events für Genießer</h2>
-                    <p>Werfen Sie einen Blick in die Töpfe exotischer Küchen oder lernen Sie Großmutters Geheimrezept nachkochen. Kosten Sie bei einer Weinprobe aufregende Tropfen junger Winzer oder zaubern Sie den perfekten Espresso. In unseren Genuss-Events, individuellen Kochkursen, intensiven Whisky-Tastings, sinnlichen Weinseminaren und Barista-Kursen wecken wir Ihre Leidenschaft für großen Genuss und machen Sie zum Virtuosen am Kochlöffel, Cocktailshaker oder Korkenzieher.</p>
+                    <h2>Online-Tastings & Events</h2>
+                    <p>Entdecken Sie unsere <span>Online-Tastings und virtuellen Events für Zuhause!</span> Erleben Sie trotz Ausgangsbeschränkungen, geschlossenen Kochschulen und Bars neue Genusserlebnisse mit unseren Tasting-Sets und Online-Kursen. Wir schicken Ihnen eine spannende Genuss-Box mit allen Zutaten - und Sie können ganz einfach selbst zum Entdecker neuer kulinarischer Reiche werden. Bei einer unterhaltsamen Online-Verkostung als Livestream erfahren Sie dann interaktiv mehr über Wein, Gin, Schokolade oder Kaffee. Stellen Sie unseren Experten live Fragen oder chatten Sie mit uns! Auf diese Weise unterstützen Sie gleichzeitig unsere Partner in dieser schwierigen Zeit und sorgen dafür, dass Sie auch nach Corona noch ein Genuss-Erlebnis in unseren Kochschulen, Cocktailbars und Vinotheken buchen können.</p>
                     <div class="scroll-down">
                       <img src="images/icons/arrow-scroll.svg" alt="Arrow Scroll Icon">
                     </div>
@@ -721,190 +651,109 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     </div>
                   </div>
                 </div>
-                <div class="seller">
+                <div class="categories">
                   <div class="container">
-                    <h2>Topseller</h2>
-                    <div class="seller-table">
-                      <div class="seller-wrapper">
-                        <a href="#" class="seller-card">
-                          <div class="seller-card__image">
-                            <img src="images/seller-1.png" alt="Product Preview">
+                    <h2>Genussreisen bei Dir zuhause</h2>
+                    <div class="categories-table">
+                      <div class="categories-wrapper">
+                        <div class="categories-card">
+                          <div class="categories-card__image">
+                            <img src="images/enjoyment-1.png" alt="Categories Preview">
                           </div>
-                          <div class="seller-card-main">
-                            <div class="seller-card-stars">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
-                            </div>
-                            <div class="seller-card-info">
-                              <h3>Weinprobe@Home für 2</h3>
-                              <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
-                            </div>
-                            <ul>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
-                                </div>
-                                Ganz Deutschland
-                              </li>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
-                                </div>
-                                58 Plätze
-                              </li>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
-                                </div>
-                                5 buchbare Termine
-                              </li>
-                            </ul>
-                            <div class="seller-card-buy">
-                              <div class="price">
-                                <span>€</span>60,00
-                              </div>
-                              <div class="seller-card__btn btn-primary">Entdecken</div>
+                          <div class="categories-card-main">
+                            <h3>Paradies Provence</h3>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
                             </div>
                           </div>
-                        </a>
+                        </div>
                       </div>
-                      <div class="seller-wrapper">
-                        <a href="#" class="seller-card">
-                          <div class="seller-card__image">
-                            <img src="images/seller-1.png" alt="Product Preview">
+                      <div class="categories-wrapper">
+                        <div class="categories-card">
+                          <div class="categories-card__image">
+                            <img src="images/enjoyment-2.png" alt="Categories Preview">
                           </div>
-                          <div class="seller-card-main">
-                            <div class="seller-card-stars">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
-                            </div>
-                            <div class="seller-card-info">
-                              <h3>Weinprobe@Home für 2</h3>
-                              <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
-                            </div>
-                            <ul>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
-                                </div>
-                                Ganz Deutschland
-                              </li>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
-                                </div>
-                                58 Plätze
-                              </li>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
-                                </div>
-                                5 buchbare Termine
-                              </li>
-                            </ul>
-                            <div class="seller-card-buy">
-                              <div class="price">
-                                <span>€</span>60,00
-                              </div>
-                              <div class="seller-card__btn btn-primary">Entdecken</div>
+                          <div class="categories-card-main">
+                            <h3>Geheimtipp Ligurien</h3>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
                             </div>
                           </div>
-                        </a>
+                        </div>
                       </div>
-                      <div class="seller-wrapper">
-                        <a href="#" class="seller-card">
-                          <div class="seller-card__image">
-                            <img src="images/seller-1.png" alt="Product Preview">
+                      <div class="categories-wrapper">
+                        <div class="categories-card">
+                          <div class="categories-card__image">
+                            <img src="images/enjoyment-3.png" alt="Categories Preview">
                           </div>
-                          <div class="seller-card-main">
-                            <div class="seller-card-stars">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
-                              <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
-                            </div>
-                            <div class="seller-card-info">
-                              <h3>Weinprobe@Home für 2</h3>
-                              <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
-                            </div>
-                            <ul>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
-                                </div>
-                                Ganz Deutschland
-                              </li>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
-                                </div>
-                                58 Plätze
-                              </li>
-                              <li>
-                                <div class="seller-card__icon">
-                                  <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
-                                </div>
-                                5 buchbare Termine
-                              </li>
-                            </ul>
-                            <div class="seller-card-buy">
-                              <div class="price">
-                                <span>€</span>60,00
-                              </div>
-                              <div class="seller-card__btn btn-primary">Entdecken</div>
+                          <div class="categories-card-main">
+                            <h3>Sehnsucht Südafrika</h3>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
                             </div>
                           </div>
-                        </a>
+                        </div>
+                      </div>
+                      <div class="categories-wrapper">
+                        <div class="categories-card">
+                          <div class="categories-card__image">
+                            <img src="images/enjoyment-4.png" alt="Categories Preview">
+                          </div>
+                          <div class="categories-card-main">
+                            <h3>Paradies Provence</h3>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="categories-wrapper">
+                        <div class="categories-card">
+                          <div class="categories-card__image">
+                            <img src="images/enjoyment-5.png" alt="Categories Preview">
+                          </div>
+                          <div class="categories-card-main">
+                            <h3>Paradies Provence</h3>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="categories-wrapper">
+                        <div class="categories-card">
+                          <div class="categories-card__image">
+                            <img src="images/enjoyment-6.png" alt="Categories Preview">
+                          </div>
+                          <div class="categories-card-main">
+                            <h3>Paradies Provence</h3>
+                            <div class="dropdown__trigger">Mehr anzeigen</div>
+                            <div class="dropdown-list">
+                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                              <button class="categories-card__btn btn-primary">Lorem ispum</button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="safe">
-                  <div class="container">
-                    <h2>Absolut Sicher! <span>Auch während Corona</span></h2>
-                    <div class="safe-list">
-                      <div class="safe-item">
-                        <div class="safe-item__icon">
-                          <img src="images/icons/discount.svg" alt="Card With GiftBox Icon">
-                        </div>
-                        <span>Immer einlösbar, ohne fixen Termin</span>
-                      </div>
-                      <div class="safe-item">
-                        <div class="safe-item__icon">
-                          <img src="images/icons/safe-calendar.svg" alt="Calendar Icon">
-                        </div>
-                        <span>3 Jahre gültig</span>
-                      </div>
-                      <div class="safe-item">
-                        <div class="safe-item__icon">
-                          <img src="images/icons/trade.svg" alt="Trade Icon">
-                        </div>
-                        <span>Kostenlos umtauschen</span>
-                      </div>
+                    <div class="show-more">
+                      <button class="btn-primary">Mehr anzeigen</button>
                     </div>
                   </div>
                 </div>
                 <div class="categories">
                   <div class="container">
                     <h2>Alle Kategorien</h2>
-                    <div class="categories-filter-list">
-                      <a href="#" class="categories-filter__item">
-                        Online
-                      </a>
-                      <a href="#" class="categories-filter__item">
-                        Lokal
-                      </a>
-                      <a href="#" class="categories-filter__item active">
-                        Alle
-                      </a>
-                    </div>
                     <div class="categories-table">
                       <div class="categories-wrapper">
                         <div class="categories-card">
@@ -1045,78 +894,6 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     <div class="show-more">
                       <button class="btn-primary">Mehr anzeigen</button>
                     </div>
-                  </div>
-                </div>
-                <div class="specials">
-                  <h2 class="specials-title">Specials</h2>
-                  <div class="container">
-                    <div class="specials__image">
-                      <img src="images/specials.png" alt="Decor Image">
-                    </div>
-                    <div class="specials-text">
-                      <span>Specials:</span>
-                      <h2 class="specials-subtitle">Mach dieses Weihnachtsfest zu einem besonderen</h2>
-                      <button class="specials__btn btn-primary">Mehr erfahren</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="reviews">
-                  <div class="container">
-                    <h2>Kundenbewertungen</h2>
-                    <div class="reviews-table">
-                      <div class="reviews-wrapper">
-                        <div class="reviews-card">
-                          <div class="reviews-card__image">
-                            <img src="images/reviews-1.png" alt="Reviews Author Photo">
-                          </div>
-                          <div class="reviews-card-stars">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-empty.svg" alt="Star Empty Icon">
-                          </div>
-                          <h4>Lorem ipsum dolor sit amet</h4>
-                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
-                          <span>- Christian Müller</span>
-                        </div>
-                      </div>
-                      <div class="reviews-wrapper">
-                        <div class="reviews-card">
-                          <div class="reviews-card__image">
-                            <img src="images/reviews-1.png" alt="Reviews Author Photo">
-                          </div>
-                          <div class="reviews-card-stars">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-empty.svg" alt="Star Empty Icon">
-                          </div>
-                          <h4>Lorem ipsum dolor sit amet</h4>
-                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
-                          <span>- Christian Müller</span>
-                        </div>
-                      </div>
-                      <div class="reviews-wrapper">
-                        <div class="reviews-card">
-                          <div class="reviews-card__image">
-                            <img src="images/reviews-1.png" alt="Reviews Author Photo">
-                          </div>
-                          <div class="reviews-card-stars">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-fill.svg" alt="Star Fill Icon">
-                            <img src="images/icons/star-empty.svg" alt="Star Empty Icon">
-                          </div>
-                          <h4>Lorem ipsum dolor sit amet</h4>
-                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
-                          <span>- Christian Müller</span>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="#" class="reviews__link">Lorem ipsum</a>
                   </div>
                 </div>
                 <div class="newsletter">

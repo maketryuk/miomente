@@ -1,5 +1,24 @@
 jQuery(function () {
 
+    // Search Cities //
+    var search = '',
+    total = 0;
+
+    jQuery('.hero .i-search').on('keyup',function(e){
+      search = jQuery(this).val();
+      total = 0;
+      jQuery('.result-list li a').each(function(){
+        var value = jQuery(this).text().toLowerCase();
+        if( value.indexOf(search.toLowerCase()) == 0 ){
+          total++;
+          jQuery(this).parent().removeClass('hide');
+        } else {
+          jQuery(this).parent().addClass('hide');
+        }
+      });
+      if( total>0 ) jQuery('.result__error').hide(); else jQuery('.result__error').show();
+    });
+
     // Scroll let's
     let scrollUpBtn = document.querySelector('.scroll-up')
     let scrollDownBtn = document.querySelector('.scroll-down')
@@ -99,7 +118,7 @@ jQuery(function () {
     // Hero Mobile //
     jQuery('.hero__trigger').click(function () {
       jQuery(this).toggleClass('active');
-      jQuery(this).next('.hero-dropdown').toggleClass('active');
+      jQuery(this).parent().next('.hero-dropdown').toggleClass('active');
     });
 
   } else {
@@ -117,11 +136,11 @@ jQuery(function () {
     // Hero Desktop //
     jQuery('.hero__trigger').mouseover(function () {
       jQuery(this).addClass('active');
-      jQuery(this).next('.hero-dropdown').addClass('active');
+      jQuery(this).parent().next('.hero-dropdown').addClass('active');
     });
     jQuery('.hero-dropdown').mouseleave(function () {
       jQuery(this).removeClass('active');
-      jQuery(this).prev('.hero__trigger').removeClass('active');
+      jQuery('.hero__trigger').removeClass('active');
     });
 
     // Nav Desktop //

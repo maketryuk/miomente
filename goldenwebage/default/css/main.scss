@@ -472,6 +472,7 @@ p {
 .nav {
   width: 100%;
   z-index: 80;
+  box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.1);
   &-header,
   &-footer {
     display: none;
@@ -764,21 +765,56 @@ p {
       font-weight: 700;
     }
     .result {
-      &-list {
-        margin-top: 31px;
-        padding-left: 20px;
-      }
-      &__item {
-        display: block;
+      &__error {
         color: $color-text;
         font-size: 20px;
         font-weight: 350;
         line-height: 1.15;
+        padding-left: 20px;
+        margin-top: 31px;
+      }
+      &-list {
+        margin-top: 31px;
+        padding-left: 20px;
+        max-height: 290px;
+        overflow: auto;
+      }
+      &__item {
         &:not(:last-child) {
           margin-bottom: 24px;
         }
         &:last-child {
           margin-bottom: 19px;
+        }
+        &.hide {
+          display: none;
+        }
+      }
+      &__link {
+        position: relative;
+        color: $color-text;
+        font-size: 20px;
+        font-weight: 350;
+        line-height: 1.15;
+        padding-bottom: 3px;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $color-purple;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:hover {
+          color: $color-purple;
+          &::before {
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }
@@ -788,6 +824,13 @@ p {
     }
   }
   &__trigger {
+    &.active {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__text {
     color: $color-white;
     padding-top: 50px;
     font-size: 60px;
@@ -796,6 +839,22 @@ p {
     text-transform: unset;
     text-align: center;
     cursor: pointer;
+    a {
+      position: relative;
+      color: $color-white;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.18;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $color-white;
+      }
+    }
     .ellipse {
       &::after {
         content: '';
@@ -826,14 +885,9 @@ p {
         position: absolute;
         bottom: 1px;
         left: 0;
-        width: 100%;
+        width: 94%;
         height: 3px;
         background: $color-white;
-      }
-    }
-    &.active {
-      img {
-        transform: rotate(-180deg);
       }
     }
   }
@@ -864,6 +918,9 @@ p {
   p {
     text-align: center;
     margin-bottom: 60px;
+    span {
+      font-weight: 700;
+    }
   }
   .show-more {
     width: 100%;
@@ -976,6 +1033,12 @@ p {
     }
     .calendar-icon {
       max-width: 18px;
+    }
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
     }
     &-buy {
       width: 100%;
@@ -1610,6 +1673,71 @@ p {
     &.active {
       background: $color-white;
       border-color: $color-white;
+    }
+  }
+}
+
+// Online Event //
+.online-event {
+  .info {
+    padding-top: 76px;
+    h2 {
+      max-width: 100%;
+    }
+    p {
+      max-width: 926px;
+    }
+  }
+  .categories {
+    h2 {
+      margin-bottom: 30px;
+    }
+    &-table {
+      margin-top: 0;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin-top: 42px;
+  &-arrow {
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    li {
+      display: flex;
+      align-items: center;
+      a {
+        color: $color-text;
+        font-size: 16px;
+        font-weight: 350;
+        line-height: 1.2;
+      }
+      &.active {
+        a {
+          color: $color-purple;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.events-preview {
+  padding-top: 43px;
+  &__image {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
