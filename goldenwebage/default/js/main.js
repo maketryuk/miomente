@@ -1,11 +1,49 @@
 jQuery(function () {
 
+    // Tabs //
+    class Tabs {
+      constructor(element) {
+        this.tabs = element;
+        this.toggles = this.tabs.querySelectorAll('.tab__trigger');
+        this.panels = this.tabs.querySelectorAll('.tab-list')
+      }
+      init() {
+        this.toggles.forEach(toggle => {
+          toggle.addEventListener('click', (e) => {
+            this.toggles.forEach(toggle => {
+              toggle.classList.remove('active');
+            })
+            this.panels.forEach(panel => {
+              panel.classList.remove('active');
+            })
+            e.target.classList.add('active');
+            this.tabs.querySelector(`.tab-list[data-tab='${e.target.dataset.tab}']`).classList.add('active')
+          })
+        })
+      }
+    }
+    
+    document.querySelectorAll('.tabs').forEach(tab =>{
+      const tabs = new Tabs(tab);
+      tabs.init();
+    })
+
+    // Show-more //
     jQuery('.show-more button').click(function () {
-      jQuery('.info p').toggleClass('active');
-      if (jQuery('.info p').hasClass("active")) {
+      jQuery(this).parent().prev('.show-item').toggleClass('show');
+      jQuery(this).toggleClass('show');
+      if (jQuery(this).parent().prev('.show-item').hasClass('show')) {
         jQuery(this).text('Zeige weniger');
       } else {
         jQuery(this).text('Mehr anzeigen');
+      }
+    });
+
+    jQuery('.show-more button').click(function () {
+      if (jQuery(this).parent().parent().children('.tab-list').hasClass('active')) {
+        jQuery('.tab-list.active').children('.show-item').toggleClass('show')
+      } else {
+        null
       }
     });
 
@@ -92,11 +130,20 @@ jQuery(function () {
       ]
     });
 
-    jQuery('.slick-dots li button').text('');
+
     
   if (window.matchMedia('(max-width: 991px)').matches) {
-    // Add data-simplebar for Seller Table //
-    jQuery('.seller-table').data('data-simplebar', '').attr('data-simplebar', '');
+
+    const sellerSlider = new Swiper('.seller-slider', {
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: ".seller-scrollbar",
+        hide: false,
+      },
+    })
+
+    jQuery('.slick-dots li button').text('');
 
     // Change Text //
     jQuery('.header-top .giftbox span').text('Geschenkbox');

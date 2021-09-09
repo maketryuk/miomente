@@ -134,6 +134,30 @@ p {
   line-height: 1.6;
 }
 
+.show {
+  &-item {
+    overflow: hidden;
+    &::before {
+      transition: all 0.3s ease-in-out;
+    }
+    &.show {
+      max-height: none;
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &-more {
+    button {
+      transition: none;
+      &.show {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
 .scroll-down {
   min-width: 50px;
   max-width: 50px;
@@ -943,7 +967,6 @@ p {
     display: none;
     button {
       z-index: 10;
-      margin-top: 40px;
       color: $color-text;
       font-size: 18px;
       font-weight: 700;
@@ -955,22 +978,28 @@ p {
 // Seller ==========>
 .seller {
   padding-top: 120px;
-  padding-bottom: 140px; 
+  padding-bottom: 140px;
+  &-slider {
+    max-width: 1420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -10px;
+  }
+  .swiper {
+    &-wrapper {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    &-slide {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      padding: 10px;
+    }
+  }
   h2 {
     margin-bottom: 50px;
     text-align: left;
-  }
-  &-table {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    margin: -10px;
-  }
-  &-wrapper {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-    padding: 10px;
   }
   &-card {
     &__image {
@@ -1164,11 +1193,22 @@ p {
     }
   }
   &-table {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin: 50px 0;
+    margin: 50px 0 0;
     width: 100%;
+    max-height: 1170px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, 1), rgba(255,255,255, 1));
+    }
   }
   &-wrapper {
     flex: 0 0 33.3333%;
@@ -1226,24 +1266,12 @@ p {
     width: 100%;
     text-align: center;
     z-index: 5;
-    .btn-primary {
-      position: relative;
-      top: -190px;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      top: -500px;
-      left: 0;
-      width: 100%;
-      height: 450px;
-      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, 1), rgba(255,255,255, 1));
-    }
   }
 }
 
 // Specials ==========>
 .specials {
+  padding-top: 140px;
   padding-bottom: 140px;
   .container {
     display: flex;
@@ -1582,6 +1610,9 @@ p {
     &:not(:last-child) {
       margin-right: 15px;
     }
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -1753,6 +1784,15 @@ p {
   }
 }
 
+.tab {
+  &-list {
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+}
+
 // Media 1500px //
 @media screen and (max-width: 1500px) {
   .reviews {
@@ -1894,6 +1934,11 @@ p {
         margin-bottom: 0;
         margin-left: 8.5px;
       }
+    }
+  }
+  .categories {
+    &-table {
+      max-height: 1070px;
     }
   }
 }
@@ -2447,6 +2492,7 @@ p {
   }
   .specials {
     padding: 0;
+    padding-top: 78px;
     &-subtitle {
       color: $color-white;
       margin: 0 0 29px;
@@ -2499,49 +2545,39 @@ p {
       flex: 0 0 50%;
       max-width: 50%;
     }
+    &-table {
+      max-height: 1170px;
+    }
   }
   .seller {
     padding-bottom: 60px;
+    &-slider {
+      position: relative;
+      padding-bottom: 32px;
+    }
+    .swiper-horizontal > .swiper-scrollbar {
+      bottom: 0;
+    }
+    .swiper {
+      &-wrapper {
+        flex-wrap: nowrap;
+      }
+      &-slide {
+        flex: 0 0 auto;
+        max-width: 400px;
+      }
+      &-scrollbar {
+        background: rgba(242, 242, 242, 0.5);
+        border-radius: 5px;
+        &-drag {
+          background: $color-purple;
+          border-radius: 5px;
+        }
+      }
+    }
     h2 {
       margin-bottom: 27px;
       padding-left: 20px;
-    }
-    .simplebar {
-      &-content {
-        display: flex;
-        align-items: stretch;
-      }
-      &-horizontal {
-        position: relative;
-        margin-top: 32px;
-        &::after {
-          content: '';
-          position: absolute;
-          top: 2px;
-          right: 0;
-          width: 100%;
-          height: 3px;
-          background: #f2f2f2;
-          opacity: 0.4;
-        }
-      }
-      &-scrollbar {
-        z-index: 2;
-        &::before {
-          background: $color-purple;
-          opacity: 1;
-        }
-      }
-    }
-    .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
-      height: 4px;
-    }
-    &-table {
-      flex-wrap: nowrap;
-    }
-    &-wrapper {
-      flex: 0 0 auto;
-      max-width: 320px;
     }
     &-card {
       h3 {
@@ -2687,20 +2723,8 @@ p {
       margin: 0;
       max-width: 600px;
       max-height: 224px;
-      overflow: hidden;
       &::before {
         display: block;
-        transition: all 0.3s ease-in-out;
-      }
-      &.active {
-        max-height: none;
-        &::before {
-          opacity: 0;
-          visibility: hidden;
-        }
-        & ~ .show-more {
-          margin-top: 20px;
-        }
       }
     }
     &__image {
@@ -2728,6 +2752,7 @@ p {
     }
     &-table {
       margin-top: 43px;
+      max-height: 2530px;
     }
   }
   .footer {
@@ -2823,13 +2848,25 @@ p {
     }
     .show-more {
       button {
-        margin-top: 0;
         position: relative;
       }
     }
   }
   .seller {
     padding-top: 98px;
+    .swiper {
+      &-slide {
+        max-width: 320px;
+      }
+    }
+  }
+  .categories {
+    &-table {
+      max-height: 1820px;
+      &::before {
+        height: 200px;
+      }
+    }
   }
 }
 
@@ -2943,6 +2980,9 @@ p {
     }
   }
   .categories {
+    &-table {
+      max-height: 1620px;
+    }
     &-card {
       h3 {
         font-size: 14px;
