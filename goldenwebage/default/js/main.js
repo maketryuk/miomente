@@ -49,8 +49,8 @@ jQuery(function () {
     let categories = document.querySelector('.categories')
 
     // Scroll
-    scrollUpBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth'});
-    scrollDownBtn.onclick = () => categories.scrollIntoView({behavior: 'smooth'});
+    // scrollUpBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth'});
+    // scrollDownBtn.onclick = () => categories.scrollIntoView({behavior: 'smooth'});
 
     // Search //
     jQuery('.search__trigger').click(function () {
