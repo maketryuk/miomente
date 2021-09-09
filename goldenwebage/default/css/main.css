@@ -741,6 +741,7 @@ p {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   padding-top: 50px;
+  cursor: default;
 }
 
 .nav-dropdown-table {
@@ -781,6 +782,10 @@ p {
 
 .nav-dropdown h6 img {
   display: none;
+}
+
+.nav-dropdown__item {
+  cursor: default;
 }
 
 .nav-dropdown__item:not(:last-child) {
@@ -1125,6 +1130,7 @@ p {
 }
 
 .info p {
+  position: relative;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -1133,22 +1139,23 @@ p {
   font-weight: 700;
 }
 
-.info .show-more {
-  width: 100%;
-  position: relative;
-  text-align: center;
+.info p::before {
   display: none;
-}
-
-.info .show-more::before {
   content: '';
   position: absolute;
-  top: -120px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 150px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(white), to(white));
   background: linear-gradient(rgba(255, 255, 255, 0), white, white);
+}
+
+.info .show-more {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: none;
 }
 
 .info .show-more button {
@@ -1783,12 +1790,23 @@ p {
 .newsletter .btn-primary {
   margin-top: 34px;
   max-width: 284px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 62px;
   color: #A4006A;
   background: #fff;
   border-color: #fff;
   -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .newsletter .btn-primary:hover {
@@ -1951,6 +1969,7 @@ p {
 }
 
 .footer__link {
+  color: #595959;
   display: block;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -3245,6 +3264,23 @@ p {
   .info p {
     margin: 0;
     max-width: 600px;
+    max-height: 224px;
+    overflow: hidden;
+  }
+  .info p::before {
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .info p.active {
+    max-height: none;
+  }
+  .info p.active::before {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .info p.active ~ .show-more {
+    margin-top: 20px;
   }
   .info__image {
     display: block;
@@ -3350,17 +3386,12 @@ p {
   .info p {
     max-width: 342px;
   }
-  .info .show-more::before {
-    top: -450px;
-    height: 450px;
-  }
   .info .show-more button {
     margin-top: 0;
     position: relative;
-    top: -150px;
   }
   .seller {
-    padding-top: 0;
+    padding-top: 98px;
   }
 }
 

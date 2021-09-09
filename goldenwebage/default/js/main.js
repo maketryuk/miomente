@@ -1,5 +1,14 @@
 jQuery(function () {
 
+    jQuery('.show-more button').click(function () {
+      jQuery('.info p').toggleClass('active');
+      if (jQuery('.info p').hasClass("active")) {
+        jQuery(this).text('Zeige weniger');
+      } else {
+        jQuery(this).text('Mehr anzeigen');
+      }
+    });
+
     // Search Cities //
     var search = '',
     total = 0;
