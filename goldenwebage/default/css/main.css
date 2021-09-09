@@ -1053,6 +1053,11 @@ p {
           transform: rotate(-180deg);
 }
 
+.hero__trigger:hover ~ .hero-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
 .hero__text {
   color: #fff;
   padding-top: 50px;
@@ -2314,6 +2319,7 @@ p {
 
 .tab-list {
   display: none;
+  width: 100%;
 }
 
 .tab-list.active {
@@ -3327,7 +3333,7 @@ p {
   }
   .categories-table {
     margin-top: 43px;
-    max-height: 2530px;
+    max-height: 1070px;
   }
   .footer .language-list {
     width: 100%;

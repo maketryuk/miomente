@@ -1,32 +1,9 @@
 jQuery(function () {
 
-    // Tabs //
-    class Tabs {
-      constructor(element) {
-        this.tabs = element;
-        this.toggles = this.tabs.querySelectorAll('.tab__trigger');
-        this.panels = this.tabs.querySelectorAll('.tab-list')
-      }
-      init() {
-        this.toggles.forEach(toggle => {
-          toggle.addEventListener('click', (e) => {
-            this.toggles.forEach(toggle => {
-              toggle.classList.remove('active');
-            })
-            this.panels.forEach(panel => {
-              panel.classList.remove('active');
-            })
-            e.target.classList.add('active');
-            this.tabs.querySelector(`.tab-list[data-tab='${e.target.dataset.tab}']`).classList.add('active')
-          })
-        })
-      }
-    }
-    
-    document.querySelectorAll('.tabs').forEach(tab =>{
-      const tabs = new Tabs(tab);
-      tabs.init();
-    })
+    jQuery(".tab__trigger").click(function() {
+      jQuery(".tab__trigger").removeClass("active").eq(jQuery(this).index()).addClass("active");
+      jQuery(".tab-list").removeClass('active').eq(jQuery(this).index()).addClass('active');
+    }).eq(0).addClass("active");
 
     // Show-more //
     jQuery('.show-more button').click(function () {
@@ -43,14 +20,14 @@ jQuery(function () {
       if (jQuery(this).parent().parent().children('.tab-list').hasClass('active')) {
         jQuery('.tab-list.active').children('.show-item').toggleClass('show')
       } else {
-        null
+        jQuery('.tab-list.active').chilren('.show-item').removeClass('show')
       }
     });
 
     // Search Cities //
     var search = '',
     total = 0;
-
+    
     jQuery('.hero .i-search').on('keyup',function(e){
       search = jQuery(this).val();
       total = 0;

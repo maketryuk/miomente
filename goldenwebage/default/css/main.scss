@@ -855,6 +855,12 @@ p {
         transform: rotate(-180deg);
       }
     }
+    &:hover {
+      & ~ .hero-dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
   &__text {
     color: $color-white;
@@ -1787,6 +1793,7 @@ p {
 .tab {
   &-list {
     display: none;
+    width: 100%;
     &.active {
       display: flex;
     }
@@ -2752,7 +2759,7 @@ p {
     }
     &-table {
       margin-top: 43px;
-      max-height: 2530px;
+      max-height: 1070px;
     }
   }
   .footer {
