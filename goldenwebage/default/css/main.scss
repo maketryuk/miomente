@@ -1725,6 +1725,16 @@ p {
   }
 }
 
+.tab {
+  &-list {
+    display: none;
+    width: 100%;
+    &.active {
+      display: flex;
+    }
+  }
+}
+
 // Online Event //
 .online-event {
   .info {
@@ -1786,16 +1796,6 @@ p {
     img {
       width: 100%;
       height: 100%;
-    }
-  }
-}
-
-.tab {
-  &-list {
-    display: none;
-    width: 100%;
-    &.active {
-      display: flex;
     }
   }
 }

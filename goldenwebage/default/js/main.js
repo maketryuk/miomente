@@ -43,14 +43,45 @@ jQuery(function () {
       if( total>0 ) jQuery('.result__error').hide(); else jQuery('.result__error').show();
     });
 
-    // Scroll let's
-    let scrollUpBtn = document.querySelector('.scroll-up')
-    let scrollDownBtn = document.querySelector('.scroll-down')
-    let categories = document.querySelector('.categories')
+    var scrollToTopBtn = document.querySelector(".scroll-up")
+    var rootElement = document.documentElement
+    var TOGGLE_RATIO = 0.1
 
-    // Scroll
-    // scrollUpBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth'});
-    // scrollDownBtn.onclick = () => categories.scrollIntoView({behavior: 'smooth'});
+    function handleScroll() {
+      // do something on scroll
+      var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+      if ((rootElement.scrollTop / scrollTotal) > TOGGLE_RATIO) {
+        //show button
+        scrollToTopBtn.classList.add("showBtn")
+      } else {
+        //hide button
+        scrollToTopBtn.classList.remove("showBtn")
+      }
+    }
+
+    function scrollToTop() {
+      //scroll to top logic
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+    scrollToTopBtn.addEventListener("click", scrollToTop)
+    document.addEventListener("scroll", handleScroll)
+
+    function scrollIt(element) {
+    window.scrollTo({
+      'behavior': 'smooth',
+      'left': 0,
+      'top': element.offsetTop
+      });
+    }
+    const btns = document.querySelectorAll('.scroll-down');
+    const sections = document.querySelectorAll('.categories');
+
+    btns[0].addEventListener('click', () => {
+      scrollIt(sections[0]);
+    });
 
     // Search //
     jQuery('.search__trigger').click(function () {
