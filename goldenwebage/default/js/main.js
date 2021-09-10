@@ -58,7 +58,7 @@ jQuery(function () {
         scrollToTopBtn.classList.remove("showBtn")
       }
     }
-
+    'use strict'
     function scrollToTop() {
       //scroll to top logic
       window.scrollTo({
