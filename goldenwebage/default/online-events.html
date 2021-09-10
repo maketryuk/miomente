@@ -18,7 +18,7 @@
     </script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Handverlesene Kochkurse, Weinproben und Genuss-Events</title>
+    <title>Entdecken Sie unsere Online-Tastings & Events für Zuhause</title>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -277,7 +277,7 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
 
 </head>
 <body>
-<div id="root-wrapper">
+  <div id="root-wrapper">
     <div class="wrapper">
         <div class="page online-event">
             <a href="#" class="protection">
@@ -638,22 +638,52 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                 </div>
                 <div class="info">
                   <div class="container">
-                    <div class="info__image">
-                      <img src="images/mobile-logo.png" alt="Logo Of Miomente">
-                    </div>
                     <h2>Online-Tastings & Events</h2>
-                    <p>Entdecken Sie unsere <span>Online-Tastings und virtuellen Events für Zuhause!</span> Erleben Sie trotz Ausgangsbeschränkungen, geschlossenen Kochschulen und Bars neue Genusserlebnisse mit unseren Tasting-Sets und Online-Kursen. Wir schicken Ihnen eine spannende Genuss-Box mit allen Zutaten - und Sie können ganz einfach selbst zum Entdecker neuer kulinarischer Reiche werden. Bei einer unterhaltsamen Online-Verkostung als Livestream erfahren Sie dann interaktiv mehr über Wein, Gin, Schokolade oder Kaffee. Stellen Sie unseren Experten live Fragen oder chatten Sie mit uns! Auf diese Weise unterstützen Sie gleichzeitig unsere Partner in dieser schwierigen Zeit und sorgen dafür, dass Sie auch nach Corona noch ein Genuss-Erlebnis in unseren Kochschulen, Cocktailbars und Vinotheken buchen können.</p>
-                    <div class="scroll-down">
-                      <img src="images/icons/arrow-scroll.svg" alt="Arrow Scroll Icon">
-                    </div>
+                    <p class="show-item">Entdecken Sie unsere <span>Online-Tastings und virtuellen Events für Zuhause!</span> Erleben Sie trotz Ausgangsbeschränkungen, geschlossenen Kochschulen und Bars neue Genusserlebnisse mit unseren Tasting-Sets und Online-Kursen. Wir schicken Ihnen eine spannende Genuss-Box mit allen Zutaten - und Sie können ganz einfach selbst zum Entdecker neuer kulinarischer Reiche werden. Bei einer unterhaltsamen Online-Verkostung als Livestream erfahren Sie dann interaktiv mehr über Wein, Gin, Schokolade oder Kaffee. Stellen Sie unseren Experten live Fragen oder chatten Sie mit uns! Auf diese Weise unterstützen Sie gleichzeitig unsere Partner in dieser schwierigen Zeit und sorgen dafür, dass Sie auch nach Corona noch ein Genuss-Erlebnis in unseren Kochschulen, Cocktailbars und Vinotheken buchen können.</p>
                     <div class="show-more">
                       <button>Mehr anzeigen</button>
                     </div>
+                    <div class="scroll-down">
+                      <img src="images/icons/arrow-scroll.svg" alt="Arrow Scroll Icon">
+                    </div>
                   </div>
                 </div>
-                <div class="categories">
+                <div class="categories hotel">
                   <div class="container">
                     <h2>Genussreisen bei Dir zuhause</h2>
+                    <div class="hotel-form">
+                      <div class="hotel-form__item">
+                        <span>Ort</span>
+                        <div class="hotel-form-wrapper">
+                          <img src="images/icons/nav-location.svg" alt="Location Mark Icon">
+                          <input type="search">
+                        </div>
+                      </div>
+                      <div class="hotel-form__item date-list">
+                        <span>Bestimmtes Datum</span>
+                        <div class="hotel-form-wrapper date">
+                          <input type="text" id="from_date" name="from">
+                        </div>
+                        <div class="hotel-form-wrapper date">
+                          <input type="text" id="to_date" name='to'>
+                        </div>
+                      </div>
+                      <div class="hotel-form__item">
+                        <span>Zeiträume</span>
+                        <div class="hotel-form-wrapper">
+                          <div class="elected">
+                            <div class="select">
+                              <span>2 gewählt</span>
+                            </div>
+                            <input type="hidden" name="periods">
+                            <ul class="elected-menu">
+                              <li id="1">1 gewählt</li>
+                              <li id="2">2 gewählt</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="categories-table show-item">
                       <div class="categories-wrapper">
                         <div class="categories-card">
@@ -838,6 +868,46 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     </div>
                     <div class="show-more">
                       <button class="btn-primary">Mehr anzeigen</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="works">
+                  <div class="container">
+                    <h2>So funktionierts</h2>
+                    <div class="works-table">
+                      <div class="works-wrapper works-large">
+                          <div class="video-wrapper">
+                            <div class="video-thumb">
+                              <img src="images/icons/icon-play.svg" alt="Icon Play Video" class="icon-play">
+                              <img class="thumb" style="cursor: pointer;" src="images/works-1.png">
+                            </div>
+                            <div class="video" style="display: none;">
+                              <iframe src="https://www.youtube.com/embed/GtIgFAMfGrM?autoplay=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="works-wrapper works-small">
+                        <a href="#" class="works-card">
+                          <div class="works-card-text">
+                            <h6>Tasting-Box</h6>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                          </div>
+                          <div class="works-card__image">
+                            <img src="images/works-2.png" alt="Works Preview">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="works-wrapper works-small">
+                        <a href="#" class="works-card">
+                          <div class="works-card-text">
+                            <h6>Meet the Maker</h6>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                          </div>
+                          <div class="works-card__image">
+                            <img src="images/works-3.png" alt="Works Preview">
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

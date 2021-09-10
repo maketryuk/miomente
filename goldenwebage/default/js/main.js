@@ -1,5 +1,64 @@
 jQuery(function () {
 
+    jQuery('.video-thumb').click(function () {
+      jQuery(this).css('display', 'none')
+      jQuery(this).next('.video').css('display', 'block');
+    })
+
+    jQuery( function() {
+      var dateFormat = "dd/mm/yy",
+        from =  jQuery( "#from_date" )
+          .datepicker({
+            defaultDate: "+1w",
+            changeMonth: false,
+            numberOfMonths: 1,
+            showOn: "button",
+            buttonImage: "images/icons/hotel-calendar.svg",
+            buttonImageOnly: false,
+            buttonText: "Select date"
+          })
+          .on( "change", function() {
+            to.datepicker( "option", "minDate", getDate( this ) );
+          }),
+        to =  jQuery( "#to_date" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: false,
+          numberOfMonths: 1,
+          showOn: "button",
+          buttonImage: "images/icons/hotel-calendar.svg",
+          buttonImageOnly: false,
+          buttonText: "Select date"
+        })
+        .on( "change", function() {
+          from.datepicker( "option", "maxDate", getDate( this ) );
+        });
+  
+      function getDate( element ) {
+        var date;
+        try {
+          date =  jQuery.datepicker.parseDate( dateFormat, element.value );
+        } catch( error ) {
+          date = null;
+        }
+  
+        return date;
+      }
+    } );
+
+    jQuery('.elected').click(function () {
+      jQuery(this).attr('tabindex', 1).focus();
+      jQuery(this).toggleClass('active');
+      jQuery(this).find('.elected-menu').slideToggle(300);
+    });
+    jQuery('.elected').focusout(function () {
+      jQuery(this).removeClass('active');
+      jQuery(this).find('.elected-menu').slideUp(300);
+    });
+    jQuery('.elected .elected-menu li').click(function () {
+      jQuery(this).parents('.elected').find('span').text( jQuery(this).text());
+      jQuery(this).parents('.elected').find('input').attr('value',  jQuery(this).attr('id'));
+    });
+
     jQuery(".tab__trigger").click(function() {
       jQuery(".tab__trigger").removeClass("active").eq(jQuery(this).index()).addClass("active");
       jQuery(".tab-list").removeClass('active').eq(jQuery(this).index()).addClass('active');
@@ -120,6 +179,7 @@ jQuery(function () {
     jQuery('.header-top .calendar span').text('Jahre gültig');
     jQuery('.safe-item .calendar span').text('Gutschein 3 Jahre gültig');
     jQuery('.cities .dropdown__trigger').text('Die Miomente Städte');
+    jQuery('.hotel h2').text('Alle Events beidir zu Hause')
 
     // Remove class //
     jQuery('.nav-dropdown-wrapper').removeClass('with-border');
@@ -183,5 +243,6 @@ jQuery(function () {
     jQuery('.safe-item .calendar span').text('3 Jahre gültig');
     jQuery('.contact h5').text('Kundenservice');
     jQuery('.cities .dropdown__trigger').text('Die Moment Städte');
+    jQuery('.hotel h2').text('Genussreisen bei Dir zuhause')
   };
 })
