@@ -1446,7 +1446,7 @@ p {
 }
 
 .seller-table.show-item {
-  max-height: 1300px;
+  max-height: 1450px;
 }
 
 .seller-table.show-item.show {
@@ -2855,6 +2855,9 @@ p {
   .specials-text {
     margin-right: 40px;
   }
+  .seller-table.show-item {
+    max-height: 1400px;
+  }
 }
 
 @media screen and (max-width: 1310px) {
@@ -2878,6 +2881,9 @@ p {
   }
   .works-card p {
     font-size: 18px;
+  }
+  .seller-table.show-item {
+    max-height: 1300px;
   }
 }
 

@@ -1132,7 +1132,7 @@ p {
     justify-content: flex-start;
     margin: -10px;
     &.show-item {
-      max-height: 1300px;
+      max-height: 1450px;
       &.show {
         max-height: unset;
       }
@@ -2196,6 +2196,13 @@ p {
       margin-right: 40px;
     }
   }
+  .seller {
+    &-table {
+      &.show-item {
+        max-height: 1400px;
+      }
+    }
+  }
 }
 
 // Media 1310px //
@@ -2237,6 +2244,13 @@ p {
       }
       p {
         font-size: 18px;
+      }
+    }
+  }
+  .seller {
+    &-table {
+      &.show-item {
+        max-height: 1300px;
       }
     }
   }
