@@ -279,7 +279,7 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
 <body>
   <div id="root-wrapper">
     <div class="wrapper">
-        <div class="page online-event">
+        <div class="page event">
             <a href="#" class="protection">
               <img src="images/protection.png" alt="Protection Image">
             </a>
@@ -643,47 +643,14 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     <div class="show-more">
                       <button>Mehr anzeigen</button>
                     </div>
-                    <div class="scroll-down">
+                    <a href="#seller" class="scroll-down">
                       <img src="images/icons/arrow-scroll.svg" alt="Arrow Scroll Icon">
-                    </div>
+                    </a>
                   </div>
                 </div>
-                <div class="categories hotel">
+                <div class="categories">
                   <div class="container">
                     <h2>Genussreisen bei Dir zuhause</h2>
-                    <div class="hotel-form">
-                      <div class="hotel-form__item">
-                        <span>Ort</span>
-                        <div class="hotel-form-wrapper">
-                          <img src="images/icons/nav-location.svg" alt="Location Mark Icon">
-                          <input type="search">
-                        </div>
-                      </div>
-                      <div class="hotel-form__item date-list">
-                        <span>Bestimmtes Datum</span>
-                        <div class="hotel-form-wrapper date">
-                          <input type="text" id="from_date" name="from">
-                        </div>
-                        <div class="hotel-form-wrapper date">
-                          <input type="text" id="to_date" name='to'>
-                        </div>
-                      </div>
-                      <div class="hotel-form__item">
-                        <span>Zeiträume</span>
-                        <div class="hotel-form-wrapper">
-                          <div class="elected">
-                            <div class="select">
-                              <span>2 gewählt</span>
-                            </div>
-                            <input type="hidden" name="periods">
-                            <ul class="elected-menu">
-                              <li id="1">1 gewählt</li>
-                              <li id="2">2 gewählt</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                     <div class="categories-table show-item">
                       <div class="categories-wrapper">
                         <div class="categories-card">
@@ -876,13 +843,13 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     <h2>So funktionierts</h2>
                     <div class="works-table">
                       <div class="works-wrapper works-large">
-                          <div class="video-wrapper">
+                          <div class="video-container">
                             <div class="video-thumb">
                               <img src="images/icons/icon-play.svg" alt="Icon Play Video" class="icon-play">
                               <img class="thumb" style="cursor: pointer;" src="images/works-1.png">
                             </div>
                             <div class="video" style="display: none;">
-                              <iframe src="https://www.youtube.com/embed/GtIgFAMfGrM?autoplay=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                              <iframe class="iframe" src="https://www.youtube.com/embed/GtIgFAMfGrM?" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                             </div>
                           </div>
                       </div>
@@ -1050,6 +1017,457 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="show-more">
+                      <button class="btn-primary">Mehr anzeigen</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="seller" id="seller">
+                  <div class="container">
+                    <h2>Topseller</h2>
+                    <div class="seller-table show-item">
+                        <div class="seller-wrapper card-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-1.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-2.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-3.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-4.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-5.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-6.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-7.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-8.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="seller-wrapper">
+                          <div class="card">
+                            <div class="card__image">
+                              <img src="images/seller-9.png" alt="Product Preview">
+                            </div>
+                            <div class="card-main">
+                              <div class="card-stars">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-fill.svg" alt="Icon Star Fill">
+                                <img src="images/icons/star-empty.svg" alt="Icon Star Empty">
+                              </div>
+                              <div class="dropdown__trigger">Mehr anzeigen</div>
+                              <h3>Weinprobe@Home für 2</h3>
+                              <div class="dropdown-list">
+                                <div class="card-info">
+                                  <p>Online Weinprobe – mit köstlicher Wein-Box & interaktivem Online-Event</p>
+                                </div>
+                                <ul>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/location-mark.svg" alt="Location Mark Icon" class="location-icon">
+                                    </div>
+                                    Ganz Deutschland
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/users.svg" alt="Users Icon" class="users-icon">
+                                    </div>
+                                    58 Plätze
+                                  </li>
+                                  <li>
+                                    <div class="card__icon">
+                                      <img src="images/icons/seller-calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                                    </div>
+                                    5 buchbare Termine
+                                  </li>
+                                </ul>
+                                <div class="card-buy">
+                                  <div class="price">
+                                    <span>€</span>60,00
+                                  </div>
+                                  <div class="card__btn btn-primary">Entdecken</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                     <div class="show-more">
                       <button class="btn-primary">Mehr anzeigen</button>

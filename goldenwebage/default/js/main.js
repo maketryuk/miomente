@@ -1,50 +1,13 @@
 jQuery(function () {
 
+    // Video //
     jQuery('.video-thumb').click(function () {
       jQuery(this).css('display', 'none')
       jQuery(this).next('.video').css('display', 'block');
+      jQuery(this).next('.video').children('iframe')[0].src += '&autoplay=1';
     })
 
-    jQuery( function() {
-      var dateFormat = "dd/mm/yy",
-        from =  jQuery( "#from_date" )
-          .datepicker({
-            defaultDate: "+1w",
-            changeMonth: false,
-            numberOfMonths: 1,
-            showOn: "button",
-            buttonImage: "images/icons/hotel-calendar.svg",
-            buttonImageOnly: false,
-            buttonText: "Select date"
-          })
-          .on( "change", function() {
-            to.datepicker( "option", "minDate", getDate( this ) );
-          }),
-        to =  jQuery( "#to_date" ).datepicker({
-          defaultDate: "+1w",
-          changeMonth: false,
-          numberOfMonths: 1,
-          showOn: "button",
-          buttonImage: "images/icons/hotel-calendar.svg",
-          buttonImageOnly: false,
-          buttonText: "Select date"
-        })
-        .on( "change", function() {
-          from.datepicker( "option", "maxDate", getDate( this ) );
-        });
-  
-      function getDate( element ) {
-        var date;
-        try {
-          date =  jQuery.datepicker.parseDate( dateFormat, element.value );
-        } catch( error ) {
-          date = null;
-        }
-  
-        return date;
-      }
-    } );
-
+    // Elected List //
     jQuery('.elected').click(function () {
       jQuery(this).attr('tabindex', 1).focus();
       jQuery(this).toggleClass('active');
@@ -59,6 +22,7 @@ jQuery(function () {
       jQuery(this).parents('.elected').find('input').attr('value',  jQuery(this).attr('id'));
     });
 
+    // Tabs //
     jQuery(".tab__trigger").click(function() {
       jQuery(".tab__trigger").removeClass("active").eq(jQuery(this).index()).addClass("active");
       jQuery(".tab-list").removeClass('active').eq(jQuery(this).index()).addClass('active');
@@ -75,7 +39,8 @@ jQuery(function () {
       }
     });
 
-    jQuery('.show-more button').click(function () {
+    jQuery('.show-more span').click(function () {
+      jQuery(this).toggleClass('show');
       if (jQuery(this).parent().parent().children('.tab-list').hasClass('active')) {
         jQuery('.tab-list.active').children('.show-item').toggleClass('show')
       } else {
@@ -157,8 +122,13 @@ jQuery(function () {
       ]
     });
 
-
-    
+    // Hero Dropdown Close on click outside//
+    jQuery(document).click( function(event){
+      if ( !jQuery(event.target).closest('.hero-dropdown.active').length ) {
+          jQuery('.hero-dropdown').removeClass('active')
+      }
+    });
+  
   if (window.matchMedia('(max-width: 991px)').matches) {
 
     const sellerSlider = new Swiper('.seller-slider', {
@@ -187,6 +157,7 @@ jQuery(function () {
     // Dropdown Mobile //
     jQuery('.dropdown__trigger').click(function () {
       jQuery(this).toggleClass('active');
+      jQuery(this).next().next('.dropdown-list').slideToggle(300);
       jQuery(this).next('.dropdown-list').slideToggle(300);
     });
 
