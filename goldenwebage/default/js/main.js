@@ -128,6 +128,11 @@ jQuery(function () {
           jQuery('.hero-dropdown').removeClass('active')
       }
     });
+
+    jQuery('.slide__trigger').click(function () {
+      jQuery(this).toggleClass('active');
+      jQuery(this).next('.slide-list').slideToggle(300);
+    });
   
   if (window.matchMedia('(max-width: 991px)').matches) {
 

@@ -650,10 +650,43 @@ p {
     &-wrapper {
       flex: 0 0 25%;
       max-width: 25%;
-      padding: 0 30px;
+      padding: 5px 30px;
       margin-bottom: 30px;
       &.with-border {
         border-right: 1px solid $color-border;
+      }
+      &.large {
+        flex: 0 0 50%;
+        max-width: 50%;
+        .nav-dropdown {
+          &-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+          }
+          &__item {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+      }
+    }
+    .title {
+      display: flex;
+      color: $color-purple;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      a {
+        display: block;
+        color: $color-purple;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      margin-bottom: 27px;
+      img {
+        display: none;
       }
     }
     h6 {
@@ -675,6 +708,27 @@ p {
         max-width: 100%;
         max-height: 150px;
       }
+      p {
+        font-size: 16px;
+      }
+      .slide {
+        &__trigger {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          justify-content: space-between;
+          img {
+            display: block;
+            margin-left: 10px;
+            max-width: 12.95px;
+          }
+        }
+        &-list {
+          margin-top: 20px;
+          display: none;
+          padding-left: 20px;
+        }
+      }
     }
     .nav__link {
       display: flex;
@@ -685,6 +739,18 @@ p {
       img {
         margin-right: 38px;
         max-width: 83px;
+      }
+      .preview-image {
+        max-width: 100%;
+        max-height: none;
+        margin: 0;
+        &.mt-1 {
+          margin-top: 10px;
+        }
+      }
+      &.flex-column {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
     .no-wrap {
@@ -704,9 +770,38 @@ p {
       opacity: 1;
       visibility: visible;
     }
+    &-list {
+      &.social {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        .nav-dropdown {
+          &__item {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
   }
   &__location {
     color: $color-purple;
+  }
+  &__social {
+    width: 60px;
+    height: 60px;
+    background: $color-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 100px;
+    .social-icon {
+      margin: 0;
+      max-width: 32px;
+    }
   }
 }
 
@@ -2406,9 +2501,33 @@ p {
       margin-top: 20px;
       padding-left: 40px;
     }
+    .slide-list {
+      padding-right: 24px;
+    }
+    .slide__trigger {
+      padding-right: 24px;
+    }
     &__item {
       img {
         display: none;
+      }
+    }
+    .title {
+      color: $color-text;
+      font-size: 22px;
+      font-weight: 350;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      a {
+        color: $color-text;
+        font-size: 22px;
+        font-weight: 350;
+      }
+      img {
+        display: block;
+        margin-right: 24px;
       }
     }
     h6 {
@@ -2437,6 +2556,19 @@ p {
       &.disabled {
         display: none;
       }
+      &.large {
+        flex: 0 0 100%;
+        max-width: 100%;
+        .nav-dropdown {
+          &__item {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+          &-list {
+            display: none;
+          }
+        }
+      }
     }
     .container {
       padding: 0;
@@ -2448,6 +2580,22 @@ p {
     .nav__link {
       img {
         margin-right: 10px;
+      }
+    }
+    &-list {
+      &.social {
+        .nav-dropdown {
+          &__item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0;
+          }
+        }
+        .nav__social {
+          .social-icon {
+            display: block;
+          }
+        }
       }
     }
   }
