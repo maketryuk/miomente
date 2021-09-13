@@ -958,6 +958,7 @@ p {
 
 .nav-dropdown .nav__link .preview-image {
   max-width: 100%;
+  width: 100%;
   max-height: none;
   margin: 0;
 }
@@ -1024,9 +1025,10 @@ p {
 }
 
 .nav__social {
+  background: #A4006A;
   width: 36px;
   height: 36px;
-  background: #A4006A;
+  border-radius: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1036,13 +1038,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
-  border-radius: 100px;
 }
 
 .nav__social .social-icon {
   margin: 0;
-  max-width: 24px;
+  max-width: 18px;
+  width: 100%;
 }
 
 .burger {
@@ -1334,6 +1335,16 @@ p {
 
 .info .container {
   max-width: 940px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .info h2 {
