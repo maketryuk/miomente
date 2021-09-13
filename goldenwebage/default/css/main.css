@@ -1013,9 +1013,9 @@ p {
 
 .nav-dropdown-list.social .nav-dropdown__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
-  max-width: 25%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  max-width: 20%;
   padding: 0 5px;
 }
 
@@ -1024,8 +1024,8 @@ p {
 }
 
 .nav__social {
-  width: 60px;
-  height: 60px;
+  width: 36px;
+  height: 36px;
   background: #A4006A;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1042,7 +1042,7 @@ p {
 
 .nav__social .social-icon {
   margin: 0;
-  max-width: 32px;
+  max-width: 24px;
 }
 
 .burger {
