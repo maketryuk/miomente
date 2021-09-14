@@ -1455,7 +1455,7 @@ p {
 }
 
 .seller-table.show-item.show {
-  max-height: unset;
+  max-height: none;
 }
 
 .seller-table::before {

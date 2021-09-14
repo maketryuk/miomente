@@ -1140,7 +1140,7 @@ p {
     &.show-item {
       max-height: 1450px;
       &.show {
-        max-height: unset;
+        max-height: none;
       }
     }
     &::before {
