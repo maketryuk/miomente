@@ -154,7 +154,7 @@ jQuery(function () {
     jQuery('.header-top .calendar span').text('Jahre gültig');
     jQuery('.safe-item .calendar span').text('Gutschein 3 Jahre gültig');
     jQuery('.cities .dropdown__trigger').text('Die Miomente Städte');
-    jQuery('.hotel h2').text('Alle Events beidir zu Hause')
+    jQuery('.hotel h2').text('Alle Events beidir zu Hause');
 
     // Remove class //
     jQuery('.nav-dropdown-wrapper').removeClass('with-border');

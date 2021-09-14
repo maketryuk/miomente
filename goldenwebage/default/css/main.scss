@@ -179,7 +179,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 58px auto 0;
   cursor: pointer;
   img {
     max-width: 12px;
@@ -1835,7 +1835,6 @@ p {
     padding: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     border-radius: 10px;
     overflow: hidden;
     &__image {
@@ -1852,6 +1851,7 @@ p {
       }
     }
     &-text {
+      margin-top: auto;
       p {
         color: $color-white;
         font-size: 20px;
