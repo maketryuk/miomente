@@ -2420,6 +2420,11 @@ p {
   overflow: hidden;
 }
 
+.works-card:hover .works-card__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .works-card__image {
   z-index: -1;
   position: absolute;
@@ -2433,6 +2438,8 @@ p {
 .works-card__image img {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .works-card-text {
@@ -2799,18 +2806,14 @@ p {
   height: 700px;
 }
 
-.video-thumb {
+.video-container {
   position: relative;
-  max-height: 700px;
-  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.video-thumb img {
-  width: 100%;
-  height: 100%;
-}
-
-.video-thumb .icon-play {
+.video-container .icon-play {
+  z-index: 5;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2819,6 +2822,25 @@ p {
   width: 64px;
   height: 55px;
   cursor: pointer;
+}
+
+.video-thumb {
+  position: relative;
+  max-height: 700px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.video-thumb:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #search_mini_form {

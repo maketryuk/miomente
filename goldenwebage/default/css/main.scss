@@ -1839,6 +1839,15 @@ p {
     flex-direction: column;
     border-radius: 10px;
     overflow: hidden;
+    &:hover {
+      .works-card {
+        &__image {
+          img {
+            transform: scale(1.1);
+          }  
+        }
+      }
+    }
     &__image {
       z-index: -1;
       position: absolute;
@@ -1850,6 +1859,7 @@ p {
       img {
         width: 100%;
         height: 100%;
+        transition: all 0.3s ease-in-out;
       }
     }
     &-text {
@@ -2133,15 +2143,12 @@ p {
     width: 100%;
     height: 700px;
   }
-  &-thumb {
+  &-container {
     position: relative;
-    max-height: 700px;
-    max-width: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    overflow: hidden;
+    border-radius: 10px;
     .icon-play {
+      z-index: 5;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -2149,6 +2156,22 @@ p {
       width: 64px;
       height: 55px;
       cursor: pointer;
+    }
+  }
+  &-thumb {
+    position: relative;
+    max-height: 700px;
+    max-width: 100%;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease-in-out;
     }
   }
 }
