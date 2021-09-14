@@ -281,29 +281,6 @@ p {
   cursor: pointer;
 }
 
-.protection {
-  z-index: 50;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  max-width: 92px;
-  min-height: 147px;
-  padding: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px 0px;
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px 0px;
-  border: 1px solid #fff;
-  -webkit-transition: all 0s ease-in-out;
-  transition: all 0s ease-in-out;
-  background: #fff;
-}
-
-.protection:hover {
-  border-color: #ffdc0f;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 9px 2px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 9px 2px;
-}
-
 .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
