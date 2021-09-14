@@ -122,13 +122,6 @@ jQuery(function () {
       ]
     });
 
-    // Hero Dropdown Close on click outside//
-    jQuery(document).click( function(event){
-      if ( !jQuery(event.target).closest('.hero-dropdown.active').length ) {
-          jQuery('.hero-dropdown').removeClass('active')
-      }
-    });
-
     jQuery('.slide__trigger').click(function () {
       jQuery(this).toggleClass('active');
       jQuery(this).next('.slide-list').slideToggle(300);
@@ -202,6 +195,13 @@ jQuery(function () {
     jQuery('.hero-dropdown').mouseleave(function () {
       jQuery(this).removeClass('active');
       jQuery('.hero__trigger').removeClass('active');
+    });
+
+    // Hero Dropdown Close on click outside//
+    jQuery(document).click( function(event){
+      if ( !jQuery(event.target).closest('.hero-dropdown.active').length ) {
+          jQuery('.hero-dropdown').removeClass('active')
+      }
     });
 
     // Nav Desktop //
