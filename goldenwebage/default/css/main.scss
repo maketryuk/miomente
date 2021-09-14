@@ -689,6 +689,9 @@ p {
     }
     &__item {
       cursor: default;
+      img {
+        border-radius: 10px;
+      }
       &:not(:last-child) {
         margin-bottom: 20px;
       }
@@ -1253,7 +1256,7 @@ p {
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 250px;
+      height: 300px;
       background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, 1), rgba(255,255,255, 1));
     }
   }
@@ -1263,6 +1266,18 @@ p {
     padding: 10px;
   }
   &-card {
+    overflow: hidden;
+    &:hover {
+      .categories {
+        &-card {
+          &__image {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
     .dropdown__trigger {
       display: none;
       align-items: center;
@@ -1290,8 +1305,14 @@ p {
       flex-wrap: wrap;
     }
     &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       max-width: 100%;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
       img {
+        transition: all 0.3s ease-in-out;
         width: 100%;
         height: 100%;
       }
@@ -1848,6 +1869,15 @@ p {
   align-items: flex-start;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
+  &:hover {
+    .card {
+      &__image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
   &__image {
     max-width: 100%;
     max-height: 200px;
@@ -1856,6 +1886,7 @@ p {
     img {
       width: 100%;
       height: 100%;
+      transition: all 0.3s ease-in-out;
     }
   }
   &-stars {

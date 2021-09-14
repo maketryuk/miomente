@@ -200,7 +200,8 @@ jQuery(function () {
     // Hero Dropdown Close on click outside//
     jQuery(document).click( function(event){
       if ( !jQuery(event.target).closest('.hero-dropdown.active').length ) {
-          jQuery('.hero-dropdown').removeClass('active')
+        jQuery('.hero-dropdown').removeClass('active');
+        jQuery('.hero__trigger').removeClass('active');
       }
     });
 
