@@ -279,670 +279,798 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
 <body>
   <div id="root-wrapper">
     <div class="wrapper">
-        <div class="page event">
-            <div class="overlay"></div>
-            <div id="top" class="header-container">
-              <div class="header-top">
-                <div class="container">
-                  <div class="header-top__item calendar">
-                    <img src="images/icons/header-calendar.svg" alt="Calendar Icon">
-                    <span>Gutschein 3 Jahre gültig</span>
-                  </div>
-                  <div class="header-top__item euro">
-                    <img src="images/icons/header-euro.svg" alt="Euro Icon">
-                    <span>Kostenlos umtauschbar</span>
-                  </div>
-                  <div class="header-top__item printer">
-                    <img src="images/icons/header-printer.svg" alt="Printer Icon">
-                    <span>Sofort selbst ausdrucken</span>
-                  </div>
-                  <div class="header-top__item giftbox">
-                    <img src="images/icons/header-gift.svg" alt="GiftBox Icon">
-                    <span>Wunderschöne Geschenkbox</span>
-                  </div>
-                </div>
-              </div>
-              <div class="header-main">
-                <div class="container">
-                  <div class="burger-wrapper">
-                    <div class="burger">
-                      <span class="burger__line"></span>
+        <div class="page">
+            <div id="top" class="header-container"></div>
+            <div class="main-container col1-layout">
+              <div class="grid-full event" id="GWA">
+                <div class="overlay"></div>
+                <div class="header">
+                  <div class="header-top">
+                    <div class="container">
+                      <div class="header-top__item calendar">
+                        <img src="images/icons/header-calendar.svg" alt="Calendar Icon">
+                        <span>Gutschein 3 Jahre gültig</span>
+                      </div>
+                      <div class="header-top__item euro">
+                        <img src="images/icons/header-euro.svg" alt="Euro Icon">
+                        <span>Kostenlos umtauschbar</span>
+                      </div>
+                      <div class="header-top__item printer">
+                        <img src="images/icons/header-printer.svg" alt="Printer Icon">
+                        <span>Sofort selbst ausdrucken</span>
+                      </div>
+                      <div class="header-top__item giftbox">
+                        <img src="images/icons/header-gift.svg" alt="GiftBox Icon">
+                        <span>Wunderschöne Geschenkbox</span>
+                      </div>
                     </div>
-                    <span class="burger__text">Menü</span>
                   </div>
-                  <a href="#" class="mobile-logo">
-                    <img src="images/mobile-logo.svg" alt="Logo Of Miomente">
-                  </a>
-                  <a href="#" class="logo">
-                    <img src="images/logo.png" alt="Logo Of Miomente">
-                  </a>
-                  <div class="search-wrapper">
-                    <div class="search-close">
-                      <img src="images/icons/arrow-left.svg" alt="Arrow Left Icon">
-                    </div>
-                    <form class="search" role="search" id="search_mini_form" action="https://www.miomente.de/deutschland/catalogsearch/result/" method="get"> 
-                      <div class="search__icon">
+                  <div class="header-main">
+                    <div class="container">
+                      <div class="burger-wrapper">
+                        <div class="burger">
+                          <span class="burger__line"></span>
+                        </div>
+                        <span class="burger__text">Menü</span>
+                      </div>
+                      <a href="#" class="mobile-logo">
+                        <img src="images/mobile-logo.svg" alt="Logo Of Miomente">
+                      </a>
+                      <a href="#" class="logo">
+                        <img src="images/logo.png" alt="Logo Of Miomente">
+                      </a>
+                      <div class="search-wrapper">
+                        <div class="search-close">
+                          <img src="images/icons/arrow-left.svg" alt="Arrow Left Icon">
+                        </div>
+                        <form class="search" role="search" id="search_mini_form" action="https://www.miomente.de/deutschland/catalogsearch/result/" method="get"> 
+                          <div class="search__icon">
+                            <img src="images/icons/search.svg" alt="Search Icon">
+                          </div>
+                          <input type="search" name="q" id="search" class="i-search" placeholder="Was suchen Sie?">
+                          <button class="search__apply">Suchen</button>
+                        </form>
+                      </div>
+                      <div class="search__trigger">
                         <img src="images/icons/search.svg" alt="Search Icon">
                       </div>
-                      <input type="search" name="q" id="search" class="i-search" placeholder="Was suchen Sie?">
-                      <button class="search__apply">Suchen</button>
-                    </form>
-                  </div>
-                  <div class="search__trigger">
-                    <img src="images/icons/search.svg" alt="Search Icon">
-                  </div>
-                  <a href="tel:+089215522040" class="phone-contact">
-                    <div class="phone-contact__icon">
-                      <img src="images/icons/awesome-phone.svg" alt="Phone Icon">
-                    </div>
-                    <span>089 - 215 52 20 40</span>
-                  </a>
-                  <div class="cart">
-                    <div class="cart__trigger">
-                      <img src="images/icons/shopping-cart.svg" alt="Shopping Cart Icon">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <nav class="nav">
-                <div class="container">
-                  <div class="nav-header">
-                    <div class="burger-wrapper">
-                      <div class="burger">
-                        <span class="burger__line"></span>
-                        <div class="burger__text">
-                          Schließen
+                      <a href="tel:+089215522040" class="phone-contact">
+                        <div class="phone-contact__icon">
+                          <img src="images/icons/awesome-phone.svg" alt="Phone Icon">
+                        </div>
+                        <span>089 - 215 52 20 40</span>
+                      </a>
+                      <div class="cart">
+                        <div class="cart__trigger">
+                          <img src="images/icons/shopping-cart.svg" alt="Shopping Cart Icon">
                         </div>
                       </div>
                     </div>
                   </div>
-                  <ul class="nav-list">
-                    <li class="nav-item disabled">
-                      <div class="nav__link">
-                        <img src="images/icons/nav-location.svg" alt="Location Mark Icon" class="nav__link__icon">
-                        Ganz Deutschland
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border large">
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/" class="nav__link">
-                                    Ganz Deutschland
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/augsburg/" class="nav__link">
-                                    Augsburg
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/berlin/" class="nav__link">
-                                    Berlin
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/bielefeld/" class="nav__link">
-                                    Bielefeld
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/bonn/" class="nav__link">
-                                    Bonn
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/bremen/" class="nav__link">
-                                    Bremen
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/darmstadt/" class="nav__link">
-                                    Darmstadt
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/dortmund/" class="nav__link">
-                                    Dortmund
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/dresden/" class="nav__link">
-                                    Dresden
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/duesseldorf/" class="nav__link">
-                                    Düsseldorf
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/essen/" class="nav__link">
-                                    Essen
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/frankfurt/" class="nav__link">
-                                    Frankfurt am Main
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/freiburg/" class="nav__link">
-                                    Freiburg
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/hamburg/" class="nav__link">
-                                    Hamburg
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/hannover/" class="nav__link">
-                                    Hannover
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/heidelberg/" class="nav__link">
-                                    Heidelberg
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/karlsruhe/" class="nav__link">
-                                    Karlsruhe
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/koeln/" class="nav__link">
-                                    Köln
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/leipzig/" class="nav__link">
-                                    Leipzig
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/mainz/" class="nav__link">
-                                    Mainz
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/mannheim/" class="nav__link">
-                                    Mannheim
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/muenchen/" class="nav__link">
-                                    München
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/muenster/" class="nav__link">
-                                    Münster
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/nuernberg/" class="nav__link">
-                                    Nürnberg
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/regensburg/" class="nav__link">
-                                    Regensburg
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/stuttgart/" class="nav__link">
-                                    Stuttgart
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/wiesbaden/" class="nav__link">
-                                    Wiesbaden
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/wuppertal/" class="nav__link">
-                                    Wuppertal
-                                  </a>
-                                </li>
-                              </ul>
+                  <nav class="nav">
+                    <div class="container">
+                      <div class="nav-header">
+                        <div class="burger-wrapper">
+                          <div class="burger">
+                            <span class="burger__line"></span>
+                            <div class="burger__text">
+                              Schließen
                             </div>
                           </div>
                         </div>
                       </div>
-                    </li>
-                    <li class="nav-item">
-                      <div class="nav__trigger">
-                        <a href="https://www.miomente.at/oesterreich/genuss-kategorien/" class="nav__link">
-                          Genuss-Events
-                        </a>
-                        <div class="icon-dropdown">
-                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                        </div>
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Genuss-Events in Ihrer Stadt
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/alle-genuss-events/" class="nav__link">Alle Genuss-Events</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/backkurse/" class="nav__link">Backkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/barista-kurse/" class="nav__link">Barista-Kurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">Bierprobe</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/cocktailkurse/" class="nav__link">Cocktail-Kurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">Erlebnis-Dinner</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/gesunde-ernaehrung/" class="nav__link">Gesunde Ernährung</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/gin-tasting/" class="nav__link">Gin-Tasting</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">Grillkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/" class="nav__link">Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">Krimi-Dinner</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kulinarische-stadtfuehrungen/" class="nav__link">Kulinarische Stadtführung</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/junggesellenabschied/" class="nav__link">Junggesellenabschied</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/weinseminare/" class="nav__link">Wein-Seminare</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/whisky-tasting/" class="nav__link">Whisky-Tasting</a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Kochkurs-Themen
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <img src="images/dropdown-1.png" alt="Ivent Preview" class="preview-image">
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/asia-kochkurse/" class="nav__link">Asia-Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/orientalische-kochkurse/" class="nav__link">Orientalische Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/vegetarisch-vegane-kochkurse/" class="nav__link">Vegetarische & Veganer Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/fisch-kochkurse/" class="nav__link">Fisch-Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/fleisch-kochkurse/" class="nav__link">Fleisch-Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/mediterrane-kochkurse/" class="nav__link">Mediterrane Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/regionale-kochkurse/" class="nav__link">Regionale Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/anfaenger-kochkurse/" class="nav__link">Anfänger-Kochkurse</a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/kochkurse-fuer-fortgeschrittene/" class="nav__link">Kochkurse für Fortgeschrittene</a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Topseller in ganz Deutschland
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">
-                                    <img src="images/dropdown-2.png" alt="Event Preview">
-                                    Neuseeländischer Kochkurs@Home
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/stay-at-home-online-events-box/" class="nav__link">
-                                    <img src="images/dropdown-2.png" alt="Event Preview">
-                                    Stay at Home
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.at/oesterreich/stay-at-home-online-events-box/" class="nav__link">
-                                    <img src="images/dropdown-2.png" alt="Event Preview">
-                                    Stay at Home
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper">
-                              <h6 class="nav-sub__trigger">Neue Events in ganz Deutschland
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">
-                                    <img src="images/dropdown-2.png" alt="Event Preview">
-                                    Stay at Home
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">
-                                    <img src="images/dropdown-2.png" alt="Event Preview">
-                                    Stay at Home
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="#" class="nav__link">
-                                    <img src="images/dropdown-2.png" alt="Event Preview">
-                                    Stay at Home
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper disabled">
-                              <a href="https://www.miomente.at/oesterreich/" class="nav__link title__link no-wrap">
-                                <img src="images/icons/nav-location.svg" alt="Location Mark Icon">
-                                Wählen Sie Ihre Miomente Stadt
-                              </a>
+                      <ul class="nav-list">
+                        <li class="nav-item disabled">
+                          <div class="nav__link">
+                            <img src="images/icons/nav-location.svg" alt="Location Mark Icon" class="nav__link__icon">
+                            Ganz Deutschland
+                          </div>
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border large">
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/" class="nav__link">
+                                        Ganz Deutschland
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/augsburg/" class="nav__link">
+                                        Augsburg
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/berlin/" class="nav__link">
+                                        Berlin
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/bielefeld/" class="nav__link">
+                                        Bielefeld
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/bonn/" class="nav__link">
+                                        Bonn
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/bremen/" class="nav__link">
+                                        Bremen
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/darmstadt/" class="nav__link">
+                                        Darmstadt
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/dortmund/" class="nav__link">
+                                        Dortmund
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/dresden/" class="nav__link">
+                                        Dresden
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/duesseldorf/" class="nav__link">
+                                        Düsseldorf
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/essen/" class="nav__link">
+                                        Essen
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/frankfurt/" class="nav__link">
+                                        Frankfurt am Main
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/freiburg/" class="nav__link">
+                                        Freiburg
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/hamburg/" class="nav__link">
+                                        Hamburg
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/hannover/" class="nav__link">
+                                        Hannover
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/heidelberg/" class="nav__link">
+                                        Heidelberg
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/karlsruhe/" class="nav__link">
+                                        Karlsruhe
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/koeln/" class="nav__link">
+                                        Köln
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/leipzig/" class="nav__link">
+                                        Leipzig
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/mainz/" class="nav__link">
+                                        Mainz
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/mannheim/" class="nav__link">
+                                        Mannheim
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/muenchen/" class="nav__link">
+                                        München
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/muenster/" class="nav__link">
+                                        Münster
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/nuernberg/" class="nav__link">
+                                        Nürnberg
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/regensburg/" class="nav__link">
+                                        Regensburg
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/stuttgart/" class="nav__link">
+                                        Stuttgart
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/wiesbaden/" class="nav__link">
+                                        Wiesbaden
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/wuppertal/" class="nav__link">
+                                        Wuppertal
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <div class="nav__trigger">
-                        <a href="https://www.miomente.at/oesterreich/geschenkboxen/" class="nav__link">
-                          Geschenkboxen
-                        </a>
-                        <div class="icon-dropdown">
-                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                        </div>
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Alle Geschenk-Boxen
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkboxen/genussentdecker-boxen/" class="nav__link flex-column">
-                                    Genussentdecker-Boxen
-                                    <img src="images/genussentdecker-boxen.jpg" alt="Preview Image" class="preview-image mt-1">
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Shoppen nach Anlass
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/tag/hochzeit/" class="nav__link">
-                                    Hochzeit (8)
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/tag/geburtstag/" class="nav__link">
-                                    Geburtstag (13)
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/tag/muttertag/" class="nav__link">
-                                    Muttertag (10)
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/tag/vatertag/" class="nav__link">
-                                    Vatertag (10)
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper">
-                              <h6 class="nav-sub__trigger">Topseller
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/stay-at-home-online-events-box/" class="nav__link">
-                                    <img src="images/tasting-box-fuer-online-tasting-stay-at-home.jpg" alt="Event Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
+                        </li>
+                        <li class="nav-item">
+                          <div class="nav__trigger">
+                            <a href="https://www.miomente.at/oesterreich/genuss-kategorien/" class="nav__link">
+                              Genuss-Events
+                            </a>
+                            <div class="icon-dropdown">
+                              <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <div class="nav__trigger">
-                        <a href="https://www.miomente.at/oesterreich/geschenkideen/" class="nav__link">
-                          Geschenkideen
-                        </a>
-                        <div class="icon-dropdown">
-                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                        </div>
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Für wen
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/geschenke-fuer-frauen/" class="nav__link flex-column">
-                                    Geschenke für Frauen
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Genuss-Events in Ihrer Stadt
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/alle-genuss-events/" class="nav__link">Alle Genuss-Events</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/backkurse/" class="nav__link">Backkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/barista-kurse/" class="nav__link">Barista-Kurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">Bierprobe</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/cocktailkurse/" class="nav__link">Cocktail-Kurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">Erlebnis-Dinner</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/gesunde-ernaehrung/" class="nav__link">Gesunde Ernährung</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/gin-tasting/" class="nav__link">Gin-Tasting</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">Grillkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/" class="nav__link">Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">Krimi-Dinner</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kulinarische-stadtfuehrungen/" class="nav__link">Kulinarische Stadtführung</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/junggesellenabschied/" class="nav__link">Junggesellenabschied</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/weinseminare/" class="nav__link">Wein-Seminare</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/whisky-tasting/" class="nav__link">Whisky-Tasting</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Kochkurs-Themen
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <img src="images/dropdown-1.png" alt="Ivent Preview" class="preview-image">
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/asia-kochkurse/" class="nav__link">Asia-Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/orientalische-kochkurse/" class="nav__link">Orientalische Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/vegetarisch-vegane-kochkurse/" class="nav__link">Vegetarische & Veganer Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/fisch-kochkurse/" class="nav__link">Fisch-Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/fleisch-kochkurse/" class="nav__link">Fleisch-Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/mediterrane-kochkurse/" class="nav__link">Mediterrane Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/regionale-kochkurse/" class="nav__link">Regionale Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/anfaenger-kochkurse/" class="nav__link">Anfänger-Kochkurse</a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/genuss-kategorien/kochkurse/kochkurse-fuer-fortgeschrittene/" class="nav__link">Kochkurse für Fortgeschrittene</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Topseller in ganz Deutschland
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">
+                                        <img src="images/dropdown-2.png" alt="Event Preview">
+                                        Neuseeländischer Kochkurs@Home
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/stay-at-home-online-events-box/" class="nav__link">
+                                        <img src="images/dropdown-2.png" alt="Event Preview">
+                                        Stay at Home
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.at/oesterreich/stay-at-home-online-events-box/" class="nav__link">
+                                        <img src="images/dropdown-2.png" alt="Event Preview">
+                                        Stay at Home
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper">
+                                  <h6 class="nav-sub__trigger">Neue Events in ganz Deutschland
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">
+                                        <img src="images/dropdown-2.png" alt="Event Preview">
+                                        Stay at Home
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">
+                                        <img src="images/dropdown-2.png" alt="Event Preview">
+                                        Stay at Home
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="#" class="nav__link">
+                                        <img src="images/dropdown-2.png" alt="Event Preview">
+                                        Stay at Home
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper disabled">
+                                  <a href="https://www.miomente.at/oesterreich/" class="nav__link title__link no-wrap">
+                                    <img src="images/icons/nav-location.svg" alt="Location Mark Icon">
+                                    Wählen Sie Ihre Miomente Stadt
                                   </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/geschenke-fur-maenner/" class="nav__link flex-column">
-                                    Geschenke für Männer
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/geschenke-fuer-paare/" class="nav__link flex-column">
-                                    Geschenke für Paare
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/hochzeitsgeschenke/" class="nav__link flex-column">
-                                    Hochzeits-Geschenke
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/muttertagsgeschenke/" class="nav__link flex-column">
-                                    Muttertagsgeschenke
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/weihnachtsgeschenke/" class="nav__link flex-column">
-                                    Weihnachtsgeschenke
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkideen/geschenkgutscheine/" class="nav__link flex-column">
-                                    Geschenkgutscheine
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Geschenkboxen
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/geschenkboxen/" class="nav__link">
-                                    <img src="images/genussentdecker-boxen.jpg" alt="Image Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper">
-                              <h6 class="nav-sub__trigger">Topseller
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/stay-at-home-online-events-box/" class="nav__link">
-                                    <img src="images/tasting-box-fuer-online-tasting-stay-at-home.jpg" alt="Event Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <div class="nav__trigger">
-                        <a href="https://www.miomente.at/oesterreich/firmen-events/" class="nav__link">
-                          Firmen-Events
-                        </a>
-                        <div class="icon-dropdown">
-                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                        </div>
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Auswahl nach Anlass
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/firmenfeier/" class="nav__link flex-column">
-                                    Online Team-Events & Firmenfeiern
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/weihnachtsfeier/" class="nav__link flex-column">
-                                    Weihnachtsfeier
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/teambuilding/" class="nav__link flex-column">
-                                    Teambuilding
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/incentive/" class="nav__link flex-column">
-                                    Incentive
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/betriebsausflug/" class="nav__link flex-column">
-                                    Betriebsausflug
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/kundengeschenke/" class="nav__link flex-column">
-                                    Kundengeschenke
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/alle-firmen-events/" class="nav__link flex-column">
-                                    Alle Firmen-Events
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav-sub__trigger title">Unsere Eventlocations
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </a>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav__link">
-                                    <img src="images/noimage.jpg" alt="Image Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <a href="https://www.miomente.de/deutschland/firmen-events/eventlocations/" class="nav-sub__trigger title">Locations auf Karte
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </a>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/deutschland/firmen-events/eventlocations/" class="nav__link">
-                                    <img src="images/noimage-location.jpg" alt="Event Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper">
-                              <a href="https://www.miomente.de/deutschland/unsere-referenzen" class="nav-sub__trigger title">Kundenstimmen
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </a>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <p>
-                                    "Als Organisator unserer Betriebsweihnachtsfeier war ich sehr froh, Ihr Angebot gewählt zu haben, da Sie mir sehr viel Arbeit abnahmen und ich jederzeit das Gefühl hatte, gut betreut zu werden. Unsere Sonderwünsche wurden ermöglicht und die Kommunikation verlief sehr schnell und angenehm. Die Feier selbst war ausgesprochen gelungen und hat allen Kollegen so gut gefallen, dass wir dieses Event sicherlich wiederholen werden." ekon Haus- und Vermögensverwaltung GmbH
-                                  </p>
-                                </li>
-                              </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <div class="nav__trigger">
-                        <a href="https://www.miomente.de/entdeckermagazin/" class="nav__link">
-                          Entdeckermagazin
-                        </a>
-                        <div class="icon-dropdown">
-                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                        </div>
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Auswahl nach Anlass
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <div class="slide__trigger">
-                                    <a href="https://www.miomente.de/deutschland/firmen-events/firmenfeier/" class="nav__link flex-column">
-                                      Online Team-Events & Firmenfeiern
-                                    </a>
+                        </li>
+                        <li class="nav-item">
+                          <div class="nav__trigger">
+                            <a href="https://www.miomente.at/oesterreich/geschenkboxen/" class="nav__link">
+                              Geschenkboxen
+                            </a>
+                            <div class="icon-dropdown">
+                              <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                            </div>
+                          </div>
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Alle Geschenk-Boxen
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkboxen/genussentdecker-boxen/" class="nav__link flex-column">
+                                        Genussentdecker-Boxen
+                                        <img src="images/genussentdecker-boxen.jpg" alt="Preview Image" class="preview-image mt-1">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Shoppen nach Anlass
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/tag/hochzeit/" class="nav__link">
+                                        Hochzeit (8)
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/tag/geburtstag/" class="nav__link">
+                                        Geburtstag (13)
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/tag/muttertag/" class="nav__link">
+                                        Muttertag (10)
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/tag/vatertag/" class="nav__link">
+                                        Vatertag (10)
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper">
+                                  <h6 class="nav-sub__trigger">Topseller
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/stay-at-home-online-events-box/" class="nav__link">
+                                        <img src="images/tasting-box-fuer-online-tasting-stay-at-home.jpg" alt="Event Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <div class="nav__trigger">
+                            <a href="https://www.miomente.at/oesterreich/geschenkideen/" class="nav__link">
+                              Geschenkideen
+                            </a>
+                            <div class="icon-dropdown">
+                              <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                            </div>
+                          </div>
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Für wen
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/geschenke-fuer-frauen/" class="nav__link flex-column">
+                                        Geschenke für Frauen
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/geschenke-fur-maenner/" class="nav__link flex-column">
+                                        Geschenke für Männer
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/geschenke-fuer-paare/" class="nav__link flex-column">
+                                        Geschenke für Paare
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/hochzeitsgeschenke/" class="nav__link flex-column">
+                                        Hochzeits-Geschenke
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/muttertagsgeschenke/" class="nav__link flex-column">
+                                        Muttertagsgeschenke
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/weihnachtsgeschenke/" class="nav__link flex-column">
+                                        Weihnachtsgeschenke
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkideen/geschenkgutscheine/" class="nav__link flex-column">
+                                        Geschenkgutscheine
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Geschenkboxen
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/geschenkboxen/" class="nav__link">
+                                        <img src="images/genussentdecker-boxen.jpg" alt="Image Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper">
+                                  <h6 class="nav-sub__trigger">Topseller
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/stay-at-home-online-events-box/" class="nav__link">
+                                        <img src="images/tasting-box-fuer-online-tasting-stay-at-home.jpg" alt="Event Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <div class="nav__trigger">
+                            <a href="https://www.miomente.at/oesterreich/firmen-events/" class="nav__link">
+                              Firmen-Events
+                            </a>
+                            <div class="icon-dropdown">
+                              <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                            </div>
+                          </div>
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Auswahl nach Anlass
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/firmenfeier/" class="nav__link flex-column">
+                                        Online Team-Events & Firmenfeiern
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/weihnachtsfeier/" class="nav__link flex-column">
+                                        Weihnachtsfeier
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/teambuilding/" class="nav__link flex-column">
+                                        Teambuilding
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/incentive/" class="nav__link flex-column">
+                                        Incentive
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/betriebsausflug/" class="nav__link flex-column">
+                                        Betriebsausflug
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/kundengeschenke/" class="nav__link flex-column">
+                                        Kundengeschenke
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/alle-firmen-events/" class="nav__link flex-column">
+                                        Alle Firmen-Events
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav-sub__trigger title">Unsere Eventlocations
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </a>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav__link">
+                                        <img src="images/noimage.jpg" alt="Image Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <a href="https://www.miomente.de/deutschland/firmen-events/eventlocations/" class="nav-sub__trigger title">Locations auf Karte
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </a>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/deutschland/firmen-events/eventlocations/" class="nav__link">
+                                        <img src="images/noimage-location.jpg" alt="Event Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper">
+                                  <a href="https://www.miomente.de/deutschland/unsere-referenzen" class="nav-sub__trigger title">Kundenstimmen
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </a>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <p>
+                                        "Als Organisator unserer Betriebsweihnachtsfeier war ich sehr froh, Ihr Angebot gewählt zu haben, da Sie mir sehr viel Arbeit abnahmen und ich jederzeit das Gefühl hatte, gut betreut zu werden. Unsere Sonderwünsche wurden ermöglicht und die Kommunikation verlief sehr schnell und angenehm. Die Feier selbst war ausgesprochen gelungen und hat allen Kollegen so gut gefallen, dass wir dieses Event sicherlich wiederholen werden." ekon Haus- und Vermögensverwaltung GmbH
+                                      </p>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <div class="nav__trigger">
+                            <a href="https://www.miomente.de/entdeckermagazin/" class="nav__link">
+                              Entdeckermagazin
+                            </a>
+                            <div class="icon-dropdown">
+                              <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                            </div>
+                          </div>
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Auswahl nach Anlass
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <div class="slide__trigger">
+                                        <a href="https://www.miomente.de/deutschland/firmen-events/firmenfeier/" class="nav__link flex-column">
+                                          Online Team-Events & Firmenfeiern
+                                        </a>
+                                        <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                      </div>
+                                      <ul class="slide-list">
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-aller-welt/" class="nav__link">
+                                            Aus aller Welt
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-der-heimat/" class="nav__link">
+                                            Aus der Heimat
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/buchtipps/" class="nav__link">
+                                            Buchtipps
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/foodquiz/" class="nav__link">
+                                            Foodlexikon
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-aller-welt/" class="nav__link">
+                                            Foodquiz
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/gewuerzlexikon/" class="nav__link">
+                                            Gewürzlexikon
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/testberichte/" class="nav__link">
+                                            Testberichte
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/foodtrends/" class="nav__link">
+                                        Foodtrends
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <div class="slide__trigger">
+                                        <a href="https://www.miomente.de/entdeckermagazin/kochbuch/" class="nav__link flex-column">
+                                          Kochbuch
+                                        </a>
+                                        <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                      </div>
+                                      <ul class="slide-list">
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/desserts/" class="nav__link">
+                                            Desserts
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/fisch-rezepte/" class="nav__link">
+                                            Fisch
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/fleisch-rezepte/" class="nav__link">
+                                            Fleisch
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/gesunde-gerichte/" class="nav__link">
+                                            Gesunde Gerichte
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/getraenke/" class="nav__link">
+                                            Getränke
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/kuchen-torten-plaetzchen/" class="nav__link">
+                                            Kuchen, Torten & Plätzchen
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-menues/" class="nav__link">
+                                            Rezepte für Menüs
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-pasta-reis-kartoffeln/" class="nav__link">
+                                            Pasta, Reis & Kartoffeln
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-suppen-saucen-salate/" class="nav__link">
+                                            Suppen, Saucen & Salate
+                                          </a>
+                                        </li>
+                                        <li class="nav-dropdown__item">
+                                          <a href="https://www.miomente.de/entdeckermagazin/kochbuch/vegetarisch/" class="nav__link">
+                                            Vegetarisch
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/unsere-partner/" class="nav__link">
+                                        Unsere Partner
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav__link">
+                                        Unsere Eventlocations
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/videos/" class="nav__link">
+                                        Videos
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <div class="title nav-sub__trigger">
+                                    <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/">Food-Wissen</a>
                                     <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
                                   </div>
-                                  <ul class="slide-list">
+                                  <ul class="nav-dropdown-list">
                                     <li class="nav-dropdown__item">
                                       <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-aller-welt/" class="nav__link">
                                         Aus aller Welt
@@ -959,12 +1087,12 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                                       </a>
                                     </li>
                                     <li class="nav-dropdown__item">
-                                      <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/foodquiz/" class="nav__link">
+                                      <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/foodlexikon/" class="nav__link">
                                         Foodlexikon
                                       </a>
                                     </li>
                                     <li class="nav-dropdown__item">
-                                      <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-aller-welt/" class="nav__link">
+                                      <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/foodquiz/" class="nav__link">
                                         Foodquiz
                                       </a>
                                     </li>
@@ -979,20 +1107,13 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                                       </a>
                                     </li>
                                   </ul>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/foodtrends/" class="nav__link">
-                                    Foodtrends
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <div class="slide__trigger">
-                                    <a href="https://www.miomente.de/entdeckermagazin/kochbuch/" class="nav__link flex-column">
-                                      Kochbuch
-                                    </a>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <div class="title nav-sub__trigger">
+                                    <a href="https://www.miomente.de/entdeckermagazin/kochbuch/">Rezepte</a>
                                     <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
                                   </div>
-                                  <ul class="slide-list">
+                                  <ul class="nav-dropdown-list">
                                     <li class="nav-dropdown__item">
                                       <a href="https://www.miomente.de/entdeckermagazin/kochbuch/desserts/" class="nav__link">
                                         Desserts
@@ -1034,318 +1155,199 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                                       </a>
                                     </li>
                                     <li class="nav-dropdown__item">
-                                      <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-suppen-saucen-salate/" class="nav__link">
+                                      <a href="https://www.miomente.de/entdeckermagazin/kochbuch/vegetarisch/" class="nav__link">
                                         Suppen, Saucen & Salate
                                       </a>
                                     </li>
                                     <li class="nav-dropdown__item">
-                                      <a href="https://www.miomente.de/entdeckermagazin/kochbuch/vegetarisch/" class="nav__link">
+                                      <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-menues/" class="nav__link">
                                         Vegetarisch
                                       </a>
                                     </li>
                                   </ul>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/unsere-partner/" class="nav__link">
-                                    Unsere Partner
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav__link">
-                                    Unsere Eventlocations
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/videos/" class="nav__link">
-                                    Videos
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <div class="title nav-sub__trigger">
-                                <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/">Food-Wissen</a>
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                </div>
+                                <div class="nav-dropdown-wrapper disabled">
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/unsere-partner/" class="nav__link">
+                                        <img src="images/unsere-partner.jpg" alt="Event Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav__link">
+                                        <img src="images/eventlocations.jpg" alt="Event Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-aller-welt/" class="nav__link">
-                                    Aus aller Welt
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/aus-der-heimat/" class="nav__link">
-                                    Aus der Heimat
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/buchtipps/" class="nav__link">
-                                    Buchtipps
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/foodlexikon/" class="nav__link">
-                                    Foodlexikon
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/foodquiz/" class="nav__link">
-                                    Foodquiz
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kuechenlatein/gewuerzlexikon/" class="nav__link">
-                                    Gewürzlexikon
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/testberichte/" class="nav__link">
-                                    Testberichte
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <div class="title nav-sub__trigger">
-                                <a href="https://www.miomente.de/entdeckermagazin/kochbuch/">Rezepte</a>
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </div>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/desserts/" class="nav__link">
-                                    Desserts
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/fisch-rezepte/" class="nav__link">
-                                    Fisch
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/fleisch-rezepte/" class="nav__link">
-                                    Fleisch
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/gesunde-gerichte/" class="nav__link">
-                                    Gesunde Gerichte
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/getraenke/" class="nav__link">
-                                    Getränke
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/kuchen-torten-plaetzchen/" class="nav__link">
-                                    Kuchen, Torten & Plätzchen
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-menues/" class="nav__link">
-                                    Rezepte für Menüs
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-pasta-reis-kartoffeln/" class="nav__link">
-                                    Pasta, Reis & Kartoffeln
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/vegetarisch/" class="nav__link">
-                                    Suppen, Saucen & Salate
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/kochbuch/rezepte-fuer-menues/" class="nav__link">
-                                    Vegetarisch
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper disabled">
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/unsere-partner/" class="nav__link">
-                                    <img src="images/unsere-partner.jpg" alt="Event Preview" class="preview-image">
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/entdeckermagazin/unsere-eventlocations/" class="nav__link">
-                                    <img src="images/eventlocations.jpg" alt="Event Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item disabled">
-                      <div class="nav__trigger">
-                        <a href="https://www.miomente.at/team/" class="nav__link">
-                          Über uns
-                        </a>
-                        <div class="icon-dropdown">
-                          <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                        </div>
-                      </div>
-                      <div class="nav-dropdown">
-                        <div class="container">
-                          <div class="nav-dropdown-table">
-                            <div class="nav-dropdown-wrapper with-border large">
-                              <h6 class="nav-sub__trigger">Alles Wichtige auf einen Blick
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/gutschein-einloesen/" class="nav__link">
-                                    Gutschein einlösen
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/ueber-uns/" class="nav__link">
-                                    Über uns
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/team/" class="nav__link">
-                                    Das Miomente-Team
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/faqs/" class="nav__link">
-                                    FAQ
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/kontaktanfrage/" class="nav__link">
-                                    Kontakt
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/agb/" class="nav__link">
-                                    AGB und Widerrufsrecht
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/datenschutz/" class="nav__link">
-                                    Datenschutz
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/versand-und-verpackung/" class="nav__link">
-                                    Versand & Verpackung
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/impressum/" class="nav__link">
-                                    Impressum
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/karriere/" class="nav__link">
-                                    Karriere
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/unsere-referenzen/" class="nav__link">
-                                    Referenzen
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/pressemeldungen/" class="nav__link">
-                                    Miomente Presse
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/miomente-partner-werden/" class="nav__link">
-                                    Miomente-Partner werden
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper with-border">
-                              <h6 class="nav-sub__trigger">Wir sind Miomente
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/team/" class="nav__link">
-                                    <img src="images/wir_sind_miomente.jpg" alt="Event Preview" class="preview-image">
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="nav-dropdown-wrapper">
-                              <h6 class="nav-sub__trigger">Fan werden
-                                <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
-                              </h6>
-                              <ul class="nav-dropdown-list social">
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.miomente.de/newsletteranmeldung/" class="nav__social">
-                                    <img src="images/icons/nav-email.svg" alt="Email Icon" class="social-icon">
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.facebook.com/miomente.de" class="nav__social">
-                                    <img src="images/icons/nav-facebook.svg" alt="Facebook Icon" class="social-icon">
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://instagram.com/miomente" class="nav__social">
-                                    <img src="images/icons/nav-instagram.svg" alt="Instagram Icon" class="social-icon">
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://pinterest.com/miomente/" class="nav__social">
-                                    <img src="images/icons/nav-pinterest.svg" alt="Pinterest Icon" class="social-icon">
-                                  </a>
-                                </li>
-                                <li class="nav-dropdown__item">
-                                  <a href="https://www.youtube.com/channel/UCWj68ZcU3RyyBFR5dxvRc0w" class="nav__social">
-                                    <img src="images/icons/nav-youtube.svg" alt="YouTube Icon" class="social-icon">
-                                  </a>
-                                </li>
-                              </ul>
+                        </li>
+                        <li class="nav-item disabled">
+                          <div class="nav__trigger">
+                            <a href="https://www.miomente.at/team/" class="nav__link">
+                              Über uns
+                            </a>
+                            <div class="icon-dropdown">
+                              <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
                             </div>
                           </div>
+                          <div class="nav-dropdown">
+                            <div class="container">
+                              <div class="nav-dropdown-table">
+                                <div class="nav-dropdown-wrapper with-border large">
+                                  <h6 class="nav-sub__trigger">Alles Wichtige auf einen Blick
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/gutschein-einloesen/" class="nav__link">
+                                        Gutschein einlösen
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/ueber-uns/" class="nav__link">
+                                        Über uns
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/team/" class="nav__link">
+                                        Das Miomente-Team
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/faqs/" class="nav__link">
+                                        FAQ
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/kontaktanfrage/" class="nav__link">
+                                        Kontakt
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/agb/" class="nav__link">
+                                        AGB und Widerrufsrecht
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/datenschutz/" class="nav__link">
+                                        Datenschutz
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/versand-und-verpackung/" class="nav__link">
+                                        Versand & Verpackung
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/impressum/" class="nav__link">
+                                        Impressum
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/karriere/" class="nav__link">
+                                        Karriere
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/unsere-referenzen/" class="nav__link">
+                                        Referenzen
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/pressemeldungen/" class="nav__link">
+                                        Miomente Presse
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/miomente-partner-werden/" class="nav__link">
+                                        Miomente-Partner werden
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper with-border">
+                                  <h6 class="nav-sub__trigger">Wir sind Miomente
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/team/" class="nav__link">
+                                        <img src="images/wir_sind_miomente.jpg" alt="Event Preview" class="preview-image">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="nav-dropdown-wrapper">
+                                  <h6 class="nav-sub__trigger">Fan werden
+                                    <img src="images/icons/nav-dropdown.svg" alt="Arrow Dropdown Icon">
+                                  </h6>
+                                  <ul class="nav-dropdown-list social">
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.miomente.de/newsletteranmeldung/" class="nav__social">
+                                        <img src="images/icons/nav-email.svg" alt="Email Icon" class="social-icon">
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.facebook.com/miomente.de" class="nav__social">
+                                        <img src="images/icons/nav-facebook.svg" alt="Facebook Icon" class="social-icon">
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://instagram.com/miomente" class="nav__social">
+                                        <img src="images/icons/nav-instagram.svg" alt="Instagram Icon" class="social-icon">
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://pinterest.com/miomente/" class="nav__social">
+                                        <img src="images/icons/nav-pinterest.svg" alt="Pinterest Icon" class="social-icon">
+                                      </a>
+                                    </li>
+                                    <li class="nav-dropdown__item">
+                                      <a href="https://www.youtube.com/channel/UCWj68ZcU3RyyBFR5dxvRc0w" class="nav__social">
+                                        <img src="images/icons/nav-youtube.svg" alt="YouTube Icon" class="social-icon">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="nav-footer">
+                        <div class="language-list">
+                          <a href="https://www.miomente.de/" class="language__item active">
+                            <img src="images/icons/germany.svg" alt="Germany Flag">
+                            Deutschland
+                          </a>
+                          <a href="https://www.miomente.at/" class="language__item">
+                            <img src="images/icons/austria.svg" alt="Austria Flag">
+                            Österreich
+                          </a>
+                        </div>
+                        <div class="copyright-list">
+                          <a href="#" class="copyright__link">Impressum</a>
+                          <a href="#" class="copyright__link">AGB</a>
+                          <a href="#" class="copyright__link">Kontakt</a>
+                        </div>
+                        <div class="social-list">
+                          <a href="#" class="social__item">
+                            <img src="images/icons/facebook.svg" alt="Facebook Logo">
+                          </a>
+                          <a href="#" class="social__item">
+                            <img src="images/icons/instagram.svg" alt="Instagram Logo">
+                          </a>
+                          <a href="#" class="social__item">
+                            <img src="images/icons/pinterest.svg" alt="Pinterest Logo">
+                          </a>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                  <div class="nav-footer">
-                    <div class="language-list">
-                      <a href="https://www.miomente.de/" class="language__item active">
-                        <img src="images/icons/germany.svg" alt="Germany Flag">
-                        Deutschland
-                      </a>
-                      <a href="https://www.miomente.at/" class="language__item">
-                        <img src="images/icons/austria.svg" alt="Austria Flag">
-                        Österreich
-                      </a>
                     </div>
-                    <div class="copyright-list">
-                      <a href="#" class="copyright__link">Impressum</a>
-                      <a href="#" class="copyright__link">AGB</a>
-                      <a href="#" class="copyright__link">Kontakt</a>
-                    </div>
-                    <div class="social-list">
-                      <a href="#" class="social__item">
-                        <img src="images/icons/facebook.svg" alt="Facebook Logo">
-                      </a>
-                      <a href="#" class="social__item">
-                        <img src="images/icons/instagram.svg" alt="Instagram Logo">
-                      </a>
-                      <a href="#" class="social__item">
-                        <img src="images/icons/pinterest.svg" alt="Pinterest Logo">
-                      </a>
-                    </div>
-                  </div>
+                  </nav>
                 </div>
-              </nav>
-            </div>
-            <div class="main-container col1-layout">
                 <div class="breadcrumbs">
                   <div class="container">
                     <ul>
@@ -2004,143 +2006,144 @@ src="../../skin/frontend/ultimo/default/js/wishdatefinder/bootstrap-multiselect.
                     </div>
                   </div>
                 </div>
-            </div>
-            <div class="footer-container1">
-              <div class="footer">
-                <div class="container">
-                  <a href="#root-wrapper" class="scroll-up">
-                    <img src="images/icons/scrollup.svg" alt="Arrow Up Icon" class="scroll-up-icon">
-                    <img src="images/icons/scrollup-mobile.svg" alt="Arrow Up Icon" class="scroll-up-icon-mobile">
-                  </a>
-                  <div class="footer-table">
-                    <div class="footer-wrapper contact">
-                      <h5>Kundenservice</h5>
-                      <div class="footer-list">
-                        <a href="tel:+089215522040" class="footer__link">
-                          <img src="images/icons/awesome-phone.svg" alt="Phone Icon">
-                          089-215522040
-                        </a>
-                        <div class="footer__link clock">
-                          <img src="images/icons/clock.svg" alt="Clock Icon">
-                          Mo-Fr 9-17 Uhr
+                <div class="footer">
+                  <div class="container">
+                    <a href="#root-wrapper" class="scroll-up">
+                      <img src="images/icons/scrollup.svg" alt="Arrow Up Icon" class="scroll-up-icon">
+                      <img src="images/icons/scrollup-mobile.svg" alt="Arrow Up Icon" class="scroll-up-icon-mobile">
+                    </a>
+                    <div class="footer-table">
+                      <div class="footer-wrapper contact">
+                        <h5>Kundenservice</h5>
+                        <div class="footer-list">
+                          <a href="tel:+089215522040" class="footer__link">
+                            <img src="images/icons/awesome-phone.svg" alt="Phone Icon">
+                            089-215522040
+                          </a>
+                          <div class="footer__link clock">
+                            <img src="images/icons/clock.svg" alt="Clock Icon">
+                            Mo-Fr 9-17 Uhr
+                          </div>
+                          <a href="mailto:kundenservice@miomente.de" class="footer__link">
+                            <img src="images/icons/email.svg" alt="Email Icon">
+                            kundenservice@miomente.de
+                          </a>
+                          <div class="footer-tab">
+                            <h5>Miomente Newsletter</h5>
+                            <p>Sichere Dir 5€ Startguthaben und melde dich zum Newsletter an.</p>
+                            <a href="https://www.miomente.at/newsletteranmeldung/" class="btn-primary">Anmelden</a>
+                          </div>
                         </div>
-                        <a href="mailto:kundenservice@miomente.de" class="footer__link">
-                          <img src="images/icons/email.svg" alt="Email Icon">
-                          kundenservice@miomente.de
-                        </a>
-                        <div class="footer-tab">
-                          <h5>Miomente Newsletter</h5>
-                          <p>Sichere Dir 5€ Startguthaben und melde dich zum Newsletter an.</p>
-                          <a href="https://www.miomente.at/newsletteranmeldung/" class="btn-primary">Anmelden</a>
+                      </div>
+                      <div class="footer-wrapper cities">
+                        <h5 class="dropdown__trigger">Die Moment Städte</h5>
+                        <div class="footer-list dropdown-list">
+                          <a href="https://www.miomente.de/augsburg/" class="footer__link">Augsburg</a>
+                          <a href="https://www.miomente.de/heidelberg/" class="footer__link">Heidelberg</a>
+                          <a href="https://www.miomente.de/berlin/" class="footer__link">Berlin</a>
+                          <a href="https://www.miomente.de/karlsruhe/" class="footer__link">Karlsruhe</a>
+                          <a href="https://www.miomente.de/bielefeld/" class="footer__link">Bielefeld</a>
+                          <a href="https://www.miomente.de/koeln/" class="footer__link">Köln</a>
+                          <a href="https://www.miomente.de/bonn/" class="footer__link">Bonn</a>
+                          <a href="https://www.miomente.de/leipzig/" class="footer__link">Leipzig</a>
+                          <a href="https://www.miomente.de/bremen/" class="footer__link">Bremen</a>
+                          <a href="https://www.miomente.de/mainz/" class="footer__link">Mainz</a>
+                          <a href="https://www.miomente.de/darmstadt/" class="footer__link">Darmstadt</a>
+                          <a href="https://www.miomente.de/mannheim/" class="footer__link">Mannheim</a>
+                          <a href="https://www.miomente.de/dortmund/" class="footer__link">Dortmund</a>
+                          <a href="https://www.miomente.de/muenchen/" class="footer__link">München</a>
+                          <a href="https://www.miomente.de/dresden/" class="footer__link">Dresden</a>
+                          <a href="https://www.miomente.de/muenster/" class="footer__link">Münster</a>
+                          <a href="https://www.miomente.de/duesseldorf/" class="footer__link">Düsseldorf</a>
+                          <a href="https://www.miomente.de/nuernberg/" class="footer__link">Nürnberg</a>
+                          <a href="https://www.miomente.de/essen/" class="footer__link">Essen</a>
+                          <a href="https://www.miomente.de/regensburg/" class="footer__link">Regensburg</a>
+                          <a href="https://www.miomente.de/frankfurt/" class="footer__link">Frankfurt am Main</a>
+                          <a href="https://www.miomente.de/stuttgart/" class="footer__link">Stuttgart</a>
+                          <a href="https://www.miomente.de/freiburg/" class="footer__link">Freiburg</a>
+                          <a href="https://www.miomente.de/wiesbaden/" class="footer__link">Wiesbaden</a>
+                          <a href="https://www.miomente.de/hamburg/" class="footer__link">Hamburg</a>
+                          <a href="https://www.miomente.de/wuppertal/" class="footer__link">Wuppertal</a>
+                          <a href="https://www.miomente.de/hannover/" class="footer__link">Hannover</a>
+                        </div>
+                      </div>
+                      <div class="footer-wrapper shop">
+                        <h5 class="dropdown__trigger">Shop
+                        </h5>
+                        <div class="footer-list dropdown-list">
+                          <a href="https://www.miomente.de/deutschland/genuss-kategorien/" class="footer__link">Genuss-Events</a>
+                          <a href="https://www.miomente.de/deutschland/geschenkboxen/" class="footer__link">Geschenkboxen</a>
+                          <a href="https://www.miomente.de/deutschland/geschenkideen/" class="footer__link">Geschenkideen</a>
+                          <a href="https://www.miomente.de/deutschland/firmen-events/" class="footer__link">Firmen-Events</a>
+                          <a href="https://www.miomente.de/entdeckermagazin/" class="footer__link">Entdeckermagazin</a>
                         </div>
                       </div>
                     </div>
-                    <div class="footer-wrapper cities">
-                      <h5 class="dropdown__trigger">Die Moment Städte</h5>
-                      <div class="footer-list dropdown-list">
-                        <a href="https://www.miomente.de/augsburg/" class="footer__link">Augsburg</a>
-                        <a href="https://www.miomente.de/heidelberg/" class="footer__link">Heidelberg</a>
-                        <a href="https://www.miomente.de/berlin/" class="footer__link">Berlin</a>
-                        <a href="https://www.miomente.de/karlsruhe/" class="footer__link">Karlsruhe</a>
-                        <a href="https://www.miomente.de/bielefeld/" class="footer__link">Bielefeld</a>
-                        <a href="https://www.miomente.de/koeln/" class="footer__link">Köln</a>
-                        <a href="https://www.miomente.de/bonn/" class="footer__link">Bonn</a>
-                        <a href="https://www.miomente.de/leipzig/" class="footer__link">Leipzig</a>
-                        <a href="https://www.miomente.de/bremen/" class="footer__link">Bremen</a>
-                        <a href="https://www.miomente.de/mainz/" class="footer__link">Mainz</a>
-                        <a href="https://www.miomente.de/darmstadt/" class="footer__link">Darmstadt</a>
-                        <a href="https://www.miomente.de/mannheim/" class="footer__link">Mannheim</a>
-                        <a href="https://www.miomente.de/dortmund/" class="footer__link">Dortmund</a>
-                        <a href="https://www.miomente.de/muenchen/" class="footer__link">München</a>
-                        <a href="https://www.miomente.de/dresden/" class="footer__link">Dresden</a>
-                        <a href="https://www.miomente.de/muenster/" class="footer__link">Münster</a>
-                        <a href="https://www.miomente.de/duesseldorf/" class="footer__link">Düsseldorf</a>
-                        <a href="https://www.miomente.de/nuernberg/" class="footer__link">Nürnberg</a>
-                        <a href="https://www.miomente.de/essen/" class="footer__link">Essen</a>
-                        <a href="https://www.miomente.de/regensburg/" class="footer__link">Regensburg</a>
-                        <a href="https://www.miomente.de/frankfurt/" class="footer__link">Frankfurt am Main</a>
-                        <a href="https://www.miomente.de/stuttgart/" class="footer__link">Stuttgart</a>
-                        <a href="https://www.miomente.de/freiburg/" class="footer__link">Freiburg</a>
-                        <a href="https://www.miomente.de/wiesbaden/" class="footer__link">Wiesbaden</a>
-                        <a href="https://www.miomente.de/hamburg/" class="footer__link">Hamburg</a>
-                        <a href="https://www.miomente.de/wuppertal/" class="footer__link">Wuppertal</a>
-                        <a href="https://www.miomente.de/hannover/" class="footer__link">Hannover</a>
+                    <div class="footer-info">
+                      <div class="payment-list">
+                        <h5>Zahlungsarten</h5>
+                        <div class="payment__item">
+                          <img src="images/visa.svg" alt="Visa Logo">
+                        </div>
+                        <div class="payment__item">
+                          <img src="images/mastercard.svg" alt="MasterCard Logo">
+                        </div>
+                        <div class="payment__item">
+                          <img src="images/paypal.svg" alt="PayPal Logo">
+                        </div>
+                        <div class="payment__item">
+                          <img src="images/lastschrift.svg" alt="Lastschrift Logo">
+                        </div>
+                        <div class="payment__item">
+                          <img src="images/rechnung.svg" alt="Rechnung Logo">
+                        </div>
+                      </div>
+                      <div class="safety-list">
+                        <h5>Sicherheit</h5>
+                        <a href="javascript:if(window.open('https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&amp;v_shortname=SC5&amp;v_search=https://www.miomente.de/augsburg/&amp;x=6&amp;y=5','tl_wnd_credentials'+(new Date()).getTime(),'toolbar=0,scrollbars=1,location=1,status=1,menubar=1,resizable=1,width=374,height=660,left=60,top=120')){};tLlB(tLTB);" class="safety__item">
+                          <img src="images/secured.png" alt="Sectigo Logo">
+                        </a>
+                        <a target="_blank" href="https://pci.usd.de/compliance/1741-F60F-3AC3-AEF1-8E70-B415/details_de.html" class="safety__item">
+                          <img src="images/mar.png" alt="More Security">
+                        </a>
+                      </div>
+                      <div class="social-list">
+                        <h5>Fan werden</h5>
+                        <a href="https://www.facebook.com/miomente.de" class="social__item">
+                          <img src="images/icons/facebook.svg" alt="Facebook Logo">
+                        </a>
+                        <a href="https://instagram.com/miomente" class="social__item">
+                          <img src="images/icons/instagram.svg" alt="Instagram Logo">
+                        </a>
+                        <a href="http://pinterest.com/miomente/" class="social__item">
+                          <img src="images/icons/pinterest.svg" alt="Pinterest Logo">
+                        </a>
                       </div>
                     </div>
-                    <div class="footer-wrapper shop">
-                      <h5 class="dropdown__trigger">Shop
-                      </h5>
-                      <div class="footer-list dropdown-list">
-                        <a href="https://www.miomente.de/deutschland/genuss-kategorien/" class="footer__link">Genuss-Events</a>
-                        <a href="https://www.miomente.de/deutschland/geschenkboxen/" class="footer__link">Geschenkboxen</a>
-                        <a href="https://www.miomente.de/deutschland/geschenkideen/" class="footer__link">Geschenkideen</a>
-                        <a href="https://www.miomente.de/deutschland/firmen-events/" class="footer__link">Firmen-Events</a>
-                        <a href="https://www.miomente.de/entdeckermagazin/" class="footer__link">Entdeckermagazin</a>
+                    <div class="copyright">
+                      <div class="copyright-list">
+                        <a href="https://www.miomente.de/kontaktanfrage/" class="copyright__link contact">Kontakt</a>
+                        <a href="https://www.miomente.de/datenschutz/" class="copyright__link datenschutz">Datenschutz</a>
+                        <a href="https://www.miomente.de/agb/" class="copyright__link agb">AGB</a>
+                        <a href="https://www.miomente.de/faqs/" class="copyright__link faq">FAQ</a>
+                        <a href="https://www.miomente.de/impressum/" class="copyright__link impressum">Impressum</a>
                       </div>
-                    </div>
-                  </div>
-                  <div class="footer-info">
-                    <div class="payment-list">
-                      <h5>Zahlungsarten</h5>
-                      <div class="payment__item">
-                        <img src="images/visa.svg" alt="Visa Logo">
+                      <div class="language-list">
+                        <a href="https://www.miomente.de/" class="language__item active">
+                          <img src="images/icons/germany.svg" alt="Germany Flag">
+                          Deutschland
+                        </a>
+                        <a href="https://www.miomente.at/" class="language__item">
+                          <img src="images/icons/austria.svg" alt="Austria Flag">
+                          Österreich
+                        </a>
                       </div>
-                      <div class="payment__item">
-                        <img src="images/mastercard.svg" alt="MasterCard Logo">
-                      </div>
-                      <div class="payment__item">
-                        <img src="images/paypal.svg" alt="PayPal Logo">
-                      </div>
-                      <div class="payment__item">
-                        <img src="images/lastschrift.svg" alt="Lastschrift Logo">
-                      </div>
-                      <div class="payment__item">
-                        <img src="images/rechnung.svg" alt="Rechnung Logo">
-                      </div>
-                    </div>
-                    <div class="safety-list">
-                      <h5>Sicherheit</h5>
-                      <a href="javascript:if(window.open('https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&amp;v_shortname=SC5&amp;v_search=https://www.miomente.de/augsburg/&amp;x=6&amp;y=5','tl_wnd_credentials'+(new Date()).getTime(),'toolbar=0,scrollbars=1,location=1,status=1,menubar=1,resizable=1,width=374,height=660,left=60,top=120')){};tLlB(tLTB);" class="safety__item">
-                        <img src="images/secured.png" alt="Sectigo Logo">
-                      </a>
-                      <a target="_blank" href="https://pci.usd.de/compliance/1741-F60F-3AC3-AEF1-8E70-B415/details_de.html" class="safety__item">
-                        <img src="images/mar.png" alt="More Security">
-                      </a>
-                    </div>
-                    <div class="social-list">
-                      <h5>Fan werden</h5>
-                      <a href="https://www.facebook.com/miomente.de" class="social__item">
-                        <img src="images/icons/facebook.svg" alt="Facebook Logo">
-                      </a>
-                      <a href="https://instagram.com/miomente" class="social__item">
-                        <img src="images/icons/instagram.svg" alt="Instagram Logo">
-                      </a>
-                      <a href="http://pinterest.com/miomente/" class="social__item">
-                        <img src="images/icons/pinterest.svg" alt="Pinterest Logo">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="copyright">
-                    <div class="copyright-list">
-                      <a href="https://www.miomente.de/kontaktanfrage/" class="copyright__link contact">Kontakt</a>
-                      <a href="https://www.miomente.de/datenschutz/" class="copyright__link datenschutz">Datenschutz</a>
-                      <a href="https://www.miomente.de/agb/" class="copyright__link agb">AGB</a>
-                      <a href="https://www.miomente.de/faqs/" class="copyright__link faq">FAQ</a>
-                      <a href="https://www.miomente.de/impressum/" class="copyright__link impressum">Impressum</a>
-                    </div>
-                    <div class="language-list">
-                      <a href="https://www.miomente.de/" class="language__item active">
-                        <img src="images/icons/germany.svg" alt="Germany Flag">
-                        Deutschland
-                      </a>
-                      <a href="https://www.miomente.at/" class="language__item">
-                        <img src="images/icons/austria.svg" alt="Austria Flag">
-                        Österreich
-                      </a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="footer-container1">
             </div>
         </div>
     </div>
