@@ -1627,6 +1627,7 @@
       }
     }
     &-list {
+      margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
@@ -2751,6 +2752,9 @@
     .footer {
       position: relative;
       background: transparent;
+      &-list {
+        margin-top: 0;
+      }
       &::before {
         z-index: -1;
         content: '';

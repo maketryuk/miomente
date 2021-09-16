@@ -2138,6 +2138,7 @@
 }
 
 #GWA .footer-list {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3448,6 +3449,9 @@
   #GWA .footer {
     position: relative;
     background: transparent;
+  }
+  #GWA .footer-list {
+    margin-top: 0;
   }
   #GWA .footer::before {
     z-index: -1;
