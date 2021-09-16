@@ -22,18 +22,36 @@ jQuery(function () {
       jQuery(this).parents('.elected').find('input').attr('value',  jQuery(this).attr('id'));
     });
 
-    // Tabs //
-    jQuery(".tab__trigger").click(function() {
-      jQuery(".tab__trigger").removeClass("active").eq(jQuery(this).index()).addClass("active");
-      jQuery(".tab-list").removeClass('active').eq(jQuery(this).index()).addClass('active');
-    }).eq(0).addClass("active");
+    jQuery('.online-trigger').click(function () {
+      jQuery(this).addClass('active');
+      jQuery('.online-item').addClass('active');
+      jQuery('.local-item').removeClass('active');
+      jQuery('.local-trigger').removeClass('active');
+      jQuery('.all-trigger').removeClass('active');
+    })
+
+    jQuery('.local-trigger').click(function () {
+      jQuery(this).addClass('active');
+      jQuery('.local-item').addClass('active');
+      jQuery('.online-item').removeClass('active');
+      jQuery('.online-trigger').removeClass('active')
+      jQuery('.all-trigger').removeClass('active');
+    })
+
+    jQuery('.all-trigger').click(function () {
+      jQuery(this).addClass('active');
+      jQuery('.online-item').addClass('active');
+      jQuery('.local-item').addClass('active');
+      jQuery('.online-trigger').removeClass('active')
+      jQuery('.local-trigger').removeClass('active');
+    })
 
     // Show-more //
     jQuery('.show-more button').click(function () {
       jQuery(this).parent().prev('.show-item').toggleClass('show');
       jQuery(this).toggleClass('show');
       if (jQuery(this).parent().prev('.show-item').hasClass('show')) {
-        jQuery(this).text('Zeige weniger');
+        jQuery(this).text('Weniger anzeigen');
       } else {
         jQuery(this).text('Mehr anzeigen');
       }
@@ -41,12 +59,13 @@ jQuery(function () {
 
     jQuery('.show-more span').click(function () {
       jQuery(this).toggleClass('show');
-      if (jQuery(this).parent().parent().children('.tab-list').hasClass('active')) {
-        jQuery('.tab-list.active').children('.show-item').toggleClass('show')
+      jQuery(this).parent().parent().children('.show-item').toggleClass('show');
+      if (jQuery(this).hasClass('show')) {
+        jQuery(this).text('Weniger anzeigen');
       } else {
-        jQuery('.tab-list.active').chilren('.show-item').removeClass('show')
+        jQuery(this).text('Mehr anzeigen');
       }
-    });
+    })
 
     // Search Cities //
     var search = '',
@@ -152,9 +171,15 @@ jQuery(function () {
     // Remove class //
     jQuery('.nav-dropdown-wrapper').removeClass('with-border');
 
+    jQuery('.categories-card .dropdown__trigger').click(function () {
+      jQuery(this).toggleClass('active');
+      jQuery(this).parent().next('.dropdown-list').slideToggle(300);
+    });
+
     // Dropdown Mobile //
     jQuery('.dropdown__trigger').click(function () {
       jQuery(this).toggleClass('active');
+      jQuery(this).parent().next().next('.dropdown-list').slideToggle(300);
       jQuery(this).next().next('.dropdown-list').slideToggle(300);
       jQuery(this).next('.dropdown-list').slideToggle(300);
     });

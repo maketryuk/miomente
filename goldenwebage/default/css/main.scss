@@ -240,6 +240,10 @@
       color: $color-purple;
       background: transparent;
     }
+    &.show {
+      color: $color-purple;
+      background: transparent;
+    }
   }
 
   .overlay {
@@ -1115,7 +1119,7 @@
       position: relative;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: stretch;
       justify-content: flex-start;
       margin: -10px;
       &.show-item {
@@ -1262,9 +1266,26 @@
       flex: 0 0 33.3333%;
       max-width: 33.3333%;
       padding: 10px;
+      &.local-item {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+      &.online-item {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
     }
     &-card {
+      height: 100%;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
       &:hover {
         .categories {
           &-card {
@@ -1292,23 +1313,39 @@
         border-radius: 5px;
       }
       .dropdown-list {
-        flex: 0 0 100%;
         max-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
       &-main {
         padding: 30px 20px;
         border: 1px solid $color-border;
         border-radius: 0 0 10px 10px;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
       }
       &__image {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 100%;
         border-radius: 10px 10px 0 0;
         overflow: hidden;
+        height: 200px;
+        min-height: 200px;
+        max-height: 200px;
+        width: 100%;
         img {
           transition: all 0.3s ease-in-out;
           width: 100%;
@@ -1328,9 +1365,10 @@
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
+        margin-bottom: 25px;
       }
       &__btn {
-        margin-top: 25px;
+        margin-top: auto;
       }
     }
     .show-more {
@@ -1748,6 +1786,26 @@
     }
   }
 
+  .ratings {
+    margin: 5px 0 0 5px;
+  }
+
+  .rating-box {
+    width: 69px;
+    height: 13px;
+    font-size: 0;
+    line-height: 0;
+    background: url(https://www.miomente.de/skin/frontend/ultimo/default/images/img/rating.png) 0 0 repeat-x;
+    text-indent: -999em;
+    overflow: hidden;
+  }
+
+  .rating-box .rating {
+    float: left;
+    height: 13px;
+    background: url(https://www.miomente.de/skin/frontend/ultimo/default/images/img/rating.png) 0 100% repeat-x;
+  }
+
   .language {
     &-list {
       display: flex;
@@ -1875,8 +1933,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
+    height: 100%;
     &:hover {
       .card {
         &__image {
@@ -1888,7 +1948,9 @@
     }
     &__image {
       max-width: 100%;
+      height: 200px;
       max-height: 200px;
+      min-height: 200px;
       width: 100%;
       overflow: hidden;
       img {
@@ -1900,24 +1962,33 @@
     &-stars {
       display: flex;
       align-items: center;
+      height: fit-content;
       img {
         &:not(:last-child) {
           margin-right: 6px;
         }
       }
     }
-    &-main {
+    &-header {
+      height: fit-content;
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: space-between;
+    }
+    &-main {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
       padding: 20px;
       border: 1px solid $color-border;
       border-radius: 0 0 10px 10px;
       overflow: hidden;
     }
     h3 {
-      flex: 0 0 100%;
       max-width: 100%;
       width: 100%;
       color: $color-purple;
@@ -1927,8 +1998,6 @@
       margin: 20px 0 0;
     }
     &-info {
-      border-bottom: 1px solid $color-border;
-      padding-bottom: 20px;
       margin-bottom: 15px;
       p {
         color: $color-text;
@@ -1938,8 +2007,10 @@
       }
     }
     ul {
-      flex: 0 0 100%;
-      max-width: 100%;
+      border-top: 1px solid $color-border;
+      padding-top: 20px;
+      margin-top: auto;
+      width: 100%;
       li {
         position: relative;
         display: flex;
@@ -1977,8 +2048,7 @@
     }
     &-buy {
       margin-top: 10px;
-      flex: 0 0 100%;
-      max-width: 100%;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -2009,7 +2079,10 @@
       border-radius: 5px;
     }
     .dropdown-list {
-      display: block;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 
