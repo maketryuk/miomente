@@ -1,43 +1,35 @@
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/FilsonPro-Book.woff2") format("woff2"), url("../fonts/FilsonPro-Book.woff") format("woff");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/FilsonPro-Regular.woff2") format("woff2"), url("../fonts/FilsonPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/FilsonPro-Medium.woff2") format("woff2"), url("../fonts/FilsonPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/FilsonPro-Bold.woff2") format("woff2"), url("../fonts/FilsonPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 #GWA {
   width: 100%;
   float: none;
   margin: 0;
-}
-
-@font-face {
-  #GWA {
-    font-family: "Filson Pro";
-    src: url("../fonts/FilsonPro-Book.woff2") format("woff2"), url("../fonts/FilsonPro-Book.woff") format("woff");
-    font-weight: 350;
-    font-style: normal;
-  }
-}
-
-@font-face {
-  #GWA {
-    font-family: "Filson Pro";
-    src: url("../fonts/FilsonPro-Regular.woff2") format("woff2"), url("../fonts/FilsonPro-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-  }
-}
-
-@font-face {
-  #GWA {
-    font-family: "Filson Pro";
-    src: url("../fonts/FilsonPro-Medium.woff2") format("woff2"), url("../fonts/FilsonPro-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-  }
-}
-
-@font-face {
-  #GWA {
-    font-family: "Filson Pro";
-    src: url("../fonts/FilsonPro-Bold.woff2") format("woff2"), url("../fonts/FilsonPro-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-  }
 }
 
 #GWA *,
@@ -1704,6 +1696,7 @@
 }
 
 #GWA .categories-card .dropdown-list {
+  width: 100%;
   max-width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -1785,6 +1778,7 @@
 }
 
 #GWA .categories-card p {
+  width: 100%;
   font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2627,6 +2621,7 @@
 #GWA .card-main {
   height: 100%;
   width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2657,10 +2652,12 @@
 }
 
 #GWA .card-info {
+  width: 100%;
   margin-bottom: 15px;
 }
 
 #GWA .card-info p {
+  max-width: 100%;
   color: #595959;
   font-size: 16px;
   font-weight: 350;
@@ -2770,6 +2767,7 @@
 }
 
 #GWA .card .dropdown-list {
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4129,6 +4127,9 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  #GWA .categories-card__image img {
+    height: auto;
+  }
   #GWA .categories-card-main {
     padding-bottom: 12px;
   }
@@ -4165,6 +4166,9 @@
   }
   #GWA .seller-table.show-item {
     max-height: 1750px;
+  }
+  #GWA .card__image img {
+    height: auto;
   }
   #GWA .card .dropdown__trigger {
     display: -webkit-box;
@@ -4218,8 +4222,18 @@
   #GWA .categories-table::before {
     height: 200px;
   }
+  #GWA .categories-card__image {
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+  }
   #GWA .works-card {
     min-height: 140px;
+  }
+  #GWA .card__image {
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
   }
 }
 
