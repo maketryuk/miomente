@@ -1768,6 +1768,8 @@
   transition: all 0.3s ease-in-out;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #GWA .categories-card h3 {
@@ -2585,6 +2587,8 @@
   height: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #GWA .card-stars {
