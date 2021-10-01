@@ -357,7 +357,7 @@
 .GWA.hero {
   /*! Hero ==========>  */
   padding: 453px 0 97px;
-  background-image: url(../images/hero-background.png);
+  background-image: url(../../default/images/hero-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -510,7 +510,7 @@
   left: -6%;
   width: 140%;
   height: 140%;
-  background-image: url(../images/hero-ellipse.svg);
+  background-image: url(../../default/images/hero-ellipse.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 0;
@@ -1323,7 +1323,7 @@
   }
   .GWA.specials .container {
     padding: 173px 40px 50px;
-    background-image: url(../images/specials.png);
+    background-image: url(../../default/images/specials.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1549,7 +1549,7 @@
     min-height: 13px;
     max-width: 13px;
     max-height: 13px;
-    background-image: url(../images/icons/safe-mobile.svg);
+    background-image: url(../../default/images/icons/safe-mobile.svg);
     background-repeat: no-repeat;
     background-size: auto;
   }
@@ -1560,7 +1560,7 @@
     margin-bottom: 19px;
   }
   .GWA.hero {
-    background-image: url(../images/hero-mobile.png);
+    background-image: url(../../default/images/hero-mobile.png);
     position: relative;
     padding: 380px 0 100px;
   }

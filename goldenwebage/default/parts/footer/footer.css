@@ -455,7 +455,7 @@
   .GWA.footer h5::after {
     z-index: 2;
     content: "";
-    background-image: url(../images/icons/nav-dropdown.svg);
+    background-image: url(../../default/images/icons/nav-dropdown.svg);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: right center;

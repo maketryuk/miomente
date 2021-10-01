@@ -177,7 +177,8 @@ jQuery(function () {
     });
 
     // Dropdown Mobile //
-    jQuery('.dropdown__trigger').click(function () {
+    jQuery('.dropdown__trigger').click(function (e) {
+      e.preventDefault();
       jQuery(this).toggleClass('active');
       jQuery(this).parent().next().next('.dropdown-list').slideToggle(300);
       jQuery(this).next().next('.dropdown-list').slideToggle(300);

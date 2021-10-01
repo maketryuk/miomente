@@ -5,7 +5,7 @@
 }
 
 .GWA.newsletter .container {
-  background-image: url(../images/newsletter.png);
+  background-image: url(../../default/images/newsletter.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -104,7 +104,7 @@
   }
   .GWA.newsletter .container {
     position: relative;
-    background-image: url(../images/newsletter-mobile.png);
+    background-image: url(../../default/images/newsletter-mobile.png);
     background-size: cover;
     max-width: 385px;
     min-height: 618px;

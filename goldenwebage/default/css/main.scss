@@ -878,7 +878,7 @@ $color-border: #e0e0e0;
   &.hero {
     /*! Hero ==========>  */ 
     padding: 453px 0 97px;
-    background-image: url(../images/hero-background.png);
+    background-image: url(../../default/images/hero-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1020,7 +1020,7 @@ $color-border: #e0e0e0;
             left: -6%;
             width: 140%;
             height: 140%;
-            background-image: url(../images/hero-ellipse.svg);
+            background-image: url(../../default/images/hero-ellipse.svg);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 0 0;
@@ -1120,11 +1120,13 @@ $color-border: #e0e0e0;
       &-wrapper {
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: stretch;
       }
       &-slide {
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
         padding: 10px;
+        height: auto !important;
       }
     }
     h2 {
@@ -1379,12 +1381,10 @@ $color-border: #e0e0e0;
           justify-content: center;
           border-radius: 10px 10px 0 0;
           overflow: hidden;
-          height: 200px;
           min-height: 200px;
           max-height: 200px;
           width: 100%;
           img {
-            object-fit: cover;
             transition: all 0.3s ease-in-out;
             width: 100%;
             height: 100%;
@@ -1550,7 +1550,7 @@ $color-border: #e0e0e0;
     padding-top: 140px;
     padding-bottom: 140px;
     .container {
-      background-image: url(../images/newsletter.png);
+      background-image: url(../../default/images/newsletter.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -1985,6 +1985,7 @@ $color-border: #e0e0e0;
       min-height: 200px;
       width: 100%;
       overflow: hidden;
+      border-radius: 10px 10px 0 0;
       img {
         object-fit: cover;
         width: 100%;
@@ -2500,10 +2501,10 @@ $color-border: #e0e0e0;
     }
   }
   .GWA {
-    .euro {
-      display: none;
-    }
     &.header {
+      .euro {
+        display: none;
+      }
       .header {
         &-top {
           order: 2;
@@ -2827,7 +2828,7 @@ $color-border: #e0e0e0;
         &::after {
           z-index: 2;
           content: "";
-          background-image: url(../images/icons/nav-dropdown.svg);
+          background-image: url(../../default/images/icons/nav-dropdown.svg);
           background-repeat: no-repeat;
           background-size: auto;
           background-position: right center;
@@ -3099,7 +3100,7 @@ $color-border: #e0e0e0;
       }
       .container {
         padding: 173px 40px 50px;
-        background-image: url(../images/specials.png);
+        background-image: url(../../default/images/specials.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -3334,7 +3335,7 @@ $color-border: #e0e0e0;
       padding: 30px 20px 75px;
       .container {
         position: relative;
-        background-image: url(../images/newsletter-mobile.png);
+        background-image: url(../../default/images/newsletter-mobile.png);
         background-size: cover;
         max-width: 385px;
         min-height: 618px;
@@ -3411,7 +3412,7 @@ $color-border: #e0e0e0;
             min-height: 13px;
             max-width: 13px;
             max-height: 13px;
-            background-image: url(../images/icons/safe-mobile.svg);
+            background-image: url(../../default/images/icons/safe-mobile.svg);
             background-repeat: no-repeat;
             background-size: auto;
           }
@@ -3425,7 +3426,7 @@ $color-border: #e0e0e0;
       }
     }
     &.hero {
-      background-image: url(../images/hero-mobile.png);
+      background-image: url(../../default/images/hero-mobile.png);
       position: relative;
       padding: 380px 0 100px;
       .hero {
@@ -3525,11 +3526,6 @@ $color-border: #e0e0e0;
       }
     }
     .card {
-      &__image {
-        img {
-          height: auto;
-        }
-      }
       .dropdown__trigger {
         display: flex;
       }
@@ -3620,13 +3616,6 @@ $color-border: #e0e0e0;
     &.works {
       .works-card {
         min-height: 140px;
-      }
-    }
-    .card {
-      &__image {
-        height: 120px;
-        min-height: 120px;
-        max-height: 120px;
       }
     }
   }
